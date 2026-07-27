@@ -1,0 +1,39 @@
+# MLLM Security Daily - Global Configuration
+
+# Output settings
+output:
+  data_dir: "docs/data"
+  all_news_file: "all_news.json"
+  daily_prefix: "news_"
+  date_format: "%Y-%m-%d"
+
+# Network settings
+network:
+  default_timeout: 30
+  connect_timeout: 15
+  read_timeout: 30
+  request_delay: 3.0
+  max_retries: 3
+  backoff_base: 2.0
+  user_agent: "MLLM-Security-Daily/1.0 (Academic Research Project; mailto:your-email@example.com)"
+
+# Mirror fallback for oversea sources
+mirror:
+  arxiv: "https://cn.arxiv.org"
+  huggingface: "https://hf-mirror.com"
+
+# Dedup settings
+dedup:
+  method: "sha256"
+  fields: ["origin_url", "title"]
+
+# Logging
+logging:
+  level: "INFO"
+  file: "collector/logs/collector.log"
+  max_bytes: 10485760
+  backup_count: 5
+
+# Date filter
+date_filter:
+  lookback_days: 7

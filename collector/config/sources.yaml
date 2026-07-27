@@ -1,0 +1,144 @@
+# MLLM Security Daily - Data Source Configuration
+# Each source is auto-collected on every run.
+
+sources:
+
+  # ===== arXiv API Queries =====
+  - name: "arXiv MLLM+Backdoor"
+    type: arxiv_api
+    endpoint: "http://export.arxiv.org/api/query"
+    params:
+      search_query: "all:multimodal+AND+all:backdoor"
+      max_results: 100
+      sortBy: submittedDate
+      sortOrder: descending
+    interval: 3
+    category: 学术论文
+    enabled: true
+
+  - name: "arXiv VLM+Backdoor"
+    type: arxiv_api
+    endpoint: "http://export.arxiv.org/api/query"
+    params:
+      search_query: "all:vision-language+AND+all:backdoor"
+      max_results: 100
+      sortBy: submittedDate
+      sortOrder: descending
+    interval: 3
+    category: 学术论文
+    enabled: true
+
+  - name: "arXiv MLLM+Safety"
+    type: arxiv_api
+    endpoint: "http://export.arxiv.org/api/query"
+    params:
+      search_query: "all:multimodal+AND+all:safety+AND+all:llm"
+      max_results: 100
+      sortBy: submittedDate
+      sortOrder: descending
+    interval: 3
+    category: 学术论文
+    enabled: true
+
+  - name: "arXiv MLLM+Jailbreak"
+    type: arxiv_api
+    endpoint: "http://export.arxiv.org/api/query"
+    params:
+      search_query: "all:multimodal+AND+all:jailbreak"
+      max_results: 100
+      sortBy: submittedDate
+      sortOrder: descending
+    interval: 3
+    category: 学术论文
+    enabled: true
+
+  - name: "arXiv VLM+Adversarial"
+    type: arxiv_api
+    endpoint: "http://export.arxiv.org/api/query"
+    params:
+      search_query: "all:VLM+AND+all:adversarial"
+      max_results: 100
+      sortBy: submittedDate
+      sortOrder: descending
+    interval: 3
+    category: 学术论文
+    enabled: true
+
+  # ===== RSS Feeds =====
+  - name: "OpenAI Blog"
+    type: rss
+    feed_url: "https://openai.com/blog/news.xml"
+    interval: 5
+    category: 官方新闻
+    enabled: true
+
+  - name: "Google DeepMind Blog"
+    type: rss
+    feed_url: "https://deepmind.google/blog/rss/"
+    interval: 5
+    category: 官方新闻
+    enabled: true
+
+  - name: "Meta AI Blog"
+    type: rss
+    feed_url: "https://ai.meta.com/blog/rss/"
+    interval: 5
+    category: 官方新闻
+    enabled: true
+
+  - name: "Google AI Blog"
+    type: rss
+    feed_url: "https://ai.googleblog.com/rss/"
+    interval: 5
+    category: 官方新闻
+    enabled: true
+
+  - name: "Microsoft Research"
+    type: rss
+    feed_url: "https://www.microsoft.com/en-us/research/feed/"
+    interval: 5
+    category: 官方新闻
+    enabled: true
+
+  - name: "Hugging Face Blog"
+    type: rss
+    feed_url: "https://huggingface.co/blog/feed.xml"
+    interval: 5
+    category: 开源发布
+    enabled: true
+
+  - name: "Hugging Face Papers"
+    type: rss
+    feed_url: "https://huggingface.co/papers/feed"
+    interval: 5
+    category: 学术论文
+    enabled: true
+
+  # ===== Web Scrape Targets (no RSS available) =====
+  - name: "BAAI 智源研究院"
+    type: web_scrape
+    page_url: "https://www.baai.ac.cn/portal/list/index/id/3.html"
+    interval: 10
+    category: 官方新闻
+    enabled: false
+
+  - name: "Qwen Team Blog"
+    type: web_scrape
+    page_url: "https://qwenlm.github.io/blog/"
+    interval: 10
+    category: 官方新闻
+    enabled: false
+
+  - name: "Anthropic Blog"
+    type: rss
+    feed_url: "https://www.anthropic.com/feed.xml"
+    interval: 5
+    category: 官方新闻
+    enabled: true
+
+  - name: "Meta Research Blog"
+    type: rss
+    feed_url: "https://research.facebook.com/blog/rss/"
+    interval: 5
+    category: 官方新闻
+    enabled: true
