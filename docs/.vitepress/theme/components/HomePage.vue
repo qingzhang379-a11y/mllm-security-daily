@@ -10,11 +10,11 @@
         </div>
 
         <div class="nav-links">
-          <a href="/" class="nav-link active">首页</a>
-          <a href="/daily" class="nav-link">每日归档</a>
-          <a href="/monthly" class="nav-link">月度汇总</a>
-          <a href="/backdoor" class="nav-link">后门专题</a>
-          <a href="/sources" class="nav-link">数据源订阅</a>
+          <a :href="basePath + ''" class="nav-link active">首页</a>
+          <a :href="basePath + 'daily'" class="nav-link">每日归档</a>
+          <a :href="basePath + 'monthly'" class="nav-link">月度汇总</a>
+          <a :href="basePath + 'backdoor'" class="nav-link">后门专题</a>
+          <a :href="basePath + 'sources'" class="nav-link">数据源订阅</a>
         </div>
 
         <button class="theme-toggle" @click="toggleTheme" title="主题切换">
@@ -177,6 +177,8 @@ const pagedItems = computed(() => { const s = (currentPage.value-1)*PAGE_SIZE; r
 watch(filteredItems, () => { currentPage.value = 1 })
 
 function refresh() { window.location.reload() }
+
+const basePath = import.meta.env.BASE_URL || '/'
 
 const isDark = ref(true)
 function toggleTheme() {
