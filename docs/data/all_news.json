@@ -1,9 +1,357 @@
 {
   "meta": {
-    "total_count": 0,
-    "last_updated": "2026-07-27T03:49:17Z",
-    "today_new": 10,
-    "today_added": 0
+    "total_count": 15,
+    "last_updated": "2026-08-05T02:54:12Z",
+    "today_new": 15,
+    "today_added": 15
   },
-  "news": []
+  "news": [
+    {
+      "id": "ea80f2ffa0df",
+      "title": "AprielGuard: A Guardrail for Safety and Adversarial Robustness in Modern LLM Systems",
+      "abstract": "",
+      "source": "Hugging Face Blog (via HF Mirror)",
+      "source_type": "rss",
+      "publish_date": "2025-12-23",
+      "category": "开源发布",
+      "is_backdoor": false,
+      "tags": [
+        "AI安全",
+        "鲁棒性"
+      ],
+      "origin_url": "https://hf-mirror.com/blog/ServiceNow-AI/aprielguard",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-05",
+      "is_safe": true,
+      "security_tags": [
+        "security",
+        "robustness"
+      ],
+      "category_tag": "security"
+    },
+    {
+      "id": "6c9627634600",
+      "title": "Qwen3Guard: Real-time Safety for Your Token StreamTech Report GitHub Hugging Fac",
+      "abstract": "Tech Report GitHub Hugging Face ModelScope DISCORD\nIntroduction We are excited to introduce Qwen3Guard, the first safety guardrail model in the Qwen family. Built upon the powerful Qwen3 foundation models and fine-tuned specifically for safety classificatoin, Qwen3Guard ensures responsible AI intera",
+      "source": "阿里云 Qwen 团队 Blog",
+      "source_type": "web_scrape",
+      "publish_date": "2025-09-23",
+      "category": "官方新闻",
+      "is_backdoor": false,
+      "tags": [
+        "AI安全"
+      ],
+      "origin_url": "https://qwenlm.github.io/blog/qwen3guard/",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-05",
+      "is_safe": true,
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security"
+    },
+    {
+      "id": "1af747610f0a",
+      "title": "Visible Watermarking with Gradio",
+      "abstract": "",
+      "source": "Hugging Face Blog (via HF Mirror)",
+      "source_type": "rss",
+      "publish_date": "2025-09-15",
+      "category": "开源发布",
+      "is_backdoor": false,
+      "tags": [
+        "可信性"
+      ],
+      "origin_url": "https://hf-mirror.com/blog/watermarking-with-gradio",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-05",
+      "is_safe": true,
+      "security_tags": [
+        "trustworthy"
+      ],
+      "category_tag": "trustworthy"
+    },
+    {
+      "id": "f9fb0dc59de8",
+      "title": "GSPO: Towards Scalable Reinforcement Learning for Language ModelsPAPER DISCORD\nI",
+      "abstract": "PAPER DISCORD\nIntroduction Reinforcement Learning (RL) has emerged as a pivotal paradigm for scaling language models and enhancing their deep reasoning and problem-solving capabilities. To scale RL, the foremost prerequisite is maintaining stable and robust training dynamics. However, we observe tha",
+      "source": "阿里云 Qwen 团队 Blog",
+      "source_type": "web_scrape",
+      "publish_date": "2025-07-27",
+      "category": "官方新闻",
+      "is_backdoor": false,
+      "tags": [
+        "鲁棒性"
+      ],
+      "origin_url": "https://qwenlm.github.io/blog/gspo/",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-05",
+      "is_safe": true,
+      "security_tags": [
+        "robustness"
+      ],
+      "category_tag": "robustness"
+    },
+    {
+      "id": "0e490030bdf6",
+      "title": "Ettin Suite: SoTA Paired Encoders and Decoders",
+      "abstract": "",
+      "source": "Hugging Face Blog (via HF Mirror)",
+      "source_type": "rss",
+      "publish_date": "2025-07-16",
+      "category": "开源发布",
+      "is_backdoor": false,
+      "tags": [
+        "AI测试"
+      ],
+      "origin_url": "https://hf-mirror.com/blog/ettin",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-05",
+      "is_safe": true,
+      "security_tags": [
+        "testing"
+      ],
+      "category_tag": "testing"
+    },
+    {
+      "id": "29a256e25087",
+      "title": "ScreenSuite - The most comprehensive evaluation suite for GUI Agents!",
+      "abstract": "",
+      "source": "Hugging Face Blog (via HF Mirror)",
+      "source_type": "rss",
+      "publish_date": "2025-06-06",
+      "category": "开源发布",
+      "is_backdoor": false,
+      "tags": [
+        "AI测试"
+      ],
+      "origin_url": "https://hf-mirror.com/blog/screensuite",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-05",
+      "is_safe": true,
+      "security_tags": [
+        "testing"
+      ],
+      "category_tag": "testing"
+    },
+    {
+      "id": "fdcdb334b0de",
+      "title": "HF Mirror Teams Up with Protect AI: Enhancing Model Security for the ML Community",
+      "abstract": "",
+      "source": "Hugging Face Blog (via HF Mirror)",
+      "source_type": "rss",
+      "publish_date": "2024-10-22",
+      "category": "开源发布",
+      "is_backdoor": false,
+      "tags": [
+        "AI安全"
+      ],
+      "origin_url": "https://hf-mirror.com/blog/protectai",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-05",
+      "is_safe": true,
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security"
+    },
+    {
+      "id": "ef4477a63b00",
+      "title": "AI Watermarking 101: Tools and Techniques",
+      "abstract": "",
+      "source": "Hugging Face Blog (via HF Mirror)",
+      "source_type": "rss",
+      "publish_date": "2024-02-26",
+      "category": "开源发布",
+      "is_backdoor": false,
+      "tags": [
+        "可信性"
+      ],
+      "origin_url": "https://hf-mirror.com/blog/watermarking",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-05",
+      "is_safe": true,
+      "security_tags": [
+        "trustworthy"
+      ],
+      "category_tag": "trustworthy"
+    },
+    {
+      "id": "e3ef967cc236",
+      "title": "Constitutional AI with Open LLMs",
+      "abstract": "",
+      "source": "Hugging Face Blog (via HF Mirror)",
+      "source_type": "rss",
+      "publish_date": "2024-02-01",
+      "category": "开源发布",
+      "is_backdoor": false,
+      "tags": [
+        "AI安全"
+      ],
+      "origin_url": "https://hf-mirror.com/blog/constitutional_ai",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-05",
+      "is_safe": true,
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security"
+    },
+    {
+      "id": "da7c08655e64",
+      "title": "The Hallucinations Leaderboard, an Open Effort to Measure Hallucinations in Large Language Models",
+      "abstract": "",
+      "source": "Hugging Face Blog (via HF Mirror)",
+      "source_type": "rss",
+      "publish_date": "2024-01-29",
+      "category": "开源发布",
+      "is_backdoor": false,
+      "tags": [
+        "可信性"
+      ],
+      "origin_url": "https://hf-mirror.com/blog/leaderboard-hallucinations",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-05",
+      "is_safe": true,
+      "security_tags": [
+        "trustworthy"
+      ],
+      "category_tag": "trustworthy"
+    },
+    {
+      "id": "8147d5993982",
+      "title": "A guide to setting up your own HF Mirror leaderboard: an end-to-end example with Vectara's hallucination leaderboard",
+      "abstract": "",
+      "source": "Hugging Face Blog (via HF Mirror)",
+      "source_type": "rss",
+      "publish_date": "2024-01-12",
+      "category": "开源发布",
+      "is_backdoor": false,
+      "tags": [
+        "可信性"
+      ],
+      "origin_url": "https://hf-mirror.com/blog/leaderboard-vectara",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-05",
+      "is_safe": true,
+      "security_tags": [
+        "trustworthy"
+      ],
+      "category_tag": "trustworthy"
+    },
+    {
+      "id": "830b17b38d15",
+      "title": "Ethics and Society Newsletter #4: Bias in Text-to-Image Models",
+      "abstract": "",
+      "source": "Hugging Face Blog (via HF Mirror)",
+      "source_type": "rss",
+      "publish_date": "2023-06-26",
+      "category": "开源发布",
+      "is_backdoor": false,
+      "tags": [
+        "可信性"
+      ],
+      "origin_url": "https://hf-mirror.com/blog/ethics-soc-4",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-05",
+      "is_safe": true,
+      "security_tags": [
+        "trustworthy"
+      ],
+      "category_tag": "trustworthy"
+    },
+    {
+      "id": "7cc123a8e2b1",
+      "title": "AI Policy @🤗: Response to the U.S. NTIA's Request for Comment on AI Accountability",
+      "abstract": "",
+      "source": "Hugging Face Blog (via HF Mirror)",
+      "source_type": "rss",
+      "publish_date": "2023-06-20",
+      "category": "开源发布",
+      "is_backdoor": false,
+      "tags": [
+        "可信性"
+      ],
+      "origin_url": "https://hf-mirror.com/blog/policy-ntia-rfc",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-05",
+      "is_safe": true,
+      "security_tags": [
+        "trustworthy"
+      ],
+      "category_tag": "trustworthy"
+    },
+    {
+      "id": "70c1b33bac29",
+      "title": "Creating Privacy Preserving AI with Substra",
+      "abstract": "",
+      "source": "Hugging Face Blog (via HF Mirror)",
+      "source_type": "rss",
+      "publish_date": "2023-04-12",
+      "category": "开源发布",
+      "is_backdoor": false,
+      "tags": [
+        "可信性"
+      ],
+      "origin_url": "https://hf-mirror.com/blog/owkin-substra",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-05",
+      "is_safe": true,
+      "security_tags": [
+        "trustworthy"
+      ],
+      "category_tag": "trustworthy"
+    },
+    {
+      "id": "cb9bb914558f",
+      "title": "Federated Learning using HF Mirror and Flower",
+      "abstract": "",
+      "source": "Hugging Face Blog (via HF Mirror)",
+      "source_type": "rss",
+      "publish_date": "2023-03-27",
+      "category": "开源发布",
+      "is_backdoor": false,
+      "tags": [
+        "可信性"
+      ],
+      "origin_url": "https://hf-mirror.com/blog/fl-with-flower",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-05",
+      "is_safe": true,
+      "security_tags": [
+        "trustworthy"
+      ],
+      "category_tag": "trustworthy"
+    }
+  ]
 }

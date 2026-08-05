@@ -1,0 +1,48 @@
+[
+  {
+    "id": "6c9627634600",
+    "title": "Qwen3Guard: Real-time Safety for Your Token StreamTech Report GitHub Hugging Fac",
+    "abstract": "Tech Report GitHub Hugging Face ModelScope DISCORD\nIntroduction We are excited to introduce Qwen3Guard, the first safety guardrail model in the Qwen family. Built upon the powerful Qwen3 foundation models and fine-tuned specifically for safety classificatoin, Qwen3Guard ensures responsible AI intera",
+    "source": "阿里云 Qwen 团队 Blog",
+    "source_type": "web_scrape",
+    "publish_date": "2025-09-23",
+    "category": "官方新闻",
+    "is_backdoor": false,
+    "tags": [
+      "AI安全"
+    ],
+    "origin_url": "https://qwenlm.github.io/blog/qwen3guard/",
+    "pdf_url": "",
+    "arxiv_id": "",
+    "is_today_new": true,
+    "created_at": "2026-08-05",
+    "is_safe": true,
+    "security_tags": [
+      "security"
+    ],
+    "category_tag": "security"
+  },
+  {
+    "id": "1af747610f0a",
+    "title": "Visible Watermarking with Gradio",
+    "abstract": "",
+    "source": "Hugging Face Blog (via HF Mirror)",
+    "source_type": "rss",
+    "publish_date": "2025-09-15",
+    "category": "开源发布",
+    "is_backdoor": false,
+    "tags": [
+      "可信性"
+    ],
+    "origin_url": "https://hf-mirror.com/blog/watermarking-with-gradio",
+    "pdf_url": "",
+    "arxiv_id": "",
+    "is_today_new": true,
+    "created_at": "2026-08-05",
+    "is_safe": true,
+    "security_tags": [
+      "trustworthy"
+    ],
+    "category_tag": "trustworthy"
+  }
+]

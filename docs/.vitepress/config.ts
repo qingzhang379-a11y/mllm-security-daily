@@ -11,18 +11,14 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#1a365d' }],
+    // Font Awesome linear icons
+    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' }],
   ],
 
   themeConfig: {
     logo: false,
-    siteTitle: '🔬 MLLM安全日报',
-    nav: [
-      { text: '首页', link: '/' },
-      { text: '每日日报', link: '/daily' },
-      { text: '月度汇总', link: '/monthly' },
-      { text: '⚠️ 后门专题', link: '/backdoor' },
-      { text: '数据源说明', link: '/sources' },
-    ],
+    siteTitle: false,
+    nav: [],
 
     socialLinks: [],
 

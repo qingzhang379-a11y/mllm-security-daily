@@ -1,0 +1,27 @@
+[
+  {
+    "id": "ea80f2ffa0df",
+    "title": "AprielGuard: A Guardrail for Safety and Adversarial Robustness in Modern LLM Systems",
+    "abstract": "",
+    "source": "Hugging Face Blog (via HF Mirror)",
+    "source_type": "rss",
+    "publish_date": "2025-12-23",
+    "category": "开源发布",
+    "is_backdoor": false,
+    "tags": [
+      "AI安全",
+      "鲁棒性"
+    ],
+    "origin_url": "https://hf-mirror.com/blog/ServiceNow-AI/aprielguard",
+    "pdf_url": "",
+    "arxiv_id": "",
+    "is_today_new": true,
+    "created_at": "2026-08-05",
+    "is_safe": true,
+    "security_tags": [
+      "security",
+      "robustness"
+    ],
+    "category_tag": "security"
+  }
+]

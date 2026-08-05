@@ -1,0 +1,25 @@
+[
+  {
+    "id": "70c1b33bac29",
+    "title": "Creating Privacy Preserving AI with Substra",
+    "abstract": "",
+    "source": "Hugging Face Blog (via HF Mirror)",
+    "source_type": "rss",
+    "publish_date": "2023-04-12",
+    "category": "开源发布",
+    "is_backdoor": false,
+    "tags": [
+      "可信性"
+    ],
+    "origin_url": "https://hf-mirror.com/blog/owkin-substra",
+    "pdf_url": "",
+    "arxiv_id": "",
+    "is_today_new": true,
+    "created_at": "2026-08-05",
+    "is_safe": true,
+    "security_tags": [
+      "trustworthy"
+    ],
+    "category_tag": "trustworthy"
+  }
+]

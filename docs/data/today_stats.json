@@ -1,11 +1,13 @@
 {
-  "date": "2026-07-27",
-  "total_items": 10,
+  "date": "2026-08-05",
+  "total_items": 15,
   "backdoor_items": 0,
   "category_breakdown": {
-    "官方新闻": 10
+    "官方新闻": 2,
+    "开源发布": 13
   },
   "sources": [
-    "Microsoft Research"
+    "阿里云 Qwen 团队 Blog",
+    "Hugging Face Blog (via HF Mirror)"
   ]
 }
