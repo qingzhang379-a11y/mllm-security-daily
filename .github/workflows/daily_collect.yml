@@ -50,7 +50,7 @@ jobs:
           python collector/main.py 2>&1 | tee collector/logs/collect_run.log
         env:
           PYTHONUNBUFFERED: 1
-          LOG_LEVEL: ${{ inputs.log_level || 'INFO' }}
+          LOG_LEVEL: "${{ inputs.log_level }}"
           # GitHub Actions 云端环境直连，无需也必不能用本地 Clash 代理
           MLLM_PROXY: ""
 
@@ -102,7 +102,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
           publish_dir: docs/.vitepress/dist
           publish_branch: gh-pages
           force_orphan: true
