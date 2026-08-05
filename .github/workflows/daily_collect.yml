@@ -51,7 +51,7 @@ jobs:
         env:
           PYTHONUNBUFFERED: 1
           LOG_LEVEL: "${{ inputs.log_level }}"
-          # GitHub Actions 云端环境直连，无需也必不能用本地 Clash 代理
+          # Disable local Clash proxy in GitHub Actions cloud environment
           MLLM_PROXY: ""
 
       # Step 5: Show collection results
@@ -72,7 +72,7 @@ jobs:
         run: |
           git config --local user.email "mllm-bot@github.com"
           git config --local user.name "MLLM Security Bot"
-          # 提交全部分片数据：all_news / index / latest / stats / 按月归档
+          # Commit all sharded data: index / latest / stats / monthly archive
           git add docs/data/all_news.json docs/data/index.json docs/data/latest.json docs/data/today_stats.json
           git add docs/data/archive
           # Only commit if there are changes

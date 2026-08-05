@@ -46,7 +46,7 @@ jobs:
         env:
           PYTHONUNBUFFERED: 1
           LOG_LEVEL: "${{ inputs.log_level }}"
-          # GitHub Actions 云端环境直连，无需也必不能用本地 Clash 代理
+          # Disable local Clash proxy in GitHub Actions cloud environment
           MLLM_PROXY: ""
 
       - name: Show collection results
