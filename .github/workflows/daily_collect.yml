@@ -51,6 +51,8 @@ jobs:
         env:
           PYTHONUNBUFFERED: 1
           LOG_LEVEL: ${{ inputs.log_level || 'INFO' }}
+          # GitHub Actions 云端环境直连，无需也必不能用本地 Clash 代理
+          MLLM_PROXY: ""
 
       # Step 5: Show collection results
       - name: Show collection summary
@@ -70,7 +72,9 @@ jobs:
         run: |
           git config --local user.email "mllm-bot@github.com"
           git config --local user.name "MLLM Security Bot"
-          git add docs/data/all_news.json docs/data/today_stats.json
+          # 提交全部分片数据：all_news / index / latest / stats / 按月归档
+          git add docs/data/all_news.json docs/data/index.json docs/data/latest.json docs/data/today_stats.json
+          git add docs/data/archive
           # Only commit if there are changes
           if git diff --cached --quiet; then
             echo "No data changes to commit"
@@ -104,4 +108,4 @@ jobs:
           force_orphan: true
           user_name: 'MLLM Security Bot'
           user_email: 'mllm-bot@github.com'
-          commit_message: 'deploy: site update $(date +'%Y-%m-%d')'
+          commit_message: "deploy: site update $(date +%Y-%m-%d)"
