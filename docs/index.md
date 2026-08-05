@@ -4,7 +4,7 @@ layout: page
 
 <script setup>
 import HomePage from './.vitepress/theme/components/HomePage.vue'
-import latestData from './data/latest.json'
+import allData from './data/all_news.json'
 </script>
 
-<HomePage :data="latestData" />
+<HomePage :data="allData" />
