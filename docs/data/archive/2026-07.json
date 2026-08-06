@@ -19,7 +19,7 @@
     "arxiv_id": "",
     "is_today_new": true,
     "created_at": "2026-08-06",
-    "is_safe": false,
+    "is_safe": true,
     "security_tags": [],
     "category_tag": ""
   },
@@ -45,112 +45,7 @@
     "arxiv_id": "",
     "is_today_new": true,
     "created_at": "2026-08-06",
-    "is_safe": false,
-    "security_tags": [],
-    "category_tag": ""
-  },
-  {
-    "id": "5f99c25bc46c",
-    "title": "Echoverse: Deep, evolving environments for computer-use agents",
-    "abstract": "Computer-use AI agents struggle with multi-step workflows like email and customer support. Echoverse trains agents in realistic environments rather than simply providing more training tasks, helping them improve as the tasks, tests, and environments evolve.\nThe post Echoverse: Deep, evolving environ",
-    "source": "Microsoft Research",
-    "source_type": "rss",
-    "publish_date": "2026-07-30",
-    "category": "官方新闻",
-    "is_backdoor": false,
-    "tags": [
-      "Research Blog"
-    ],
-    "origin_url": "https://www.microsoft.com/en-us/research/blog/echoverse-deep-evolving-environments-for-computer-use-agents/",
-    "pdf_url": "",
-    "arxiv_id": "",
-    "is_today_new": true,
-    "created_at": "2026-08-06",
-    "is_safe": false,
-    "security_tags": [],
-    "category_tag": ""
-  },
-  {
-    "id": "07c46a80832d",
-    "title": "EvoLib: Turning experience into evolving knowledge",
-    "abstract": "LLMs do not get smarter just by remembering more. EvoLib turns experience into evolving knowledge, taking reusable skills and insights that help models learn and adapt across tasks long after deployment. \nThe post EvoLib: Turning experience into evolving knowledge appeared first on Microsoft Researc",
-    "source": "Microsoft Research",
-    "source_type": "rss",
-    "publish_date": "2026-07-30",
-    "category": "官方新闻",
-    "is_backdoor": false,
-    "tags": [
-      "Research Blog"
-    ],
-    "origin_url": "https://www.microsoft.com/en-us/research/blog/evolib-turning-experience-into-evolving-knowledge/",
-    "pdf_url": "",
-    "arxiv_id": "",
-    "is_today_new": true,
-    "created_at": "2026-08-06",
-    "is_safe": false,
-    "security_tags": [],
-    "category_tag": ""
-  },
-  {
-    "id": "38861e444aa1",
-    "title": "Verifying Rust cryptography in SymCrypt, from standards to code",
-    "abstract": "Cryptographic code supports vital protections in modern computing systems. Learn how a new method helps verify code as developers write it while preserving speed and adaptability as it gets implemented and evolves.\nThe post Verifying Rust cryptography in SymCrypt, from standards to code appeared fir",
-    "source": "Microsoft Research",
-    "source_type": "rss",
-    "publish_date": "2026-07-13",
-    "category": "官方新闻",
-    "is_backdoor": false,
-    "tags": [
-      "Research Blog"
-    ],
-    "origin_url": "https://www.microsoft.com/en-us/research/blog/verifying-rust-cryptography-in-symcrypt-from-standards-to-code/",
-    "pdf_url": "",
-    "arxiv_id": "",
-    "is_today_new": true,
-    "created_at": "2026-08-06",
-    "is_safe": false,
-    "security_tags": [],
-    "category_tag": ""
-  },
-  {
-    "id": "df104d1e64cf",
-    "title": "Aurora 1.5: Extending open foundation models for weather and Earth-system applications",
-    "abstract": "Aurora 1.5 adds 22 more variables, hourly temporal resolution, and probabilistic ensemble forecasting to the Aurora foundation model, making it more useful for real-world weather, climate, and energy applications.\nThe post Aurora 1.5: Extending open foundation models for weather and Earth-system app",
-    "source": "Microsoft Research",
-    "source_type": "rss",
-    "publish_date": "2026-07-09",
-    "category": "官方新闻",
-    "is_backdoor": false,
-    "tags": [
-      "Research Blog"
-    ],
-    "origin_url": "https://www.microsoft.com/en-us/research/blog/aurora-1-5-extending-open-foundation-models-for-weather-and-earth-system-applications/",
-    "pdf_url": "",
-    "arxiv_id": "",
-    "is_today_new": true,
-    "created_at": "2026-08-06",
-    "is_safe": false,
-    "security_tags": [],
-    "category_tag": ""
-  },
-  {
-    "id": "29da6d1618e7",
-    "title": "Flint: A visualization language for the AI era",
-    "abstract": "Short chart specifications are easy to write, but often produce uninspiring results. Flint is an open-source visualization language that offers a middle path, letting AI agents create expressive charts from compact, human-editable specifications.\nThe post Flint: A visualization language for the AI e",
-    "source": "Microsoft Research",
-    "source_type": "rss",
-    "publish_date": "2026-07-08",
-    "category": "官方新闻",
-    "is_backdoor": false,
-    "tags": [
-      "Research Blog"
-    ],
-    "origin_url": "https://www.microsoft.com/en-us/research/blog/flint-a-visualization-language-for-the-ai-era/",
-    "pdf_url": "",
-    "arxiv_id": "",
-    "is_today_new": true,
-    "created_at": "2026-08-06",
-    "is_safe": false,
+    "is_safe": true,
     "security_tags": [],
     "category_tag": ""
   }

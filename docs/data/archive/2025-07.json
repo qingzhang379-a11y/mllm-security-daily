@@ -15,53 +15,11 @@
     "pdf_url": "",
     "arxiv_id": "",
     "is_today_new": true,
-    "created_at": "2026-08-05",
+    "created_at": "2026-08-06",
     "is_safe": true,
     "security_tags": [
       "robustness"
     ],
     "category_tag": "robustness"
-  },
-  {
-    "id": "0e490030bdf6",
-    "title": "Ettin Suite: SoTA Paired Encoders and Decoders",
-    "abstract": "",
-    "source": "Hugging Face Blog (via HF Mirror)",
-    "source_type": "rss",
-    "publish_date": "2025-07-16",
-    "category": "开源发布",
-    "is_backdoor": false,
-    "tags": [
-      "AI测试"
-    ],
-    "origin_url": "https://hf-mirror.com/blog/ettin",
-    "pdf_url": "",
-    "arxiv_id": "",
-    "is_today_new": true,
-    "created_at": "2026-08-05",
-    "is_safe": true,
-    "security_tags": [
-      "testing"
-    ],
-    "category_tag": "testing"
-  },
-  {
-    "id": "9b3e075e914d",
-    "title": "Qwen-MT: Where Speed Meets Smart TranslationDEMO API DISCORD\nIntroduction Here w",
-    "abstract": "DEMO API DISCORD\nIntroduction Here we introduce the latest update of Qwen-MT (qwen-mt-turbo) via Qwen API. This update builds upon the powerful Qwen3, leveraging trillions multilingual and translation tokens to comprehensively enhance the model’s multilingual understanding and translation capabiliti",
-    "source": "阿里云 Qwen 团队 Blog",
-    "source_type": "web_scrape",
-    "publish_date": "2025-07-24",
-    "category": "官方新闻",
-    "is_backdoor": false,
-    "tags": [],
-    "origin_url": "https://qwenlm.github.io/blog/qwen-mt/",
-    "pdf_url": "",
-    "arxiv_id": "",
-    "is_today_new": true,
-    "created_at": "2026-08-06",
-    "is_safe": false,
-    "security_tags": [],
-    "category_tag": ""
   }
 ]

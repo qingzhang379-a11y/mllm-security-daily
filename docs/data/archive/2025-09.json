@@ -15,34 +15,11 @@
     "pdf_url": "",
     "arxiv_id": "",
     "is_today_new": true,
-    "created_at": "2026-08-05",
+    "created_at": "2026-08-06",
     "is_safe": true,
     "security_tags": [
       "security"
     ],
     "category_tag": "security"
-  },
-  {
-    "id": "1af747610f0a",
-    "title": "Visible Watermarking with Gradio",
-    "abstract": "",
-    "source": "Hugging Face Blog (via HF Mirror)",
-    "source_type": "rss",
-    "publish_date": "2025-09-15",
-    "category": "开源发布",
-    "is_backdoor": false,
-    "tags": [
-      "可信性"
-    ],
-    "origin_url": "https://hf-mirror.com/blog/watermarking-with-gradio",
-    "pdf_url": "",
-    "arxiv_id": "",
-    "is_today_new": true,
-    "created_at": "2026-08-05",
-    "is_safe": true,
-    "security_tags": [
-      "trustworthy"
-    ],
-    "category_tag": "trustworthy"
   }
 ]

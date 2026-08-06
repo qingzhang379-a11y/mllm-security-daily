@@ -1,68 +1,18 @@
 {
   "meta": {
-    "total_count": 31,
-    "last_updated": "2026-08-06T08:00:50Z",
-    "today_new": 16,
-    "today_added": 16
+    "total_count": 5,
+    "last_updated": "2026-08-06T09:28:06Z",
+    "today_new": 5,
+    "today_added": 5
   },
   "ids": [
-    "6c9627634600",
-    "f9fb0dc59de8",
-    "ea80f2ffa0df",
-    "1af747610f0a",
-    "0e490030bdf6",
-    "29a256e25087",
-    "fdcdb334b0de",
-    "ef4477a63b00",
-    "e3ef967cc236",
-    "da7c08655e64",
-    "8147d5993982",
-    "830b17b38d15",
-    "7cc123a8e2b1",
-    "70c1b33bac29",
-    "cb9bb914558f",
     "06ed47043b6f",
     "86ea98d74ff3",
     "22a1c4df23df",
-    "e578a4550681",
-    "5f99c25bc46c",
-    "07c46a80832d",
-    "38861e444aa1",
-    "df104d1e64cf",
-    "29da6d1618e7",
-    "ddabafdf5076",
-    "9106e2ea8a22",
-    "22396c42a6d1",
-    "e1906ba6fcad",
-    "17846e5dd6a1",
-    "e4ec685143b8",
-    "9b3e075e914d"
+    "6c9627634600",
+    "f9fb0dc59de8"
   ],
   "items": [
-    {
-      "id": "e578a4550681",
-      "title": "Orchard: An open framework for scalable agentic AI",
-      "publish_date": "2026-08-03",
-      "category": "官方新闻",
-      "is_backdoor": false,
-      "source": "Microsoft Research"
-    },
-    {
-      "id": "5f99c25bc46c",
-      "title": "Echoverse: Deep, evolving environments for computer-use agents",
-      "publish_date": "2026-07-30",
-      "category": "官方新闻",
-      "is_backdoor": false,
-      "source": "Microsoft Research"
-    },
-    {
-      "id": "07c46a80832d",
-      "title": "EvoLib: Turning experience into evolving knowledge",
-      "publish_date": "2026-07-30",
-      "category": "官方新闻",
-      "is_backdoor": false,
-      "source": "Microsoft Research"
-    },
     {
       "id": "06ed47043b6f",
       "title": "V&V takes on OpenAI’s long-horizon incidents",
@@ -70,14 +20,6 @@
       "category": "官方新闻",
       "is_backdoor": false,
       "source": "Foretellix CTO Blog - AI Safety"
-    },
-    {
-      "id": "38861e444aa1",
-      "title": "Verifying Rust cryptography in SymCrypt, from standards to code",
-      "publish_date": "2026-07-13",
-      "category": "官方新闻",
-      "is_backdoor": false,
-      "source": "Microsoft Research"
     },
     {
       "id": "86ea98d74ff3",
@@ -88,54 +30,6 @@
       "source": "Foretellix CTO Blog - AI Safety"
     },
     {
-      "id": "df104d1e64cf",
-      "title": "Aurora 1.5: Extending open foundation models for weather and Earth-system applications",
-      "publish_date": "2026-07-09",
-      "category": "官方新闻",
-      "is_backdoor": false,
-      "source": "Microsoft Research"
-    },
-    {
-      "id": "29da6d1618e7",
-      "title": "Flint: A visualization language for the AI era",
-      "publish_date": "2026-07-08",
-      "category": "官方新闻",
-      "is_backdoor": false,
-      "source": "Microsoft Research"
-    },
-    {
-      "id": "ddabafdf5076",
-      "title": "SkillOpt: Agent skills as trainable parameters",
-      "publish_date": "2026-06-30",
-      "category": "官方新闻",
-      "is_backdoor": false,
-      "source": "Microsoft Research"
-    },
-    {
-      "id": "9106e2ea8a22",
-      "title": "Memora: A Harmonic Memory Representation Balancing Abstraction and Specificity",
-      "publish_date": "2026-06-29",
-      "category": "官方新闻",
-      "is_backdoor": false,
-      "source": "Microsoft Research"
-    },
-    {
-      "id": "22396c42a6d1",
-      "title": "Understanding the brain with AI-driven explanations and experiments",
-      "publish_date": "2026-06-25",
-      "category": "官方新闻",
-      "is_backdoor": false,
-      "source": "Microsoft Research"
-    },
-    {
-      "id": "e1906ba6fcad",
-      "title": "Talos: Scaling rare disease diagnosis with automated, iterative genomic reanalysis",
-      "publish_date": "2026-06-24",
-      "category": "官方新闻",
-      "is_backdoor": false,
-      "source": "Microsoft Research"
-    },
-    {
       "id": "22a1c4df23df",
       "title": "Coverage-driven alignment  –  What ‘Teaching Claude Why’ can borrow from AV verification",
       "publish_date": "2026-06-08",
@@ -144,41 +38,9 @@
       "source": "Foretellix CTO Blog - AI Safety"
     },
     {
-      "id": "ea80f2ffa0df",
-      "title": "AprielGuard: A Guardrail for Safety and Adversarial Robustness in Modern LLM Systems",
-      "publish_date": "2025-12-23",
-      "category": "开源发布",
-      "is_backdoor": false,
-      "source": "Hugging Face Blog (via HF Mirror)"
-    },
-    {
       "id": "6c9627634600",
       "title": "Qwen3Guard: Real-time Safety for Your Token StreamTech Report GitHub Hugging Fac",
       "publish_date": "2025-09-23",
-      "category": "官方新闻",
-      "is_backdoor": false,
-      "source": "阿里云 Qwen 团队 Blog"
-    },
-    {
-      "id": "1af747610f0a",
-      "title": "Visible Watermarking with Gradio",
-      "publish_date": "2025-09-15",
-      "category": "开源发布",
-      "is_backdoor": false,
-      "source": "Hugging Face Blog (via HF Mirror)"
-    },
-    {
-      "id": "17846e5dd6a1",
-      "title": "Qwen-Image-Edit: Image Editing with Higher Quality and EfficiencyQWEN CHAT GITHU",
-      "publish_date": "2025-08-19",
-      "category": "官方新闻",
-      "is_backdoor": false,
-      "source": "阿里云 Qwen 团队 Blog"
-    },
-    {
-      "id": "e4ec685143b8",
-      "title": "Qwen-Image: Crafting with Native Text RenderingGITHUB HUGGING FACE MODELSCOPE DE",
-      "publish_date": "2025-08-04",
       "category": "官方新闻",
       "is_backdoor": false,
       "source": "阿里云 Qwen 团队 Blog"
@@ -190,102 +52,6 @@
       "category": "官方新闻",
       "is_backdoor": false,
       "source": "阿里云 Qwen 团队 Blog"
-    },
-    {
-      "id": "9b3e075e914d",
-      "title": "Qwen-MT: Where Speed Meets Smart TranslationDEMO API DISCORD\nIntroduction Here w",
-      "publish_date": "2025-07-24",
-      "category": "官方新闻",
-      "is_backdoor": false,
-      "source": "阿里云 Qwen 团队 Blog"
-    },
-    {
-      "id": "0e490030bdf6",
-      "title": "Ettin Suite: SoTA Paired Encoders and Decoders",
-      "publish_date": "2025-07-16",
-      "category": "开源发布",
-      "is_backdoor": false,
-      "source": "Hugging Face Blog (via HF Mirror)"
-    },
-    {
-      "id": "29a256e25087",
-      "title": "ScreenSuite - The most comprehensive evaluation suite for GUI Agents!",
-      "publish_date": "2025-06-06",
-      "category": "开源发布",
-      "is_backdoor": false,
-      "source": "Hugging Face Blog (via HF Mirror)"
-    },
-    {
-      "id": "fdcdb334b0de",
-      "title": "HF Mirror Teams Up with Protect AI: Enhancing Model Security for the ML Community",
-      "publish_date": "2024-10-22",
-      "category": "开源发布",
-      "is_backdoor": false,
-      "source": "Hugging Face Blog (via HF Mirror)"
-    },
-    {
-      "id": "ef4477a63b00",
-      "title": "AI Watermarking 101: Tools and Techniques",
-      "publish_date": "2024-02-26",
-      "category": "开源发布",
-      "is_backdoor": false,
-      "source": "Hugging Face Blog (via HF Mirror)"
-    },
-    {
-      "id": "e3ef967cc236",
-      "title": "Constitutional AI with Open LLMs",
-      "publish_date": "2024-02-01",
-      "category": "开源发布",
-      "is_backdoor": false,
-      "source": "Hugging Face Blog (via HF Mirror)"
-    },
-    {
-      "id": "da7c08655e64",
-      "title": "The Hallucinations Leaderboard, an Open Effort to Measure Hallucinations in Large Language Models",
-      "publish_date": "2024-01-29",
-      "category": "开源发布",
-      "is_backdoor": false,
-      "source": "Hugging Face Blog (via HF Mirror)"
-    },
-    {
-      "id": "8147d5993982",
-      "title": "A guide to setting up your own HF Mirror leaderboard: an end-to-end example with Vectara's hallucination leaderboard",
-      "publish_date": "2024-01-12",
-      "category": "开源发布",
-      "is_backdoor": false,
-      "source": "Hugging Face Blog (via HF Mirror)"
-    },
-    {
-      "id": "830b17b38d15",
-      "title": "Ethics and Society Newsletter #4: Bias in Text-to-Image Models",
-      "publish_date": "2023-06-26",
-      "category": "开源发布",
-      "is_backdoor": false,
-      "source": "Hugging Face Blog (via HF Mirror)"
-    },
-    {
-      "id": "7cc123a8e2b1",
-      "title": "AI Policy @🤗: Response to the U.S. NTIA's Request for Comment on AI Accountability",
-      "publish_date": "2023-06-20",
-      "category": "开源发布",
-      "is_backdoor": false,
-      "source": "Hugging Face Blog (via HF Mirror)"
-    },
-    {
-      "id": "70c1b33bac29",
-      "title": "Creating Privacy Preserving AI with Substra",
-      "publish_date": "2023-04-12",
-      "category": "开源发布",
-      "is_backdoor": false,
-      "source": "Hugging Face Blog (via HF Mirror)"
-    },
-    {
-      "id": "cb9bb914558f",
-      "title": "Federated Learning using HF Mirror and Flower",
-      "publish_date": "2023-03-27",
-      "category": "开源发布",
-      "is_backdoor": false,
-      "source": "Hugging Face Blog (via HF Mirror)"
     }
   ]
 }

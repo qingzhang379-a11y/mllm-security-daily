@@ -114,17 +114,11 @@ class CollectorOrchestrator:
         logger.info(f"\n--- Phase 2: Keyword matching ---")
         matched_items = self.keyword_matcher.batch_match(all_items)
 
-        # 安全过滤策略：
-        # - 精选受信源（trusted:true，手工挑选的 RSS/博客）直接保留，
-        #   因为源本身已是我们关注的方向，避免标题未命中关键词被误删
-        # - 其余源（arXiv 等全量抓取）按 is_safe 过滤，收窄范围
-        trusted_names = {
-            s["name"] for s in sources if s.get("trusted")
-        }
-        safe_items = []
-        for item in matched_items:
-            if item.get("source") in trusted_names or item.get("is_safe"):
-                safe_items.append(item)
+        # 安全过滤：所有源统一走 is_safe（AI 安全/可信主题门槛），
+        # 避免无关的通用 AI 内容（agent 框架、普通研究等）混入
+        safe_items = [
+            item for item in matched_items if item.get("is_safe")
+        ]
 
         backdoor_count = sum(1 for i in safe_items if i.get("is_backdoor"))
         logger.info(f"Phase 2 complete: {len(safe_items)} safe items kept, "

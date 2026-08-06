@@ -45,7 +45,8 @@ class KeywordMatcher:
             group = self.keywords.get(group_name, {})
             pats: list[re.Pattern] = []
             for kw in group.get("en", []):
-                pats.append(re.compile(re.escape(kw), re.IGNORECASE))
+                # 英文关键词加单词边界 \b，避免 "harm" 误匹配 "harmonic" 这类子串
+                pats.append(re.compile(rf"\b{re.escape(kw)}\b", re.IGNORECASE))
             for kw in group.get("zh", []):
                 pats.append(re.compile(re.escape(kw)))
             self._compiled[group_name] = pats
@@ -78,8 +79,10 @@ class KeywordMatcher:
             if self._match_patterns(text, self._compiled.get(group, [])):
                 hits.append(group)
 
-        # is_safe = 命中任一具体安全分类（不再由宽泛的 safety_filter 兜底，避免误收录）
-        is_safe = bool(hits)
+        # is_safe = 命中任一具体安全分类 或 命中 safety_filter（AI 安全/可信主题门槛）
+        is_safe = bool(hits) or self._match_patterns(
+            text, self._compiled.get("safety_filter", [])
+        )
 
         tags = list(item.get("tags", []) or [])
         # 添加分类标签（去重）
