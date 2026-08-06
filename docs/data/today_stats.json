@@ -1,13 +1,7 @@
 {
-  "date": "2026-08-05",
-  "total_items": 844,
-  "backdoor_items": 22,
-  "category_breakdown": {
-    "官方新闻": 10,
-    "开源发布": 834
-  },
-  "sources": [
-    "Hugging Face Blog",
-    "Microsoft Research"
-  ]
+  "date": "2026-08-06",
+  "total_items": 0,
+  "backdoor_items": 0,
+  "category_breakdown": {},
+  "sources": []
 }
