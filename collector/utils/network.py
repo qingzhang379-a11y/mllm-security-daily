@@ -31,12 +31,24 @@ class NetworkUtils:
             "MLLM-Security-Daily/1.0 (Academic Research Project)"
         )
         self._last_request_time: dict[str, float] = {}
+        # 代理配置：优先级 环境变量 MLLM_PROXY > config.yaml 的 network.proxy
+        # MLLM_PROXY 设为空字符串可显式禁用代理（如 GitHub Actions 云端环境直连）
+        import os
+        env_proxy = os.environ.get("MLLM_PROXY")
+        self.proxy = env_proxy if env_proxy is not None else (net_cfg.get("proxy", "") or "")
 
     def _get_headers(self) -> dict[str, str]:
-        return {"User-Agent": self.user_agent}
+        return {
+            "User-Agent": self.user_agent,
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+        }
 
     def _respect_interval(self, source_name: str, interval: float):
         """Ensure minimum interval between requests to the same source."""
+        # 所有 arXiv 源共享同一个 rate limit key，避免并发触发 429
+        if source_name.startswith("arXiv"):
+            source_name = "__arxiv_shared__"
         now = time.time()
         last = self._last_request_time.get(source_name, 0)
         elapsed = now - last
@@ -55,10 +67,16 @@ class NetworkUtils:
         if "headers" in kwargs:
             headers.update(kwargs.pop("headers"))
 
+        # 代理配置
+        proxies = None
+        if self.proxy:
+            proxies = {"http": self.proxy, "https": self.proxy}
+
         for attempt in range(1, self.max_retries + 1):
             try:
                 resp = requests.get(
-                    url, headers=headers, timeout=self.timeout, **kwargs
+                    url, headers=headers, timeout=self.timeout,
+                    proxies=proxies, **kwargs
                 )
                 resp.raise_for_status()
                 logger.info(f"GET {url} -> {resp.status_code}")
@@ -89,7 +107,9 @@ class NetworkUtils:
             try:
                 async with aiohttp.ClientSession(headers=headers,
                                                  timeout=timeout_obj) as session:
-                    async with session.get(url, **kwargs) as resp:
+                    # 代理配置
+                    proxy_url = self.proxy if self.proxy else None
+                    async with session.get(url, proxy=proxy_url, **kwargs) as resp:
                         text = await resp.text()
                         logger.info(f"GET {url} -> {resp.status}")
                         return text

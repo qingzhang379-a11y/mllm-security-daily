@@ -97,16 +97,18 @@ class CollectorOrchestrator:
 
         logger.info(f"Phase 1 complete: {len(all_items)} raw items collected")
 
-        # Phase 2: Keyword matching (classify backdoor / general)
+        # Phase 2: Keyword matching (classify security / backdoor) + safety filter
         logger.info(f"\n--- Phase 2: Keyword matching ---")
         matched_items = self.keyword_matcher.batch_match(all_items)
-        backdoor_count = sum(1 for i in matched_items if i.get("is_backdoor"))
-        logger.info(f"Phase 2 complete: {len(matched_items)} items, "
+        # 安全过滤：只保留命中安全关键词的条目，收窄 RSS/爬虫及宽泛 arXiv 检索的范围
+        safe_items = self.keyword_matcher.filter_safe(matched_items)
+        backdoor_count = sum(1 for i in safe_items if i.get("is_backdoor"))
+        logger.info(f"Phase 2 complete: {len(safe_items)} safe items kept, "
                     f"{backdoor_count} backdoor-related")
 
         # Phase 3: Deduplication
         logger.info(f"\n--- Phase 3: Deduplication ---")
-        new_items = self.dedup_engine.dedup(matched_items)
+        new_items = self.dedup_engine.dedup(safe_items)
         logger.info(f"Phase 3 complete: {len(new_items)} new items after dedup")
 
         if not new_items:
@@ -148,11 +150,13 @@ class CollectorOrchestrator:
         """Safely fetch from a single fetcher with error handling."""
         try:
             items = await fetcher.fetch()
-            # Add source metadata
+            # Add source metadata and standardize
             meta = fetcher.get_source_meta()
+            standardized = []
             for item in items:
                 item.update(meta)
-            return items
+                standardized.append(fetcher.to_standard_item(item))
+            return standardized
         except Exception as e:
             logger.error(f"Error fetching from {fetcher.name}: {e}")
             return []

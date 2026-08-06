@@ -1,6 +1,11 @@
 """
 Keyword Matcher - Classify news items using keyword rules.
-Matches titles and abstracts against backdoor-specific and general security keywords.
+Matches titles and abstracts against safety-oriented keyword groups.
+
+重构：以安全领域为核心。
+- is_safe: 是否命中 safety_filter（准入门槛，用于过滤 RSS/爬虫源）
+- category_tag: 命中的安全分类标签（backdoor/security/trustworthy/testing/robustness）
+- is_backdoor: 是否后门专题（红色高亮，取自 backdoor 分类）
 """
 from __future__ import annotations
 
@@ -21,10 +26,7 @@ class KeywordMatcher:
     def __init__(self, config_dir: Union[str, Path]):
         self.config_dir = Path(config_dir)
         self.keywords: dict[str, Any] = {}
-        self._compiled_backdoor_en: list[re.Pattern] = []
-        self._compiled_backdoor_zh: list[re.Pattern] = []
-        self._compiled_general_en: list[re.Pattern] = []
-        self._compiled_general_zh: list[re.Pattern] = []
+        self._compiled: dict[str, list[re.Pattern]] = {}
         self._load_keywords()
 
     def _load_keywords(self):
@@ -37,83 +39,84 @@ class KeywordMatcher:
         with open(kw_path, "r", encoding="utf-8") as f:
             self.keywords = yaml.safe_load(f) or {}
 
-        # Compile backdoor keywords (case-insensitive)
-        for kw in self.keywords.get("backdoor", {}).get("en", []):
-            self._compiled_backdoor_en.append(
-                re.compile(re.escape(kw), re.IGNORECASE)
-            )
-        for kw in self.keywords.get("backdoor", {}).get("zh", []):
-            self._compiled_backdoor_zh.append(
-                re.compile(re.escape(kw))
-            )
-
-        # Compile general security keywords
-        for kw in self.keywords.get("general", {}).get("en", []):
-            self._compiled_general_en.append(
-                re.compile(re.escape(kw), re.IGNORECASE)
-            )
-        for kw in self.keywords.get("general", {}).get("zh", []):
-            self._compiled_general_zh.append(
-                re.compile(re.escape(kw))
-            )
+        # 编译每一类关键词（按语言），全部忽略大小写
+        for group_name in ["safety_filter", "backdoor", "security",
+                           "trustworthy", "testing", "robustness"]:
+            group = self.keywords.get(group_name, {})
+            pats: list[re.Pattern] = []
+            for kw in group.get("en", []):
+                pats.append(re.compile(re.escape(kw), re.IGNORECASE))
+            for kw in group.get("zh", []):
+                pats.append(re.compile(re.escape(kw)))
+            self._compiled[group_name] = pats
 
         logger.info(
-            f"Loaded keywords: {len(self._compiled_backdoor_en)} backdoor EN, "
-            f"{len(self._compiled_backdoor_zh)} backdoor ZH, "
-            f"{len(self._compiled_general_en)} general EN, "
-            f"{len(self._compiled_general_zh)} general ZH"
+            "Loaded keyword groups: "
+            + ", ".join(f"{k}:{len(v)}" for k, v in self._compiled.items())
         )
 
-    def match(self, item: dict[str, Any]) -> dict[str, Any]:
+    def classify(self, item: dict[str, Any]) -> dict[str, Any]:
         """
-        Match a single item against keyword rules.
-        Modifies item in-place with 'is_backdoor' and 'tags' updated.
-        Returns the item.
+        对单条 item 进行安全分类（不改变是否入库）。
+        设置:
+          item['is_safe']       - 是否命中 safety_filter
+          item['security_tags'] - 命中的安全分类标签列表
+          item['category_tag']  - 主分类标签（优先 backdoor）
+          item['is_backdoor']   - 是否后门专题
         """
         title = item.get("title", "")
         abstract = item.get("abstract", "")
-        text = f"{title} {abstract}"
+        text = f"{title} {abstract}".lower()
 
-        tags = item.get("tags", [])
-        if not isinstance(tags, list):
-            tags = []
+        safety_groups = [
+            "backdoor", "security", "trustworthy", "testing", "robustness",
+        ]
 
-        # Check backdoor keywords first (high priority)
-        is_backdoor = self._match_patterns(text, self._compiled_backdoor_en) or \
-                      self._match_patterns(text, self._compiled_backdoor_zh)
+        # 逐类匹配
+        hits = []
+        for group in safety_groups:
+            if self._match_patterns(text, self._compiled.get(group, [])):
+                hits.append(group)
 
-        if is_backdoor:
-            item["is_backdoor"] = True
-            if "后门专项" not in tags:
-                tags.append("后门专项")
-            logger.info(f"  [BACKDOOR] {title[:60]}...")
-        else:
-            # Check general security keywords
-            is_security = self._match_patterns(text, self._compiled_general_en) or \
-                          self._match_patterns(text, self._compiled_general_zh)
-            if not is_security:
-                # Not a security-related item at all -> mark as non-security
-                item["is_backdoor"] = False
-                # We keep the item but it will be filtered or kept
-                # Actually, we keep all items that match at least general keywords
-                # If it doesn't match anything, it shouldn't have been collected
-                pass
-            else:
-                item["is_backdoor"] = False
+        # is_safe = 命中任一具体安全分类（不再由宽泛的 safety_filter 兜底，避免误收录）
+        is_safe = bool(hits)
+
+        tags = list(item.get("tags", []) or [])
+        # 添加分类标签（去重）
+        existing_tags = set(tags)
+        for group in hits:
+            tag_label = {
+                "backdoor": "后门专题",
+                "security": "AI安全",
+                "trustworthy": "可信性",
+                "testing": "AI测试",
+                "robustness": "鲁棒性",
+            }.get(group)
+            if tag_label and tag_label not in existing_tags:
+                tags.append(tag_label)
+                existing_tags.add(tag_label)
 
         item["tags"] = tags
+        item["is_safe"] = bool(is_safe)
+        item["security_tags"] = hits
+        item["category_tag"] = hits[0] if hits else ""
+        item["is_backdoor"] = "backdoor" in hits
         return item
 
     def batch_match(self, items: list[dict[str, Any]]) -> list[dict[str, Any]]:
-        """Match all items in a list."""
+        """对所有条目做安全分类（不改变数量）。"""
         matched = []
         for item in items:
-            matched.append(self.match(item))
+            matched.append(self.classify(item))
         return matched
 
-    def is_backdoor_related(self, item: dict[str, Any]) -> bool:
-        """Quick check if an item is backdoor-related."""
-        return item.get("is_backdoor", False)
+    def filter_safe(self, items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        """保留命中安全关键词的条目（用于 RSS/爬虫源收窄范围）。"""
+        safe = [i for i in items if i.get("is_safe")]
+        dropped = len(items) - len(safe)
+        if dropped > 0:
+            logger.info(f"Safety filter dropped {dropped} unrelated items")
+        return safe
 
     @staticmethod
     def _match_patterns(text: str, patterns: list[re.Pattern]) -> bool:

@@ -24,6 +24,12 @@ class ArxivFetcher(BaseFetcher):
         "arxiv.org": "cn.arxiv.org",
     }
 
+    # On GitHub Actions, arxiv.org is reachable; on local CN network, use cn.arxiv.org.
+    # sources.yaml already points to cn.arxiv.org, but we keep fallback for GitHub.
+    OVERSEAS_DOMAIN_MAP = {
+        "cn.arxiv.org": "export.arxiv.org",
+    }
+
     async def fetch(self) -> list[dict[str, Any]]:
         if not self.enabled:
             logger.info(f"Source {self.name} is disabled, skipping")
@@ -36,12 +42,20 @@ class ArxivFetcher(BaseFetcher):
 
         logger.info(f"Fetching arXiv: {self.name} -> {url}")
 
-        # Try primary URL
+        # Try primary URL (should be cn.arxiv.org per config)
         raw_xml = await self.network.aiohttp_get(
             url, source_name=self.name, interval=self.interval
         )
 
-        # Fallback to mirror if primary fails
+        # Fallback: if primary fails and it's a CN mirror, try overseas (for GitHub Actions)
+        if raw_xml is None and "cn.arxiv.org" in url:
+            overseas_url = url.replace("cn.arxiv.org", "export.arxiv.org")
+            logger.info(f"Trying overseas fallback: {overseas_url}")
+            raw_xml = await self.network.aiohttp_get(
+                overseas_url, source_name=self.name, interval=self.interval
+            )
+
+        # Legacy fallback (for backward compat)
         if raw_xml is None:
             mirror_url = self._get_mirror_url(url)
             if mirror_url:

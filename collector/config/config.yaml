@@ -16,6 +16,9 @@ network:
   max_retries: 3
   backoff_base: 2.0
   user_agent: "MLLM-Security-Daily/1.0 (Academic Research Project; mailto:your-email@example.com)"
+  # 代理配置：Clash Verge 默认混合端口 7897，可按你的实际端口修改
+  # 留空或不配置则不走代理（比如 GitHub Actions 环境）
+  proxy: "http://127.0.0.1:7897"
 
 # Mirror fallback for oversea sources
 mirror:

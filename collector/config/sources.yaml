@@ -1,94 +1,115 @@
-# MLLM Security Daily - Data Source Configuration
-# Each source is auto-collected on every run.
+# MLLM Security Daily - Data Source Configuration (DOMESTIC-FRIENDLY)
+# 重构：以安全领域为核心，arXiv 查询改用标题字段 ti: 收窄范围，
+# RSS/爬虫源通过 keyword_matcher.filter_safe 统一过滤
 
 sources:
 
-  # ===== arXiv API Queries =====
+  # ===== arXiv API =====
+  # 所有 arXiv 查询改用 ti: 标题字段，避免全字段 all: 误命中
+  # 注意：arXiv 源的 interval 设为 17 秒 + 共享限流 key（见 network.py），
+  # 所有源串行发出，避免触发 API 429 限流。
   - name: "arXiv MLLM+Backdoor"
     type: arxiv_api
-    endpoint: "http://export.arxiv.org/api/query"
+    endpoint: "https://export.arxiv.org/api/query"
     params:
-      search_query: "all:multimodal+AND+all:backdoor"
+      search_query: "ti:multimodal+AND+ti:backdoor"
       max_results: 100
       sortBy: submittedDate
       sortOrder: descending
-    interval: 3
+    interval: 17
     category: 学术论文
     enabled: true
 
   - name: "arXiv VLM+Backdoor"
     type: arxiv_api
-    endpoint: "http://export.arxiv.org/api/query"
+    endpoint: "https://export.arxiv.org/api/query"
     params:
-      search_query: "all:vision-language+AND+all:backdoor"
+      search_query: "ti:vision-language+AND+ti:backdoor"
       max_results: 100
       sortBy: submittedDate
       sortOrder: descending
-    interval: 3
+    interval: 17
     category: 学术论文
     enabled: true
 
   - name: "arXiv MLLM+Safety"
     type: arxiv_api
-    endpoint: "http://export.arxiv.org/api/query"
+    endpoint: "https://export.arxiv.org/api/query"
     params:
-      search_query: "all:multimodal+AND+all:safety+AND+all:llm"
+      search_query: "ti:multimodal+AND+ti:safety"
       max_results: 100
       sortBy: submittedDate
       sortOrder: descending
-    interval: 3
+    interval: 17
     category: 学术论文
     enabled: true
 
   - name: "arXiv MLLM+Jailbreak"
     type: arxiv_api
-    endpoint: "http://export.arxiv.org/api/query"
+    endpoint: "https://export.arxiv.org/api/query"
     params:
-      search_query: "all:multimodal+AND+all:jailbreak"
+      search_query: "ti:multimodal+AND+ti:jailbreak"
       max_results: 100
       sortBy: submittedDate
       sortOrder: descending
-    interval: 3
+    interval: 17
     category: 学术论文
     enabled: true
 
   - name: "arXiv VLM+Adversarial"
     type: arxiv_api
-    endpoint: "http://export.arxiv.org/api/query"
+    endpoint: "https://export.arxiv.org/api/query"
     params:
-      search_query: "all:VLM+AND+all:adversarial"
+      search_query: "ti:VLM+AND+ti:adversarial"
       max_results: 100
       sortBy: submittedDate
       sortOrder: descending
-    interval: 3
+    interval: 17
     category: 学术论文
     enabled: true
 
-  # ===== RSS Feeds =====
+  - name: "arXiv VLM+Safety"
+    type: arxiv_api
+    endpoint: "https://export.arxiv.org/api/query"
+    params:
+      search_query: "ti:vision-language+AND+ti:safety"
+      max_results: 100
+      sortBy: submittedDate
+      sortOrder: descending
+    interval: 17
+    category: 学术论文
+    enabled: true
+
+  - name: "arXiv MLLM+Robustness"
+    type: arxiv_api
+    endpoint: "https://export.arxiv.org/api/query"
+    params:
+      search_query: "ti:multimodal+AND+ti:robustness"
+      max_results: 100
+      sortBy: submittedDate
+      sortOrder: descending
+    interval: 17
+    category: 学术论文
+    enabled: true
+
+  - name: "arXiv+Trustworthy"
+    type: arxiv_api
+    endpoint: "https://export.arxiv.org/api/query"
+    params:
+      search_query: "ti:multimodal+AND+ti:trustworthy"
+      max_results: 100
+      sortBy: submittedDate
+      sortOrder: descending
+    interval: 17
+    category: 学术论文
+    enabled: true
+
+  # ===== RSS Feeds & Web Scrape (accessible from China) =====
+  # 这些源抓取全部文章，但在 keyword_matcher.filter_safe 中会过滤掉非安全内容
+
   - name: "OpenAI Blog"
     type: rss
     feed_url: "https://openai.com/blog/news.xml"
-    interval: 5
-    category: 官方新闻
-    enabled: true
-
-  - name: "Google DeepMind Blog"
-    type: rss
-    feed_url: "https://deepmind.google/blog/rss/"
-    interval: 5
-    category: 官方新闻
-    enabled: true
-
-  - name: "Meta AI Blog"
-    type: rss
-    feed_url: "https://ai.meta.com/blog/rss/"
-    interval: 5
-    category: 官方新闻
-    enabled: true
-
-  - name: "Google AI Blog"
-    type: rss
-    feed_url: "https://ai.googleblog.com/rss/"
     interval: 5
     category: 官方新闻
     enabled: true
@@ -100,45 +121,51 @@ sources:
     category: 官方新闻
     enabled: true
 
-  - name: "Hugging Face Blog"
-    type: rss
-    feed_url: "https://huggingface.co/blog/feed.xml"
-    interval: 5
-    category: 开源发布
-    enabled: true
-
-  - name: "Hugging Face Papers"
-    type: rss
-    feed_url: "https://huggingface.co/papers/feed"
-    interval: 5
-    category: 学术论文
-    enabled: true
-
-  # ===== Web Scrape Targets (no RSS available) =====
-  - name: "BAAI 智源研究院"
+  - name: "DeepSeek Blog"
     type: web_scrape
-    page_url: "https://www.baai.ac.cn/portal/list/index/id/3.html"
+    page_url: "https://www.deepseek.com/blogs/"
     interval: 10
     category: 官方新闻
-    enabled: false
+    enabled: true
 
-  - name: "Qwen Team Blog"
+  - name: "机器之心 - 最新文章"
+    type: rss
+    feed_url: "https://www.jiqizhixin.com/rss"
+    interval: 10
+    category: 官方新闻
+    enabled: true
+
+  - name: "智源社区 - 最新文章"
+    type: web_scrape
+    page_url: "https://hub.baai.ac.cn/"
+    interval: 15
+    category: 官方新闻
+    enabled: true
+
+  - name: "阿里云 Qwen 团队 Blog"
     type: web_scrape
     page_url: "https://qwenlm.github.io/blog/"
     interval: 10
     category: 官方新闻
-    enabled: false
+    enabled: true
 
-  - name: "Anthropic Blog"
-    type: rss
-    feed_url: "https://www.anthropic.com/feed.xml"
-    interval: 5
+  - name: "BAAI 智源研究院 - 新闻"
+    type: web_scrape
+    page_url: "https://www.baai.ac.cn/portal/list/index/id/3.html"
+    interval: 15
     category: 官方新闻
     enabled: true
 
-  - name: "Meta Research Blog"
+  - name: "Hugging Face Blog (via HF Mirror)"
     type: rss
-    feed_url: "https://research.facebook.com/blog/rss/"
+    feed_url: "https://hf-mirror.com/blog/feed.xml"
     interval: 5
-    category: 官方新闻
+    category: 开源发布
+    enabled: true
+
+  - name: "Hugging Face Papers (via HF Mirror)"
+    type: rss
+    feed_url: "https://hf-mirror.com/papers/feed"
+    interval: 5
+    category: 学术论文
     enabled: true

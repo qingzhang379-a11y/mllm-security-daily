@@ -49,13 +49,17 @@ class BaseFetcher(ABC):
         publish_date = raw.get("publish_date", "")
         parsed_date = TimeUtils.parse_date(publish_date)
 
+        # Fall back to article fetch date for arXiv (API always provides dates),
+        # but never fabricate "today" for items whose real date we don't know.
+        effective_date = TimeUtils.format_date(parsed_date) if parsed_date else ""
+
         return {
             "id": item_id,
             "title": title,
             "abstract": raw.get("abstract", "").strip()[:300],
             "source": self.name,
             "source_type": self.source_config.get("type", "unknown"),
-            "publish_date": TimeUtils.format_date(parsed_date) if parsed_date else TimeUtils.today_str(),
+            "publish_date": effective_date,
             "category": self.category,
             "is_backdoor": raw.get("is_backdoor", False),
             "tags": raw.get("tags", []),
