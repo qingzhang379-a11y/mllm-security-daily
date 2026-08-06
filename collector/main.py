@@ -14,6 +14,7 @@ from __future__ import annotations
 import asyncio
 import os
 import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Union
 
@@ -96,6 +97,18 @@ class CollectorOrchestrator:
                 all_items.extend(result)
 
         logger.info(f"Phase 1 complete: {len(all_items)} raw items collected")
+
+        # Apply date filter: only keep items from lookback_days to today
+        lookback = self.global_config.get("date_filter", {}).get("lookback_days", 400)
+        cutoff_date = (datetime.now(timezone.utc) - timedelta(days=lookback)).strftime("%Y-%m-%d")
+        before = len(all_items)
+        all_items = [
+            i for i in all_items
+            if i.get("publish_date", "") and i["publish_date"][:10] >= cutoff_date
+        ]
+        filtered = before - len(all_items)
+        if filtered:
+            logger.info(f"Date filter (lookback={lookback}d): dropped {filtered} items older than {cutoff_date}")
 
         # Phase 2: Keyword matching (classify security / backdoor) + safety filter
         logger.info(f"\n--- Phase 2: Keyword matching ---")

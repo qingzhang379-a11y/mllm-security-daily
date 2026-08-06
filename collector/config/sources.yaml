@@ -104,8 +104,15 @@ sources:
     category: 学术论文
     enabled: true
 
-  # ===== RSS Feeds & Web Scrape (accessible from China) =====
+  # ===== RSS Feeds & Web Scrape (company blogs & communities) =====
   # 这些源抓取全部文章，但在 keyword_matcher.filter_safe 中会过滤掉非安全内容
+
+  - name: "Foretellix CTO Blog - AI Safety"
+    type: rss
+    feed_url: "https://blog.foretellix.com/feed/"
+    interval: 5
+    category: 官方新闻
+    enabled: true
 
   - name: "OpenAI Blog"
     type: rss

@@ -39,4 +39,4 @@ logging:
 
 # Date filter
 date_filter:
-  lookback_days: 7
+  lookback_days: 400
