@@ -102,25 +102,37 @@ class NetworkUtils:
     async def aiohttp_get(self, url: str, source_name: str = "default",
                           interval: float = 3.0,
                           **kwargs) -> Optional[str]:
-        """Async GET with retry and rate limiting."""
+        """
+        Async GET with retry and rate limiting.
+        使用 requests 同步库 + run_in_executor 替代 aiohttp，
+        避免 aiohttp + happy-eyeballs 在 GitHub Actions 环境下的超时问题。
+        """
         self._respect_interval(source_name, interval)
 
         headers = self._get_headers()
         if "headers" in kwargs:
             headers.update(kwargs.pop("headers"))
 
-        timeout_obj = aiohttp.ClientTimeout(total=self.timeout)
+        # 代理配置
+        proxies = None
+        if self.proxy:
+            proxies = {"http": self.proxy, "https": self.proxy}
+
+        loop = asyncio.get_event_loop()
 
         for attempt in range(1, self.max_retries + 1):
             try:
-                async with aiohttp.ClientSession(headers=headers,
-                                                 timeout=timeout_obj) as session:
-                    # 代理配置
-                    proxy_url = self.proxy if self.proxy else None
-                    async with session.get(url, proxy=proxy_url, **kwargs) as resp:
-                        text = await resp.text()
-                        logger.info(f"GET {url} -> {resp.status}")
-                        return text
+                # 若调用方未传 timeout，则用本类默认
+                kwargs.setdefault("timeout", self.timeout)
+
+                def _sync_get():
+                    return requests.get(
+                        url, headers=headers, proxies=proxies, **kwargs)
+                resp = await loop.run_in_executor(None, _sync_get)
+                resp.raise_for_status()
+                text = resp.text
+                logger.info(f"GET {url} -> {resp.status_code}")
+                return text
             except Exception as e:
                 import traceback
                 logger.warning(
