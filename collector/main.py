@@ -67,11 +67,40 @@ class CollectorOrchestrator:
         with open(path, "r", encoding="utf-8") as f:
             return yaml.safe_load(f) or {}
 
+    def _export_keywords_snapshot(self):
+        """将当前 keywords.yaml 镜像为 docs/data/keywords.json，供前端数据源页展示。
+        每次采集前刷新，保证前端看到的词与后端采集一致。"""
+        try:
+            kw = self.keyword_matcher.keywords
+            snapshot = {}
+            for g in ["safety_filter", "backdoor", "security",
+                      "trustworthy", "testing", "robustness"]:
+                group = kw.get(g, {})
+                snapshot[g] = {
+                    "en": list(group.get("en", [])),
+                    "zh": list(group.get("zh", [])),
+                }
+            out = {
+                "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
+                "groups": snapshot,
+            }
+            target = self.data_dir / "keywords.json"
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_text(
+                json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8"
+            )
+            logger.info("Exported keywords snapshot -> docs/data/keywords.json")
+        except Exception as e:
+            logger.warning(f"Failed to export keywords snapshot: {e}")
+
     async def run(self):
         """Execute the full collection pipeline."""
         logger.info("=" * 60)
         logger.info("MLLM Security Daily - Starting collection")
         logger.info("=" * 60)
+
+        # 导出关键词快照供前端展示
+        self._export_keywords_snapshot()
 
         sources = self.sources_config.get("sources", [])
         if not sources:

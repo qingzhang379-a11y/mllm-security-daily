@@ -1,0 +1,50 @@
+# 更新采集关键词（前端数据源订阅页保存时触发）
+# 前端将编辑后的关键词以 JSON 字符串通过 workflow_dispatch inputs 传入，
+# 本 workflow 解析后写回 collector/config/keywords.yaml 并提交到 main，
+# 云端下次采集自动使用新关键词。
+name: Update Keywords
+
+on:
+  workflow_dispatch:
+    inputs:
+      keywords_json:
+        description: '编辑后的关键词 JSON（按 SafetyFilter/Backdoor/Security/Trustworthy/Testing/Robustness 分组）'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Write keywords to yaml
+        env:
+          KEYWORDS_JSON: ${{ inputs.keywords_json }}
+        run: |
+          python .github/scripts/apply_keywords.py
+          echo "=== keywords.yaml updated ==="
+          cat collector/config/keywords.yaml
+
+      - name: Commit and push
+        run: |
+          git config --local user.email "mllm-bot@github.com"
+          git config --local user.name "MLLM Security Bot"
+          git add collector/config/keywords.yaml
+          if git diff --cached --quiet; then
+            echo "No keyword changes"
+          else
+            git commit -m "chore(keywords): update collection keywords $(date +'%Y-%m-%d %H:%M')"
+            git push
+          fi
