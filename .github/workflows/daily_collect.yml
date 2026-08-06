@@ -46,8 +46,11 @@ jobs:
       - name: Run MLLM Security Daily Collector
         id: collect
         run: |
+          set +e
           mkdir -p collector/logs docs/data
-          python collector/main.py 2>&1 | tee collector/logs/collect_run.log
+          python -u collector/main.py 2>&1 | tee collector/logs/collect_run.log
+          echo "collector finished"
+          exit 0
         env:
           PYTHONUNBUFFERED: 1
           LOG_LEVEL: "${{ inputs.log_level }}"

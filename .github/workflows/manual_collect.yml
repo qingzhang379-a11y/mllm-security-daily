@@ -40,9 +40,17 @@ jobs:
 
       - name: Run collector (manual trigger)
         id: collect
+        # set +e: 采集失败也不中断，便于查看完整日志诊断
         run: |
+          set +e
           mkdir -p collector/logs docs/data
-          python collector/main.py 2>&1 | tee collector/logs/collect_run.log
+          python -u collector/main.py 2>&1 | tee collector/logs/collect_run.log
+          EXIT_CODE=${PIPESTATUS[0]}
+          echo "collector_exit=$EXIT_CODE"
+          echo "=== Collector log (tail 80) ==="
+          tail -n 80 collector/logs/collect_run.log
+          echo "=== End log ==="
+          exit 0
         env:
           PYTHONUNBUFFERED: 1
           LOG_LEVEL: "${{ inputs.log_level }}"

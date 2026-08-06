@@ -88,6 +88,14 @@ class NetworkUtils:
                 if attempt < self.max_retries:
                     sleep_time = self.backoff_base ** attempt
                     time.sleep(sleep_time)
+            except Exception as e:
+                import traceback
+                logger.error(
+                    f"Unexpected error attempt {attempt}/{self.max_retries} for {url}: {e}\n{traceback.format_exc()}"
+                )
+                if attempt < self.max_retries:
+                    sleep_time = self.backoff_base ** attempt
+                    time.sleep(sleep_time)
         logger.error(f"All {self.max_retries} attempts failed for {url}")
         return None
 
@@ -113,9 +121,10 @@ class NetworkUtils:
                         text = await resp.text()
                         logger.info(f"GET {url} -> {resp.status}")
                         return text
-            except (aiohttp.ClientError, asyncio.TimeoutError) as e:
+            except Exception as e:
+                import traceback
                 logger.warning(
-                    f"Attempt {attempt}/{self.max_retries} failed for {url}: {e}"
+                    f"Attempt {attempt}/{self.max_retries} failed for {url}: {e}\n{traceback.format_exc()}"
                 )
                 if attempt < self.max_retries:
                     sleep_time = self.backoff_base ** attempt
