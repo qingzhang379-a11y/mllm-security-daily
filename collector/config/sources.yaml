@@ -5,14 +5,13 @@
 sources:
 
   # ===== arXiv API =====
-  # 所有 arXiv 查询改用 ti: 标题字段，避免全字段 all: 误命中
-  # 注意：arXiv 源的 interval 设为 17 秒 + 共享限流 key（见 network.py），
-  # 所有源串行发出，避免触发 API 429 限流。
-  - name: "arXiv MLLM+Backdoor"
+  # arXiv 查询使用全字段（默认），扩大召回；本地以 safety_filter 精筛到 AI 安全方向。
+  # interval=17s + 共享限流 key（network.py），所有源串行发出避免 429。
+  - name: "arXiv Backdoor-Generic"
     type: arxiv_api
     endpoint: "https://export.arxiv.org/api/query"
     params:
-      search_query: "ti:multimodal+AND+ti:backdoor"
+      search_query: "all:backdoor"
       max_results: 100
       sortBy: submittedDate
       sortOrder: descending
@@ -20,11 +19,11 @@ sources:
     category: 学术论文
     enabled: true
 
-  - name: "arXiv VLM+Backdoor"
+  - name: "arXiv Data-Poisoning"
     type: arxiv_api
     endpoint: "https://export.arxiv.org/api/query"
     params:
-      search_query: "ti:vision-language+AND+ti:backdoor"
+      search_query: "all:data+poisoning"
       max_results: 100
       sortBy: submittedDate
       sortOrder: descending
@@ -32,11 +31,11 @@ sources:
     category: 学术论文
     enabled: true
 
-  - name: "arXiv MLLM+Safety"
+  - name: "arXiv Multimodal-Adversarial"
     type: arxiv_api
     endpoint: "https://export.arxiv.org/api/query"
     params:
-      search_query: "ti:multimodal+AND+ti:safety"
+      search_query: "all:multimodal+AND+all:adversarial"
       max_results: 100
       sortBy: submittedDate
       sortOrder: descending
@@ -44,11 +43,11 @@ sources:
     category: 学术论文
     enabled: true
 
-  - name: "arXiv MLLM+Jailbreak"
+  - name: "arXiv LLM-Jailbreak"
     type: arxiv_api
     endpoint: "https://export.arxiv.org/api/query"
     params:
-      search_query: "ti:multimodal+AND+ti:jailbreak"
+      search_query: "all:llm+jailbreak"
       max_results: 100
       sortBy: submittedDate
       sortOrder: descending
@@ -56,11 +55,11 @@ sources:
     category: 学术论文
     enabled: true
 
-  - name: "arXiv VLM+Adversarial"
+  - name: "arXiv LLM-AI-Safety"
     type: arxiv_api
     endpoint: "https://export.arxiv.org/api/query"
     params:
-      search_query: "ti:VLM+AND+ti:adversarial"
+      search_query: "all:LLM+AI+safety"
       max_results: 100
       sortBy: submittedDate
       sortOrder: descending
@@ -68,11 +67,11 @@ sources:
     category: 学术论文
     enabled: true
 
-  - name: "arXiv VLM+Safety"
+  - name: "arXiv Alignment-Unlearning"
     type: arxiv_api
     endpoint: "https://export.arxiv.org/api/query"
     params:
-      search_query: "ti:vision-language+AND+ti:safety"
+      search_query: "all:alignment+OR+all:unlearning"
       max_results: 100
       sortBy: submittedDate
       sortOrder: descending
@@ -80,11 +79,11 @@ sources:
     category: 学术论文
     enabled: true
 
-  - name: "arXiv MLLM+Robustness"
+  - name: "arXiv Embodied-Robot-Safety"
     type: arxiv_api
     endpoint: "https://export.arxiv.org/api/query"
     params:
-      search_query: "ti:multimodal+AND+ti:robustness"
+      search_query: "all:embodied+AI+safety"
       max_results: 100
       sortBy: submittedDate
       sortOrder: descending
@@ -92,11 +91,11 @@ sources:
     category: 学术论文
     enabled: true
 
-  - name: "arXiv+Trustworthy"
+  - name: "arXiv Test-time-LLM-Safety"
     type: arxiv_api
     endpoint: "https://export.arxiv.org/api/query"
     params:
-      search_query: "ti:multimodal+AND+ti:trustworthy"
+      search_query: "all:test-time+attack+OR+all:safety+RL"
       max_results: 100
       sortBy: submittedDate
       sortOrder: descending
