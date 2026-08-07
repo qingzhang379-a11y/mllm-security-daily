@@ -101,37 +101,23 @@
 
           <div v-for="(g, gName) in editableKeywords" :key="gName" class="kw-group-card">
             <div class="kw-group-header" @click="toggleGroup(gName)">
-              <span class="kw-group-name">{{ groupLabels[gName] || gName }}</span>
-              <span class="kw-group-count">{{ g.en.length + g.zh.length }} 词</span>
+              <span class="kw-group-name">{{ g.label || groupLabels[gName] || gName }}</span>
+              <span class="kw-group-count">{{ g.terms.length }} 词</span>
               <span class="kw-expand-icon">{{ openGroups[gName] ? '▾' : '▸' }}</span>
             </div>
             <div v-show="openGroups[gName]" class="kw-group-body">
               <div class="kw-lang-row">
-                <div class="kw-lang-label">🇬🇧 English ({{ g.en.length }})</div>
+                <div class="kw-lang-label">{{ g.group === 'gate' ? '🔐 准入层（必须命中其一）' : (g.group === 'filter' ? '🚫 排除层（命中即丢弃）' : '🏷️ 标记层') }}</div>
                 <div class="kw-tags">
-                  <span v-for="(w, wi) in g.en" :key="'en-'+wi" class="kw-tag">
+                  <span v-for="(w, wi) in g.terms" :key="'t-'+wi" class="kw-tag">
                     {{ w }}
-                    <button class="kw-del" @click="removeWord(gName, 'en', wi)">×</button>
+                    <button class="kw-del" @click="removeWord(gName, wi)">×</button>
                   </span>
-                  <span v-if="g.en.length === 0" class="kw-empty">暂无英文词</span>
-                </div>
-              </div>
-              <div class="kw-lang-row">
-                <div class="kw-lang-label">🇨🇳 中文 ({{ g.zh.length }})</div>
-                <div class="kw-tags">
-                  <span v-for="(w, wi) in g.zh" :key="'zh-'+wi" class="kw-tag">
-                    {{ w }}
-                    <button class="kw-del" @click="removeWord(gName, 'zh', wi)">×</button>
-                  </span>
-                  <span v-if="g.zh.length === 0" class="kw-empty">暂无中文词</span>
+                  <span v-if="g.terms.length === 0" class="kw-empty">暂无词</span>
                 </div>
               </div>
               <div class="kw-add-row">
-                <select v-model="addLang" class="kw-select">
-                  <option value="en">EN</option>
-                  <option value="zh">中文</option>
-                </select>
-                <input v-model="addWord" class="kw-input" placeholder="输入新词" @keyup.enter="addWordToGroup(gName)" />
+                <input v-model="addWord" class="kw-input" placeholder="输入新词（中英文皆可）" @keyup.enter="addWordToGroup(gName)" />
                 <button class="kw-add-btn" @click="addWordToGroup(gName)">添加</button>
               </div>
             </div>
@@ -218,56 +204,52 @@ const cnSources = computed(() => [
 
 // ===== 关键词管理 =====
 const groupLabels = {
-  safety_filter: '🔒 Safety 安全筛选器（门禁）',
-  backdoor: '🐞 Backdoor 后门攻击',
-  security: '🛡️ Security 安全通用',
-  trustworthy: '🤝 Trustworthy 可信性',
-  testing: '🧪 Testing 安全测试/验证',
-  robustness: '💪 Robustness 鲁棒性',
+  mllm_terms: '🔐 MLLM 限定词（准入）',
+  backdoor_terms: '🐞 后门专项（标记 is_backdoor）',
+  general_terms: '🛡️ 通用 MLLM 安全词（普通收录）',
+  exclude_terms: '🚫 排除过滤词',
+  safety_filter: '🔒 Safety（旧，兼容）',
 }
 
 const openGroups = reactive({
-  safety_filter: true,
-  backdoor: false,
-  security: false,
-  trustworthy: false,
-  testing: false,
-  robustness: false,
+  mllm_terms: true,
+  backdoor_terms: true,
+  general_terms: true,
+  exclude_terms: false,
 })
 function toggleGroup(name) { openGroups[name] = !openGroups[name] }
 
-// 初始化 editableKeywords 从 props.keywords
+// 初始化 editableKeywords 从 props.keywords（新分层结构：terms 单数组）
 const editableKeywords = reactive({})
 function initKeywords() {
   const raw = (props.keywords && props.keywords.groups) || {}
-  const groups = ['safety_filter', 'backdoor', 'security', 'trustworthy', 'testing', 'robustness']
+  const groups = ['mllm_terms', 'backdoor_terms', 'general_terms', 'exclude_terms', 'safety_filter']
   for (const g of groups) {
-    const src = raw[g] || { en: [], zh: [] }
+    const src = raw[g] || { terms: [] }
     editableKeywords[g] = {
-      en: [...(src.en || [])],
-      zh: [...(src.zh || [])],
+      label: src.label || groupLabels[g] || g,
+      group: src.group || 'mark',
+      terms: [...(src.terms || [])],
     }
   }
 }
 initKeywords()
 
 // 添加/删除词
-const addLang = ref('en')
 const addWord = ref('')
 function addWordToGroup(gName) {
   const w = addWord.value.trim()
   if (!w) return
-  const lang = addLang.value
-  const list = editableKeywords[gName][lang]
-  if (list.includes(w)) {
+  const list = editableKeywords[gName].terms
+  if (list.some(x => x.toLowerCase() === w.toLowerCase())) {
     alert(`「${w}」已存在`)
     return
   }
   list.push(w)
   addWord.value = ''
 }
-function removeWord(gName, lang, idx) {
-  editableKeywords[gName][lang].splice(idx, 1)
+function removeWord(gName, idx) {
+  editableKeywords[gName].terms.splice(idx, 1)
 }
 
 // 保存到仓库（通过 GitHub API 直接写入 keywords.yaml）
@@ -337,19 +319,23 @@ async function saveToRepo() {
     const fileInfo = await getResp.json()
     const sha = fileInfo.sha
 
-    // 构造 YAML 内容
+    // 构造 YAML 内容（新分层结构：每组一个 terms 列表，保留说明与兼容占位）
+    const yamlGroups = [
+      { key: 'mllm_terms',     comment: '# 一、核心限定语（MLLM 准入，必配其一，过滤普通小模型/传统 CV）' },
+      { key: 'backdoor_terms', comment: '# 二、高优先级后门专项词（命中 -> is_backdoor=true，卡片高亮）' },
+      { key: 'general_terms',  comment: '# 三、通用 MLLM 安全词（常规收录，不标记后门专项）' },
+      { key: 'exclude_terms',  comment: '# 四、排除过滤词（命中即丢弃）' },
+    ]
     const yamlLines = [
-      '# ===== 采集关键词（由前端数据源页编辑）=====',
+      '# ===== MLLM 安全日报 - 分层采集关键词（由前端数据源页编辑）=====',
       `# 更新时间: ${new Date().toISOString()}`,
-      '# 每次采集时 KeywordMatcher 按这些词过滤/分类资讯',
       '',
     ]
-    for (const g of ['safety_filter', 'backdoor', 'security', 'trustworthy', 'testing', 'robustness']) {
-      const src = editableKeywords[g]
-      yamlLines.push(`${g}:`, `  en:`)
-      for (const w of src.en) yamlLines.push(`    - "${w}"`)
-      yamlLines.push(`  zh:`)
-      for (const w of src.zh) yamlLines.push(`    - "${w}"`)
+    for (const { key, comment } of yamlGroups) {
+      const src = editableKeywords[key]
+      yamlLines.push(comment, `${key}:`, `  terms:`)
+      for (const w of src.terms) yamlLines.push(`    - "${w}"`)
+      yamlLines.push('')
     }
     const content = yamlLines.join('\n')
 

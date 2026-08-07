@@ -72,14 +72,27 @@ class CollectorOrchestrator:
         每次采集前刷新，保证前端看到的词与后端采集一致。"""
         try:
             kw = self.keyword_matcher.keywords
-            snapshot = {}
-            for g in ["safety_filter", "backdoor", "security",
-                      "trustworthy", "testing", "robustness"]:
-                group = kw.get(g, {})
-                snapshot[g] = {
-                    "en": list(group.get("en", [])),
-                    "zh": list(group.get("zh", [])),
-                }
+
+            def _flat(group_name: str) -> list[str]:
+                g = kw.get(group_name, {})
+                if isinstance(g, dict) and "terms" in g:
+                    return list(g.get("terms", []))
+                return []
+
+            snapshot = {
+                "mllm_terms": {"en": "", "zh": "", "terms": _flat("mllm_terms"),
+                               "group": "gist", "label": "MLLM 限定词（准入）"},
+                "backdoor_terms": {"en": "", "zh": "", "terms": _flat("backdoor_terms"),
+                                   "group": "mark", "label": "后门专项（标记 is_backdoor）"},
+                "general_terms": {"en": "", "zh": "", "terms": _flat("general_terms"),
+                                  "group": "mark", "label": "通用 MLLM 安全词（普通收录）"},
+                "exclude_terms": {"en": "", "zh": "", "terms": _flat("exclude_terms"),
+                                  "group": "filter", "label": "排除过滤词"},
+                # 旧分组，向前端兼容展示
+                "safety_filter": {"en": kw.get("safety_filter", {}).get("en", []),
+                                  "zh": kw.get("safety_filter", {}).get("zh", []),
+                                  "terms": [], "group": "legacy", "label": "Safety（旧，兼容）"},
+            }
             out = {
                 "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
                 "groups": snapshot,
@@ -141,7 +154,12 @@ class CollectorOrchestrator:
 
         # Phase 2: Keyword matching (classify security / backdoor) + safety filter
         logger.info(f"\n--- Phase 2: Keyword matching ---")
-        matched_items = self.keyword_matcher.batch_match(all_items)
+        # 受信源（trusted:true，手工精选的 RSS/博客）跳过 MLLM 准入，
+        # 但仍走排除 + 通用安全匹配；arXiv 等全量源需完整分层（准入+排除+安全词）
+        trusted_names = {
+            s["name"] for s in sources if s.get("trusted")
+        }
+        matched_items = self.keyword_matcher.batch_match(all_items, trusted_names=trusted_names)
 
         # 安全过滤：所有源统一走 is_safe（AI 安全/可信主题门槛），
         # 避免无关的通用 AI 内容（agent 框架、普通研究等）混入
