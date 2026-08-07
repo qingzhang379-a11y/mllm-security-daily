@@ -48,5 +48,30 @@
     "is_safe": true,
     "security_tags": [],
     "category_tag": ""
+  },
+  {
+    "id": "9b3db188a2c7",
+    "title": "Pluralis v0.1: Towards a Multicultural, Multimodal, Multilingual Benchmark for AI Risk and Reliability",
+    "abstract": "Current AI safety evaluation and benchmarking frameworks predominantly rely on Western-centric culture-agnostic defaults that mask critical regional laws, socio-linguistic nuances, and cultural taboos, leaving Vision-Language Models (VLMs) vulnerable in global deployments. We introduce Pluralis v0.1",
+    "source": "arXiv LLM-AI-Safety",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-07-07",
+    "category": "学术论文",
+    "is_backdoor": false,
+    "tags": [
+      "cs.CL",
+      "cs.CY",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2607.06196v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.06196v1",
+    "arxiv_id": "2607.06196",
+    "is_today_new": true,
+    "created_at": "2026-08-07",
+    "security_tags": [
+      "security"
+    ],
+    "category_tag": "security",
+    "is_safe": true
   }
 ]

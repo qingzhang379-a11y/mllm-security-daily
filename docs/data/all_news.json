@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_count": 5,
-    "last_updated": "2026-08-06T09:28:06Z",
-    "today_new": 5,
-    "today_added": 5
+    "total_count": 11,
+    "last_updated": "2026-08-07T03:36:15Z",
+    "today_new": 6,
+    "today_added": 6
   },
   "news": [
     {
@@ -57,6 +57,31 @@
       "category_tag": ""
     },
     {
+      "id": "9b3db188a2c7",
+      "title": "Pluralis v0.1: Towards a Multicultural, Multimodal, Multilingual Benchmark for AI Risk and Reliability",
+      "abstract": "Current AI safety evaluation and benchmarking frameworks predominantly rely on Western-centric culture-agnostic defaults that mask critical regional laws, socio-linguistic nuances, and cultural taboos, leaving Vision-Language Models (VLMs) vulnerable in global deployments. We introduce Pluralis v0.1",
+      "source": "arXiv LLM-AI-Safety",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-07-07",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "tags": [
+        "cs.CL",
+        "cs.CY",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2607.06196v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.06196v1",
+      "arxiv_id": "2607.06196",
+      "is_today_new": true,
+      "created_at": "2026-08-07",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
+      "is_safe": true
+    },
+    {
       "id": "22a1c4df23df",
       "title": "Coverage-driven alignment  –  What ‘Teaching Claude Why’ can borrow from AV verification",
       "abstract": "Summary: This post suggests that alignment training could benefit from coverage-driven verification. Anthropic recently reported that teaching Claude alignment rules (via pretraining-style next-token learning on alignment-related stories) is more effective than relying primarily on RL-style behavior",
@@ -80,6 +105,131 @@
       "is_safe": true,
       "security_tags": [],
       "category_tag": ""
+    },
+    {
+      "id": "45a25f311a6d",
+      "title": "Harnessing Textual Refusal Directions for Multimodal Safety",
+      "abstract": "To improve safety in Large Language Models (LLMs) we can either perform post-training alignment or exploit refusal directions in the activation space. Both strategies are less feasible in Multimodal LLMs (MLLMs) as they require unsafe multimodal data, harder to collect than their unimodal counterpar",
+      "source": "arXiv LLM-Jailbreak",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-06-30",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "tags": [
+        "cs.AI",
+        "cs.CV",
+        "cs.LG",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2606.31876v2",
+      "pdf_url": "https://arxiv.org/pdf/2606.31876v2",
+      "arxiv_id": "2606.31876",
+      "is_today_new": true,
+      "created_at": "2026-08-07",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
+      "is_safe": true
+    },
+    {
+      "id": "e3bbfee93b28",
+      "title": "Adversarial Diffusion Across Modalities: A Fusion Survey of Attacks, Defenses, and Evaluation for Text, Vision, and Vision-Language Models",
+      "abstract": "Adversarial evaluation of AI systems has matured along four largely disconnected tracks: diffusion-based attacks on text and large language models (LLMs), diffusion-based attacks on image classifiers, jailbreak pipelines against vision-language models, and diffusion-based input purification defenses",
+      "source": "arXiv LLM-Jailbreak",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-06-25",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "tags": [
+        "cs.CR",
+        "cs.CL",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2606.26566v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.26566v1",
+      "arxiv_id": "2606.26566",
+      "is_today_new": true,
+      "created_at": "2026-08-07",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
+      "is_safe": true
+    },
+    {
+      "id": "1ff6be701c28",
+      "title": "Does AI Reviewer See the Full Picture? Attacking and Defending Multimodal Peer Review",
+      "abstract": "The integration of Large Language Models (LLMs) and Multimodal LLMs (MLLMs) into scientific peer-review workflows introduces novel and significant risks for adversarial manipulation, especially given the multimodal nature of scientific papers where figures, not just text, convey core evidence. This ",
+      "source": "arXiv LLM-Jailbreak",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-06-10",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "tags": [
+        "cs.CL",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2606.12716v2",
+      "pdf_url": "https://arxiv.org/pdf/2606.12716v2",
+      "arxiv_id": "2606.12716",
+      "is_today_new": true,
+      "created_at": "2026-08-07",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
+      "is_safe": true
+    },
+    {
+      "id": "5d02789671da",
+      "title": "IMCBench: A benchmark for multimodal LLMs in Image-grounded Medical Conversations",
+      "abstract": "Recent advances in large language models and vision-language models have enabled reasoning over multimodal data, offering opportunities for clinical applications such as decision support and triaging. However, existing medical AI benchmarks are fragmented: some support multi-turn dialogues but lack ",
+      "source": "arXiv LLM-AI-Safety",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-06-26",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "tags": [
+        "cs.AI",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2606.28556v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.28556v1",
+      "arxiv_id": "2606.28556",
+      "is_today_new": true,
+      "created_at": "2026-08-07",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
+      "is_safe": true
+    },
+    {
+      "id": "10fc2c4c68e3",
+      "title": "Furina: Fragmented Uncertainty-Driven Refusal Instability Attack",
+      "abstract": "Safety alignment in large language models (LLMs) and multimodal large language models (MLLMs) is commonly assumed to operate as a near-binary threshold mechanism. We challenge this assumption by revealing that safety behavior is governed by an instability region where small perturbations induce stoc",
+      "source": "arXiv LLM-Jailbreak",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-05-24",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "tags": [
+        "cs.CR",
+        "cs.AI",
+        "cs.LG",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2605.26158v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.26158v1",
+      "arxiv_id": "2605.26158",
+      "is_today_new": true,
+      "created_at": "2026-08-07",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
+      "is_safe": true
     },
     {
       "id": "6c9627634600",

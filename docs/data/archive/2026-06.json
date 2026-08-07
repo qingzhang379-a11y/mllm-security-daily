@@ -23,5 +23,104 @@
     "is_safe": true,
     "security_tags": [],
     "category_tag": ""
+  },
+  {
+    "id": "45a25f311a6d",
+    "title": "Harnessing Textual Refusal Directions for Multimodal Safety",
+    "abstract": "To improve safety in Large Language Models (LLMs) we can either perform post-training alignment or exploit refusal directions in the activation space. Both strategies are less feasible in Multimodal LLMs (MLLMs) as they require unsafe multimodal data, harder to collect than their unimodal counterpar",
+    "source": "arXiv LLM-Jailbreak",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-06-30",
+    "category": "学术论文",
+    "is_backdoor": false,
+    "tags": [
+      "cs.AI",
+      "cs.CV",
+      "cs.LG",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2606.31876v2",
+    "pdf_url": "https://arxiv.org/pdf/2606.31876v2",
+    "arxiv_id": "2606.31876",
+    "is_today_new": true,
+    "created_at": "2026-08-07",
+    "security_tags": [
+      "security"
+    ],
+    "category_tag": "security",
+    "is_safe": true
+  },
+  {
+    "id": "e3bbfee93b28",
+    "title": "Adversarial Diffusion Across Modalities: A Fusion Survey of Attacks, Defenses, and Evaluation for Text, Vision, and Vision-Language Models",
+    "abstract": "Adversarial evaluation of AI systems has matured along four largely disconnected tracks: diffusion-based attacks on text and large language models (LLMs), diffusion-based attacks on image classifiers, jailbreak pipelines against vision-language models, and diffusion-based input purification defenses",
+    "source": "arXiv LLM-Jailbreak",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-06-25",
+    "category": "学术论文",
+    "is_backdoor": false,
+    "tags": [
+      "cs.CR",
+      "cs.CL",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2606.26566v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.26566v1",
+    "arxiv_id": "2606.26566",
+    "is_today_new": true,
+    "created_at": "2026-08-07",
+    "security_tags": [
+      "security"
+    ],
+    "category_tag": "security",
+    "is_safe": true
+  },
+  {
+    "id": "1ff6be701c28",
+    "title": "Does AI Reviewer See the Full Picture? Attacking and Defending Multimodal Peer Review",
+    "abstract": "The integration of Large Language Models (LLMs) and Multimodal LLMs (MLLMs) into scientific peer-review workflows introduces novel and significant risks for adversarial manipulation, especially given the multimodal nature of scientific papers where figures, not just text, convey core evidence. This ",
+    "source": "arXiv LLM-Jailbreak",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-06-10",
+    "category": "学术论文",
+    "is_backdoor": false,
+    "tags": [
+      "cs.CL",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2606.12716v2",
+    "pdf_url": "https://arxiv.org/pdf/2606.12716v2",
+    "arxiv_id": "2606.12716",
+    "is_today_new": true,
+    "created_at": "2026-08-07",
+    "security_tags": [
+      "security"
+    ],
+    "category_tag": "security",
+    "is_safe": true
+  },
+  {
+    "id": "5d02789671da",
+    "title": "IMCBench: A benchmark for multimodal LLMs in Image-grounded Medical Conversations",
+    "abstract": "Recent advances in large language models and vision-language models have enabled reasoning over multimodal data, offering opportunities for clinical applications such as decision support and triaging. However, existing medical AI benchmarks are fragmented: some support multi-turn dialogues but lack ",
+    "source": "arXiv LLM-AI-Safety",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-06-26",
+    "category": "学术论文",
+    "is_backdoor": false,
+    "tags": [
+      "cs.AI",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2606.28556v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.28556v1",
+    "arxiv_id": "2606.28556",
+    "is_today_new": true,
+    "created_at": "2026-08-07",
+    "security_tags": [
+      "security"
+    ],
+    "category_tag": "security",
+    "is_safe": true
   }
 ]

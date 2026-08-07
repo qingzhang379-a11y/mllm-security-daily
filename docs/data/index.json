@@ -1,16 +1,22 @@
 {
   "meta": {
-    "total_count": 5,
-    "last_updated": "2026-08-06T09:28:06Z",
-    "today_new": 5,
-    "today_added": 5
+    "total_count": 11,
+    "last_updated": "2026-08-07T03:36:15Z",
+    "today_new": 6,
+    "today_added": 6
   },
   "ids": [
     "06ed47043b6f",
     "86ea98d74ff3",
     "22a1c4df23df",
     "6c9627634600",
-    "f9fb0dc59de8"
+    "f9fb0dc59de8",
+    "45a25f311a6d",
+    "e3bbfee93b28",
+    "1ff6be701c28",
+    "10fc2c4c68e3",
+    "9b3db188a2c7",
+    "5d02789671da"
   ],
   "items": [
     {
@@ -30,12 +36,60 @@
       "source": "Foretellix CTO Blog - AI Safety"
     },
     {
+      "id": "9b3db188a2c7",
+      "title": "Pluralis v0.1: Towards a Multicultural, Multimodal, Multilingual Benchmark for AI Risk and Reliability",
+      "publish_date": "2026-07-07",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv LLM-AI-Safety"
+    },
+    {
+      "id": "45a25f311a6d",
+      "title": "Harnessing Textual Refusal Directions for Multimodal Safety",
+      "publish_date": "2026-06-30",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv LLM-Jailbreak"
+    },
+    {
+      "id": "5d02789671da",
+      "title": "IMCBench: A benchmark for multimodal LLMs in Image-grounded Medical Conversations",
+      "publish_date": "2026-06-26",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv LLM-AI-Safety"
+    },
+    {
+      "id": "e3bbfee93b28",
+      "title": "Adversarial Diffusion Across Modalities: A Fusion Survey of Attacks, Defenses, and Evaluation for Text, Vision, and Vision-Language Models",
+      "publish_date": "2026-06-25",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv LLM-Jailbreak"
+    },
+    {
+      "id": "1ff6be701c28",
+      "title": "Does AI Reviewer See the Full Picture? Attacking and Defending Multimodal Peer Review",
+      "publish_date": "2026-06-10",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv LLM-Jailbreak"
+    },
+    {
       "id": "22a1c4df23df",
       "title": "Coverage-driven alignment  –  What ‘Teaching Claude Why’ can borrow from AV verification",
       "publish_date": "2026-06-08",
       "category": "官方新闻",
       "is_backdoor": false,
       "source": "Foretellix CTO Blog - AI Safety"
+    },
+    {
+      "id": "10fc2c4c68e3",
+      "title": "Furina: Fragmented Uncertainty-Driven Refusal Instability Attack",
+      "publish_date": "2026-05-24",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv LLM-Jailbreak"
     },
     {
       "id": "6c9627634600",

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "10fc2c4c68e3",
+    "title": "Furina: Fragmented Uncertainty-Driven Refusal Instability Attack",
+    "abstract": "Safety alignment in large language models (LLMs) and multimodal large language models (MLLMs) is commonly assumed to operate as a near-binary threshold mechanism. We challenge this assumption by revealing that safety behavior is governed by an instability region where small perturbations induce stoc",
+    "source": "arXiv LLM-Jailbreak",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-05-24",
+    "category": "学术论文",
+    "is_backdoor": false,
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2605.26158v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.26158v1",
+    "arxiv_id": "2605.26158",
+    "is_today_new": true,
+    "created_at": "2026-08-07",
+    "security_tags": [
+      "security"
+    ],
+    "category_tag": "security",
+    "is_safe": true
+  }
+]
