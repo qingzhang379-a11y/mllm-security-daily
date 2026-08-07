@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_count": 11,
-    "last_updated": "2026-08-07T03:36:15Z",
-    "today_new": 6,
-    "today_added": 6
+    "total_count": 19,
+    "last_updated": "2026-08-07T04:17:37Z",
+    "today_new": 8,
+    "today_added": 8
   },
   "ids": [
     "06ed47043b6f",
@@ -16,9 +16,25 @@
     "1ff6be701c28",
     "10fc2c4c68e3",
     "9b3db188a2c7",
-    "5d02789671da"
+    "5d02789671da",
+    "b8751fb5c7de",
+    "24ba3a0bb12b",
+    "3bc0e635bb6a",
+    "c2e6b280c783",
+    "e094ab72a467",
+    "1311e87f7e0a",
+    "397e3f8d7065",
+    "4bf4101e16c9"
   ],
   "items": [
+    {
+      "id": "b8751fb5c7de",
+      "title": "Architectural Backdoors in Vision-Language Model Supply Chains via Representation Steering",
+      "publish_date": "2026-07-28",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "source": "arXiv Backdoor-Generic"
+    },
     {
       "id": "06ed47043b6f",
       "title": "V&V takes on OpenAI’s long-horizon incidents",
@@ -26,6 +42,14 @@
       "category": "官方新闻",
       "is_backdoor": false,
       "source": "Foretellix CTO Blog - AI Safety"
+    },
+    {
+      "id": "c2e6b280c783",
+      "title": "Devil in the Lens: Analyzing and Defending Physical Prompt Injection Against Vision-Language Models on Wearable Devices",
+      "publish_date": "2026-07-11",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv Embodied-Robot-Safety"
     },
     {
       "id": "86ea98d74ff3",
@@ -42,6 +66,14 @@
       "category": "学术论文",
       "is_backdoor": false,
       "source": "arXiv LLM-AI-Safety"
+    },
+    {
+      "id": "24ba3a0bb12b",
+      "title": "ReShift: Aha-Moment-Driven Reasoning-Level Backdoor Attacks on Vision-Language Models",
+      "publish_date": "2026-07-01",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "source": "arXiv Backdoor-Generic"
     },
     {
       "id": "45a25f311a6d",
@@ -84,12 +116,52 @@
       "source": "Foretellix CTO Blog - AI Safety"
     },
     {
+      "id": "3bc0e635bb6a",
+      "title": "BYORn: Bootstrap Your Own Responses to Defend Large Vision-Language Models Against Backdoor Attacks",
+      "publish_date": "2026-06-01",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "source": "arXiv Data-Poisoning"
+    },
+    {
       "id": "10fc2c4c68e3",
       "title": "Furina: Fragmented Uncertainty-Driven Refusal Instability Attack",
       "publish_date": "2026-05-24",
       "category": "学术论文",
       "is_backdoor": false,
       "source": "arXiv LLM-Jailbreak"
+    },
+    {
+      "id": "e094ab72a467",
+      "title": "RoboJailBench: Benchmarking Adversarial Attacks and Defenses in Embodied Robotic Agents",
+      "publish_date": "2026-05-19",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv Embodied-Robot-Safety"
+    },
+    {
+      "id": "1311e87f7e0a",
+      "title": "Semantic Misalignment in Vision-Language Models under Perceptual Degradation",
+      "publish_date": "2026-01-13",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv Embodied-Robot-Safety"
+    },
+    {
+      "id": "397e3f8d7065",
+      "title": "Value-Guided Iterative Refinement and the DIQ-H Benchmark for Evaluating VLM Robustness",
+      "publish_date": "2025-12-03",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv Embodied-Robot-Safety"
+    },
+    {
+      "id": "4bf4101e16c9",
+      "title": "The Shawshank Redemption of Embodied AI: Understanding and Benchmarking Indirect Environmental Jailbreaks",
+      "publish_date": "2025-11-20",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv Embodied-Robot-Safety"
     },
     {
       "id": "6c9627634600",

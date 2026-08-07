@@ -73,5 +73,83 @@
     ],
     "category_tag": "security",
     "is_safe": true
+  },
+  {
+    "id": "b8751fb5c7de",
+    "title": "Architectural Backdoors in Vision-Language Model Supply Chains via Representation Steering",
+    "abstract": "Vision--Language Models (VLMs) are increasingly deployed through a model supply chain in which pretrained checkpoints, architecture definitions, text encoders, and exported computation graphs are distributed by third parties and reused across downstream services. This reuse model creates a security-",
+    "source": "arXiv Backdoor-Generic",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-07-28",
+    "category": "学术论文",
+    "is_backdoor": true,
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG",
+      "后门专题",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2607.25479v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.25479v1",
+    "arxiv_id": "2607.25479",
+    "is_today_new": true,
+    "created_at": "2026-08-07",
+    "security_tags": [
+      "backdoor",
+      "security"
+    ],
+    "category_tag": "backdoor",
+    "is_safe": true
+  },
+  {
+    "id": "24ba3a0bb12b",
+    "title": "ReShift: Aha-Moment-Driven Reasoning-Level Backdoor Attacks on Vision-Language Models",
+    "abstract": "Vision--Language Models (VLMs) are increasingly deployed in safety-critical applications, yet remain vulnerable to backdoor attacks. Existing methods primarily manipulate final outputs, often producing reasoning traces that are inconsistent or easily detectable. In this paper, we propose ReShift, th",
+    "source": "arXiv Backdoor-Generic",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-07-01",
+    "category": "学术论文",
+    "is_backdoor": true,
+    "tags": [
+      "cs.CR",
+      "后门专题",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2607.00361v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.00361v1",
+    "arxiv_id": "2607.00361",
+    "is_today_new": true,
+    "created_at": "2026-08-07",
+    "security_tags": [
+      "backdoor",
+      "security"
+    ],
+    "category_tag": "backdoor",
+    "is_safe": true
+  },
+  {
+    "id": "c2e6b280c783",
+    "title": "Devil in the Lens: Analyzing and Defending Physical Prompt Injection Against Vision-Language Models on Wearable Devices",
+    "abstract": "Vision-Language Models (VLMs) are rapidly deployed on human-facing wearable devices such as smart glasses to enable multimodal perception and AI-assisted decision-making. While prior research has demonstrated the risks of visual prompt injection into digital image inputs of VLMs, the unique security",
+    "source": "arXiv Embodied-Robot-Safety",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-07-11",
+    "category": "学术论文",
+    "is_backdoor": false,
+    "tags": [
+      "cs.CR",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2607.10269v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.10269v1",
+    "arxiv_id": "2607.10269",
+    "is_today_new": true,
+    "created_at": "2026-08-07",
+    "security_tags": [
+      "security"
+    ],
+    "category_tag": "security",
+    "is_safe": true
   }
 ]

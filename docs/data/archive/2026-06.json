@@ -122,5 +122,32 @@
     ],
     "category_tag": "security",
     "is_safe": true
+  },
+  {
+    "id": "3bc0e635bb6a",
+    "title": "BYORn: Bootstrap Your Own Responses to Defend Large Vision-Language Models Against Backdoor Attacks",
+    "abstract": "Supervised fine-tuning is the predominant approach for adapting autoregressive vision-language models to downstream tasks. Recent work has shown that this paradigm is highly vulnerable to backdoor attacks, and that existing defenses are ineffective in open-ended generation settings. In response, we ",
+    "source": "arXiv Data-Poisoning",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-06-01",
+    "category": "学术论文",
+    "is_backdoor": true,
+    "tags": [
+      "cs.LG",
+      "cs.CV",
+      "后门专题",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2606.02947v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.02947v1",
+    "arxiv_id": "2606.02947",
+    "is_today_new": true,
+    "created_at": "2026-08-07",
+    "security_tags": [
+      "backdoor",
+      "security"
+    ],
+    "category_tag": "backdoor",
+    "is_safe": true
   }
 ]

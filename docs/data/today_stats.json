@@ -1,12 +1,13 @@
 {
   "date": "2026-08-07",
-  "total_items": 6,
-  "backdoor_items": 0,
+  "total_items": 8,
+  "backdoor_items": 3,
   "category_breakdown": {
-    "学术论文": 6
+    "学术论文": 8
   },
   "sources": [
-    "arXiv LLM-AI-Safety",
-    "arXiv LLM-Jailbreak"
+    "arXiv Data-Poisoning",
+    "arXiv Embodied-Robot-Safety",
+    "arXiv Backdoor-Generic"
   ]
 }

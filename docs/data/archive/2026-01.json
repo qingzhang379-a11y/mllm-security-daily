@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1311e87f7e0a",
+    "title": "Semantic Misalignment in Vision-Language Models under Perceptual Degradation",
+    "abstract": "Vision-Language Models (VLMs) are increasingly deployed in autonomous driving and embodied AI systems, where reliable perception is critical for safe semantic reasoning and decision-making. While recent VLMs demonstrate strong performance on multimodal benchmarks, their robustness to realistic perce",
+    "source": "arXiv Embodied-Robot-Safety",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-01-13",
+    "category": "学术论文",
+    "is_backdoor": false,
+    "tags": [
+      "cs.CV",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2601.08355v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.08355v2",
+    "arxiv_id": "2601.08355",
+    "is_today_new": true,
+    "created_at": "2026-08-07",
+    "security_tags": [
+      "security"
+    ],
+    "category_tag": "security",
+    "is_safe": true
+  }
+]
