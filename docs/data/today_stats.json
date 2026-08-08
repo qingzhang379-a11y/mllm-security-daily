@@ -1,13 +1,7 @@
 {
-  "date": "2026-08-07",
-  "total_items": 8,
-  "backdoor_items": 3,
-  "category_breakdown": {
-    "学术论文": 8
-  },
-  "sources": [
-    "arXiv Data-Poisoning",
-    "arXiv Embodied-Robot-Safety",
-    "arXiv Backdoor-Generic"
-  ]
+  "date": "2026-08-08",
+  "total_items": 0,
+  "backdoor_items": 0,
+  "category_breakdown": {},
+  "sources": []
 }
