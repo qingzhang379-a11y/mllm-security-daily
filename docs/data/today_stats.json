@@ -1,7 +1,11 @@
 {
-  "date": "2026-08-10",
-  "total_items": 0,
+  "date": "2026-08-11",
+  "total_items": 1,
   "backdoor_items": 0,
-  "category_breakdown": {},
-  "sources": []
+  "category_breakdown": {
+    "学术论文": 1
+  },
+  "sources": [
+    "arXiv Data-Poisoning"
+  ]
 }

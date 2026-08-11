@@ -151,5 +151,31 @@
     ],
     "category_tag": "security",
     "is_safe": true
+  },
+  {
+    "id": "c7ef25d3a8a8",
+    "title": "Evolving Safety Landscape of Multi-modal Large Language Models: A Survey of Emerging Threats and Safeguards",
+    "abstract": "Multi-modal large language models (MLLMs) integrate heterogeneous modalities through modality alignment and fusion, enabling stronger understanding and reasoning. However, this architectural shift reshapes the safety landscape of machine learning. Increased model complexity and cross-modal interacti",
+    "source": "arXiv Data-Poisoning",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-07-27",
+    "category": "学术论文",
+    "is_backdoor": false,
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CY",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2608.07535v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.07535v1",
+    "arxiv_id": "2608.07535",
+    "is_today_new": true,
+    "created_at": "2026-08-11",
+    "security_tags": [
+      "security"
+    ],
+    "category_tag": "security",
+    "is_safe": true
   }
 ]

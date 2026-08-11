@@ -1,8 +1,8 @@
 {
   "meta": {
-    "total": 4,
+    "total": 3,
     "range": "last 30 days",
-    "last_updated": "2026-08-07T04:17:37Z"
+    "last_updated": "2026-08-11T03:24:58Z"
   },
   "news": [
     {
@@ -34,6 +34,32 @@
       "is_safe": true
     },
     {
+      "id": "c7ef25d3a8a8",
+      "title": "Evolving Safety Landscape of Multi-modal Large Language Models: A Survey of Emerging Threats and Safeguards",
+      "abstract": "Multi-modal large language models (MLLMs) integrate heterogeneous modalities through modality alignment and fusion, enabling stronger understanding and reasoning. However, this architectural shift reshapes the safety landscape of machine learning. Increased model complexity and cross-modal interacti",
+      "source": "arXiv Data-Poisoning",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-07-27",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CY",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2608.07535v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.07535v1",
+      "arxiv_id": "2608.07535",
+      "is_today_new": true,
+      "created_at": "2026-08-11",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
+      "is_safe": true
+    },
+    {
       "id": "06ed47043b6f",
       "title": "V&V takes on OpenAI’s long-horizon incidents",
       "abstract": "[Cross-posted to LW. These short takes try to put a verification-and-validation slant on AI-safety / alignment topics – they are not full treatments. I co-originated coverage-driven verification (CDV), and spent several decades doing verification of chips and AVs. See intro post for background.] On",
@@ -49,56 +75,6 @@
         "ML safety"
       ],
       "origin_url": "https://blog.foretellix.com/2026/07/23/vv-takes-on-openais-long-horizon-incidents/",
-      "pdf_url": "",
-      "arxiv_id": "",
-      "is_today_new": true,
-      "created_at": "2026-08-06",
-      "is_safe": true,
-      "security_tags": [],
-      "category_tag": ""
-    },
-    {
-      "id": "c2e6b280c783",
-      "title": "Devil in the Lens: Analyzing and Defending Physical Prompt Injection Against Vision-Language Models on Wearable Devices",
-      "abstract": "Vision-Language Models (VLMs) are rapidly deployed on human-facing wearable devices such as smart glasses to enable multimodal perception and AI-assisted decision-making. While prior research has demonstrated the risks of visual prompt injection into digital image inputs of VLMs, the unique security",
-      "source": "arXiv Embodied-Robot-Safety",
-      "source_type": "arxiv_api",
-      "publish_date": "2026-07-11",
-      "category": "学术论文",
-      "is_backdoor": false,
-      "tags": [
-        "cs.CR",
-        "AI安全"
-      ],
-      "origin_url": "http://arxiv.org/abs/2607.10269v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.10269v1",
-      "arxiv_id": "2607.10269",
-      "is_today_new": true,
-      "created_at": "2026-08-07",
-      "security_tags": [
-        "security"
-      ],
-      "category_tag": "security",
-      "is_safe": true
-    },
-    {
-      "id": "86ea98d74ff3",
-      "title": "When is misalignment just a bug?",
-      "abstract": "[LW linkpost is here] Introduction and epistemic status: This is the first post in a planned series, &#8220;Alignment as a verification problem&#8221;. I co-originated coverage-driven verification (CDV), which became the standard methodology for chip verification and is heavily used in AV safety. Ba",
-      "source": "Foretellix CTO Blog - AI Safety",
-      "source_type": "rss",
-      "publish_date": "2026-07-09",
-      "category": "官方新闻",
-      "is_backdoor": false,
-      "tags": [
-        "Uncategorized",
-        "AGI safety",
-        "Coverage",
-        "ML safety",
-        "ML-system verification",
-        "Spec bugs"
-      ],
-      "origin_url": "https://blog.foretellix.com/2026/07/09/when-is-misalignment-just-a-bug/",
       "pdf_url": "",
       "arxiv_id": "",
       "is_today_new": true,
