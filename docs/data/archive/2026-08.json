@@ -1,0 +1,54 @@
+[
+  {
+    "id": "afce010ff3a6",
+    "title": "Once Poisoned, Arbitrarily Controlled: A Programmable Backdoor in VLMs",
+    "abstract": "Existing vision-language model (VLM) backdoors are usually treated as static vulnerabilities: one-to-one and N-to-N attacks bind one or more triggers to a finite set of targets before victim training. This assumption substantially underestimates the threat. We show that a single poisoning phase can ",
+    "source": "arXiv Backdoor-Generic",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-08-11",
+    "category": "学术论文",
+    "is_backdoor": true,
+    "tags": [
+      "cs.CV",
+      "cs.CR",
+      "后门专题",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2608.10959v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.10959v1",
+    "arxiv_id": "2608.10959",
+    "is_today_new": true,
+    "created_at": "2026-08-12",
+    "security_tags": [
+      "backdoor",
+      "security"
+    ],
+    "category_tag": "backdoor",
+    "is_safe": true
+  },
+  {
+    "id": "8797fd3a4901",
+    "title": "SafeCap: Improving LVLM Safety with Image Captioning Reinforcement Learning",
+    "abstract": "Large vision-language models (LVLMs) remain vulnerable to jailbreak attacks that exploit visual inputs to bypass safety alignment inherited from their language backbones. We propose SafeCap, a reinforcement-learning framework that aligns LVLMs through learned self-captioning. SafeCap trains a policy",
+    "source": "arXiv LLM-Jailbreak",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-08-11",
+    "category": "学术论文",
+    "is_backdoor": false,
+    "tags": [
+      "cs.CV",
+      "cs.AI",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2608.10513v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.10513v1",
+    "arxiv_id": "2608.10513",
+    "is_today_new": true,
+    "created_at": "2026-08-12",
+    "security_tags": [
+      "security"
+    ],
+    "category_tag": "security",
+    "is_safe": true
+  }
+]
