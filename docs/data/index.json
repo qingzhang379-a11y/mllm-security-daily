@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_count": 22,
-    "last_updated": "2026-08-12T03:53:30Z",
-    "today_new": 2,
-    "today_added": 2
+    "total_count": 23,
+    "last_updated": "2026-08-13T03:57:20Z",
+    "today_new": 1,
+    "today_added": 1
   },
   "ids": [
     "06ed47043b6f",
@@ -27,9 +27,18 @@
     "4bf4101e16c9",
     "c7ef25d3a8a8",
     "afce010ff3a6",
-    "8797fd3a4901"
+    "8797fd3a4901",
+    "59a1fa970dab"
   ],
   "items": [
+    {
+      "id": "59a1fa970dab",
+      "title": "MindTopo reveals VLMs’ spatial reasoning abilities",
+      "publish_date": "2026-08-12",
+      "category": "官方新闻",
+      "is_backdoor": false,
+      "source": "Microsoft Research"
+    },
     {
       "id": "afce010ff3a6",
       "title": "Once Poisoned, Arbitrarily Controlled: A Programmable Backdoor in VLMs",

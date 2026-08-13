@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_count": 22,
-    "last_updated": "2026-08-12T03:53:30Z",
-    "today_new": 2,
-    "today_added": 2
+    "total_count": 23,
+    "last_updated": "2026-08-13T03:57:20Z",
+    "today_new": 1,
+    "today_added": 1
   },
   "news": [
     {
@@ -52,6 +52,30 @@
       "arxiv_id": "2608.10513",
       "is_today_new": true,
       "created_at": "2026-08-12",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
+      "is_safe": true
+    },
+    {
+      "id": "59a1fa970dab",
+      "title": "MindTopo reveals VLMs’ spatial reasoning abilities",
+      "abstract": "A path, a fence, a knot. MindTopo sets a new benchmark for testing how AI understands topological relationships and  highlights new opportunities to strengthen spatial reasoning and planning.\nThe post MindTopo reveals VLMs&#8217; spatial reasoning abilities appeared first on Microsoft Research.",
+      "source": "Microsoft Research",
+      "source_type": "rss",
+      "publish_date": "2026-08-12",
+      "category": "官方新闻",
+      "is_backdoor": false,
+      "tags": [
+        "Research Blog",
+        "AI安全"
+      ],
+      "origin_url": "https://www.microsoft.com/en-us/research/blog/mindtopo-reveals-vlms-spatial-reasoning-abilities/",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-13",
       "security_tags": [
         "security"
       ],
