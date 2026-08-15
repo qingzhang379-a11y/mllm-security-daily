@@ -1,7 +1,7 @@
 {
   "meta": {
-    "total_count": 23,
-    "last_updated": "2026-08-13T03:57:20Z",
+    "total_count": 24,
+    "last_updated": "2026-08-15T02:46:58Z",
     "today_new": 1,
     "today_added": 1
   },
@@ -76,6 +76,33 @@
       "arxiv_id": "",
       "is_today_new": true,
       "created_at": "2026-08-13",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
+      "is_safe": true
+    },
+    {
+      "id": "5d78be878185",
+      "title": "V&V takes on “Pacing the frontier”",
+      "abstract": "[Cross-posted to LW. These short takes try to put a verification-and-validation slant on AI-safety / alignment topics – they are not full treatments. I co-originated coverage-driven verification (CDV), and spent several decades doing verification of chips and AVs. See intro post for background.] Sum",
+      "source": "Foretellix CTO Blog - AI Safety",
+      "source_type": "rss",
+      "publish_date": "2026-08-14",
+      "category": "官方新闻",
+      "is_backdoor": false,
+      "tags": [
+        "Uncategorized",
+        "AGI safety",
+        "Coverage",
+        "ML safety",
+        "AI安全"
+      ],
+      "origin_url": "https://blog.foretellix.com/2026/08/14/vv-takes-on-pacing-the-frontier/",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-15",
       "security_tags": [
         "security"
       ],

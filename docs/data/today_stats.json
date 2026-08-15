@@ -1,7 +1,11 @@
 {
-  "date": "2026-08-14",
-  "total_items": 0,
+  "date": "2026-08-15",
+  "total_items": 1,
   "backdoor_items": 0,
-  "category_breakdown": {},
-  "sources": []
+  "category_breakdown": {
+    "官方新闻": 1
+  },
+  "sources": [
+    "Foretellix CTO Blog - AI Safety"
+  ]
 }

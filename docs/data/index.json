@@ -1,7 +1,7 @@
 {
   "meta": {
-    "total_count": 23,
-    "last_updated": "2026-08-13T03:57:20Z",
+    "total_count": 24,
+    "last_updated": "2026-08-15T02:46:58Z",
     "today_new": 1,
     "today_added": 1
   },
@@ -28,9 +28,18 @@
     "c7ef25d3a8a8",
     "afce010ff3a6",
     "8797fd3a4901",
-    "59a1fa970dab"
+    "59a1fa970dab",
+    "5d78be878185"
   ],
   "items": [
+    {
+      "id": "5d78be878185",
+      "title": "V&V takes on “Pacing the frontier”",
+      "publish_date": "2026-08-14",
+      "category": "官方新闻",
+      "is_backdoor": false,
+      "source": "Foretellix CTO Blog - AI Safety"
+    },
     {
       "id": "59a1fa970dab",
       "title": "MindTopo reveals VLMs’ spatial reasoning abilities",
