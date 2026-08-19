@@ -1,7 +1,7 @@
 {
   "meta": {
-    "total_count": 24,
-    "last_updated": "2026-08-15T02:46:58Z",
+    "total_count": 25,
+    "last_updated": "2026-08-19T02:47:38Z",
     "today_new": 1,
     "today_added": 1
   },
@@ -29,9 +29,18 @@
     "afce010ff3a6",
     "8797fd3a4901",
     "59a1fa970dab",
-    "5d78be878185"
+    "5d78be878185",
+    "940f9caf82fc"
   ],
   "items": [
+    {
+      "id": "940f9caf82fc",
+      "title": "MemCatalyst: Amplifying Data Auditing on Vision-Language Models via Data Poisoning",
+      "publish_date": "2026-08-18",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "source": "arXiv Data-Poisoning"
+    },
     {
       "id": "5d78be878185",
       "title": "V&V takes on “Pacing the frontier”",

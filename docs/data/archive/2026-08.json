@@ -101,5 +101,32 @@
     ],
     "category_tag": "security",
     "is_safe": true
+  },
+  {
+    "id": "940f9caf82fc",
+    "title": "MemCatalyst: Amplifying Data Auditing on Vision-Language Models via Data Poisoning",
+    "abstract": "Vision-Language models (VLMs) achieve outstanding performance largely due to the amount of training data available on the internet. At the same time, data holders (e.g., artists) urgently need to determine whether their data has been used for model training without authorization, which concerns both",
+    "source": "arXiv Data-Poisoning",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-08-18",
+    "category": "学术论文",
+    "is_backdoor": true,
+    "tags": [
+      "cs.CR",
+      "cs.LG",
+      "后门专题",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2608.17722v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.17722v1",
+    "arxiv_id": "2608.17722",
+    "is_today_new": true,
+    "created_at": "2026-08-19",
+    "security_tags": [
+      "backdoor",
+      "security"
+    ],
+    "category_tag": "backdoor",
+    "is_safe": true
   }
 ]
