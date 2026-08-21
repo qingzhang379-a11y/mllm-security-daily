@@ -1,7 +1,7 @@
 {
   "meta": {
-    "total_count": 25,
-    "last_updated": "2026-08-19T02:47:38Z",
+    "total_count": 26,
+    "last_updated": "2026-08-21T02:53:33Z",
     "today_new": 1,
     "today_added": 1
   },
@@ -134,6 +134,30 @@
         "security"
       ],
       "category_tag": "backdoor",
+      "is_safe": true
+    },
+    {
+      "id": "343465de5c5f",
+      "title": "Broadening access to Skala creates a faster path to predictive DFT",
+      "abstract": "Skala 1.1, the updated deep-learning exchange-correlation functional from Microsoft Research, provides greater accuracy, expanded accessibility across the computational chemistry ecosystem, and a living benchmark to track computational performance. \nThe post Broadening access to Skala creates a fast",
+      "source": "Microsoft Research",
+      "source_type": "rss",
+      "publish_date": "2026-08-20",
+      "category": "官方新闻",
+      "is_backdoor": false,
+      "tags": [
+        "Research Blog",
+        "AI安全"
+      ],
+      "origin_url": "https://www.microsoft.com/en-us/research/blog/broadening-access-to-skala-creates-a-faster-path-to-predictive-dft/",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-08-21",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
       "is_safe": true
     },
     {
