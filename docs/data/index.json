@@ -1,7 +1,7 @@
 {
   "meta": {
-    "total_count": 26,
-    "last_updated": "2026-08-21T02:53:33Z",
+    "total_count": 27,
+    "last_updated": "2026-08-25T02:49:45Z",
     "today_new": 1,
     "today_added": 1
   },
@@ -31,9 +31,18 @@
     "59a1fa970dab",
     "5d78be878185",
     "940f9caf82fc",
-    "343465de5c5f"
+    "343465de5c5f",
+    "7693d3734c74"
   ],
   "items": [
+    {
+      "id": "7693d3734c74",
+      "title": "Anchoring Bias: A Persistent Fairness Backdoor Attack against MLLMs under Continual Learning",
+      "publish_date": "2026-08-21",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "source": "arXiv Backdoor-Generic"
+    },
     {
       "id": "343465de5c5f",
       "title": "Broadening access to Skala creates a faster path to predictive DFT",

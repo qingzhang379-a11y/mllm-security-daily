@@ -152,5 +152,32 @@
     ],
     "category_tag": "security",
     "is_safe": true
+  },
+  {
+    "id": "7693d3734c74",
+    "title": "Anchoring Bias: A Persistent Fairness Backdoor Attack against MLLMs under Continual Learning",
+    "abstract": "Multimodal Large Language Models (MLLMs) are increasingly deployed in high-stakes domains where fairness is a critical safety requirement. In practice, these models are continually updated through continual learning (CL) to adapt to evolving tasks and data distributions. Prior work has shown that ba",
+    "source": "arXiv Backdoor-Generic",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-08-21",
+    "category": "学术论文",
+    "is_backdoor": true,
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "后门专题",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2608.21577v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.21577v1",
+    "arxiv_id": "2608.21577",
+    "is_today_new": true,
+    "created_at": "2026-08-25",
+    "security_tags": [
+      "backdoor",
+      "security"
+    ],
+    "category_tag": "backdoor",
+    "is_safe": true
   }
 ]
