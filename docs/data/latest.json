@@ -1,10 +1,38 @@
 {
   "meta": {
-    "total": 9,
+    "total": 10,
     "range": "last 30 days",
-    "last_updated": "2026-08-25T02:49:45Z"
+    "last_updated": "2026-08-26T02:55:51Z"
   },
   "news": [
+    {
+      "id": "03ab9c896d6c",
+      "title": "Not All Tokens Are Equal: Region-Aware Consistency Repair of Backdoors in MLLMs",
+      "abstract": "MLLMs are increasingly deployed in user-facing applications, yet they inherit backdoor risks from the pipelines used to construct them: triggers may reside in images, texts, or both. Existing model-level backdoor removal methods, largely designed for conventional classifiers, show limited effectiven",
+      "source": "arXiv Backdoor-Generic",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-08-25",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "tags": [
+        "cs.CR",
+        "cs.AI",
+        "cs.CL",
+        "后门专题",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2608.24354v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24354v1",
+      "arxiv_id": "2608.24354",
+      "is_today_new": true,
+      "created_at": "2026-08-26",
+      "security_tags": [
+        "backdoor",
+        "security"
+      ],
+      "category_tag": "backdoor",
+      "is_safe": true
+    },
     {
       "id": "7693d3734c74",
       "title": "Anchoring Bias: A Persistent Fairness Backdoor Attack against MLLMs under Continual Learning",

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "total_count": 27,
-    "last_updated": "2026-08-25T02:49:45Z",
+    "total_count": 28,
+    "last_updated": "2026-08-26T02:55:51Z",
     "today_new": 1,
     "today_added": 1
   },
@@ -32,9 +32,18 @@
     "5d78be878185",
     "940f9caf82fc",
     "343465de5c5f",
-    "7693d3734c74"
+    "7693d3734c74",
+    "03ab9c896d6c"
   ],
   "items": [
+    {
+      "id": "03ab9c896d6c",
+      "title": "Not All Tokens Are Equal: Region-Aware Consistency Repair of Backdoors in MLLMs",
+      "publish_date": "2026-08-25",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "source": "arXiv Backdoor-Generic"
+    },
     {
       "id": "7693d3734c74",
       "title": "Anchoring Bias: A Persistent Fairness Backdoor Attack against MLLMs under Continual Learning",
