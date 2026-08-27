@@ -1,11 +1,7 @@
 {
-  "date": "2026-08-26",
-  "total_items": 1,
-  "backdoor_items": 1,
-  "category_breakdown": {
-    "学术论文": 1
-  },
-  "sources": [
-    "arXiv Backdoor-Generic"
-  ]
+  "date": "2026-08-27",
+  "total_items": 0,
+  "backdoor_items": 0,
+  "category_breakdown": {},
+  "sources": []
 }
