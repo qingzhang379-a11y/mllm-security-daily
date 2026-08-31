@@ -1,7 +1,11 @@
 {
-  "date": "2026-08-30",
-  "total_items": 0,
+  "date": "2026-08-31",
+  "total_items": 1,
   "backdoor_items": 0,
-  "category_breakdown": {},
-  "sources": []
+  "category_breakdown": {
+    "学术论文": 1
+  },
+  "sources": [
+    "arXiv LLM-Jailbreak"
+  ]
 }
