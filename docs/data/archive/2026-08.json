@@ -232,5 +232,56 @@
     ],
     "category_tag": "security",
     "is_safe": true
+  },
+  {
+    "id": "9c2c74215133",
+    "title": "Do VLMs Share Safety Neurons Across Modalities?",
+    "abstract": "Vision-language models (VLMs) can comply with harmful requests delivered through images, even when their LLM backbones would refuse the same content in text. While prior work characterizes these jailbreaks empirically or at the representation level, how visual inputs perturb safety pathways at the n",
+    "source": "arXiv LLM-Jailbreak",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-08-31",
+    "category": "学术论文",
+    "is_backdoor": false,
+    "tags": [
+      "cs.LG",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2608.30750v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.30750v1",
+    "arxiv_id": "2608.30750",
+    "is_today_new": true,
+    "created_at": "2026-09-01",
+    "security_tags": [
+      "security"
+    ],
+    "category_tag": "security",
+    "is_safe": true
+  },
+  {
+    "id": "188e20a4ee25",
+    "title": "Lies We Can See: Joint Verbal and Non-Verbal Deception by VLM Agents in Embodied Social Interactions",
+    "abstract": "Strategic deception by LLM and VLM agents has emerged as a central AI alignment and safety concern. Social-deduction games (where each player holds a hidden role and communicates with others to deduce identities) serve as the canonical testbed, particularly in multi-agent settings. Existing testbeds",
+    "source": "arXiv LLM-AI-Safety",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-08-31",
+    "category": "学术论文",
+    "is_backdoor": false,
+    "tags": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CV",
+      "cs.LG",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2608.30428v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.30428v1",
+    "arxiv_id": "2608.30428",
+    "is_today_new": true,
+    "created_at": "2026-09-01",
+    "security_tags": [
+      "security"
+    ],
+    "category_tag": "security",
+    "is_safe": true
   }
 ]

@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_count": 29,
-    "last_updated": "2026-08-31T07:46:30Z",
-    "today_new": 1,
-    "today_added": 1
+    "total_count": 31,
+    "last_updated": "2026-09-01T06:52:12Z",
+    "today_new": 2,
+    "today_added": 2
   },
   "ids": [
     "06ed47043b6f",
@@ -34,9 +34,27 @@
     "343465de5c5f",
     "7693d3734c74",
     "03ab9c896d6c",
-    "49b0a83cefb8"
+    "49b0a83cefb8",
+    "9c2c74215133",
+    "188e20a4ee25"
   ],
   "items": [
+    {
+      "id": "9c2c74215133",
+      "title": "Do VLMs Share Safety Neurons Across Modalities?",
+      "publish_date": "2026-08-31",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv LLM-Jailbreak"
+    },
+    {
+      "id": "188e20a4ee25",
+      "title": "Lies We Can See: Joint Verbal and Non-Verbal Deception by VLM Agents in Embodied Social Interactions",
+      "publish_date": "2026-08-31",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv LLM-AI-Safety"
+    },
     {
       "id": "49b0a83cefb8",
       "title": "Fully Unleashing the Multimodal Attacker: Meta-Adaptive Jailbreaking of Vision-Language Models",
