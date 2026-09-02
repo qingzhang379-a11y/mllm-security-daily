@@ -1,12 +1,7 @@
 {
-  "date": "2026-09-01",
-  "total_items": 2,
+  "date": "2026-09-02",
+  "total_items": 0,
   "backdoor_items": 0,
-  "category_breakdown": {
-    "学术论文": 2
-  },
-  "sources": [
-    "arXiv LLM-Jailbreak",
-    "arXiv LLM-AI-Safety"
-  ]
+  "category_breakdown": {},
+  "sources": []
 }
