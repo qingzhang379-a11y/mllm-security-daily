@@ -1,11 +1,35 @@
 {
   "meta": {
-    "total_count": 31,
-    "last_updated": "2026-09-01T06:52:12Z",
-    "today_new": 2,
-    "today_added": 2
+    "total_count": 32,
+    "last_updated": "2026-09-03T06:35:28Z",
+    "today_new": 1,
+    "today_added": 1
   },
   "news": [
+    {
+      "id": "d869872ac90f",
+      "title": "Who Drives the Probability Game of VLMs? A Temporal Causal Drive Evaluation Framework",
+      "abstract": "Vision-language models (VLMs) are increasingly evaluated on complex image and video understanding tasks, yet conventional metrics primarily assess final-answer quality and reveal little about how different information sources shape the generation process. We propose a causal and temporal evaluation ",
+      "source": "arXiv Backdoor-Generic",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-09-02",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "tags": [
+        "cs.CV",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2609.02000v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02000v1",
+      "arxiv_id": "2609.02000",
+      "is_today_new": true,
+      "created_at": "2026-09-03",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
+      "is_safe": true
+    },
     {
       "id": "afce010ff3a6",
       "title": "Once Poisoned, Arbitrarily Controlled: A Programmable Backdoor in VLMs",

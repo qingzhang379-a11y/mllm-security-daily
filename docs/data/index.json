@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_count": 31,
-    "last_updated": "2026-09-01T06:52:12Z",
-    "today_new": 2,
-    "today_added": 2
+    "total_count": 32,
+    "last_updated": "2026-09-03T06:35:28Z",
+    "today_new": 1,
+    "today_added": 1
   },
   "ids": [
     "06ed47043b6f",
@@ -36,9 +36,18 @@
     "03ab9c896d6c",
     "49b0a83cefb8",
     "9c2c74215133",
-    "188e20a4ee25"
+    "188e20a4ee25",
+    "d869872ac90f"
   ],
   "items": [
+    {
+      "id": "d869872ac90f",
+      "title": "Who Drives the Probability Game of VLMs? A Temporal Causal Drive Evaluation Framework",
+      "publish_date": "2026-09-02",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv Backdoor-Generic"
+    },
     {
       "id": "9c2c74215133",
       "title": "Do VLMs Share Safety Neurons Across Modalities?",
