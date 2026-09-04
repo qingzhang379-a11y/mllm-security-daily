@@ -1,7 +1,7 @@
 {
   "meta": {
-    "total_count": 32,
-    "last_updated": "2026-09-03T06:35:28Z",
+    "total_count": 33,
+    "last_updated": "2026-09-04T06:37:02Z",
     "today_new": 1,
     "today_added": 1
   },
@@ -309,6 +309,31 @@
       "arxiv_id": "2608.30428",
       "is_today_new": true,
       "created_at": "2026-09-01",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
+      "is_safe": true
+    },
+    {
+      "id": "162531cd7055",
+      "title": "Fully Unleashing the Multimodal Attacker: Meta-Adaptive Jailbreaking of Vision-Language Models",
+      "abstract": "The safety of large vision-language models is increasingly stress-tested by multimodal jailbreaks, yet existing attacks remain largely static at the meta level: template-based attacks freeze the image-text layout, while iterative attacks adapt only the image-text content with fixed attack strategies",
+      "source": "arXiv LLM-Jailbreak",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-08-27",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "tags": [
+        "cs.CR",
+        "cs.CV",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2608.27531v2",
+      "pdf_url": "https://arxiv.org/pdf/2608.27531v2",
+      "arxiv_id": "2608.27531",
+      "is_today_new": true,
+      "created_at": "2026-09-04",
       "security_tags": [
         "security"
       ],
