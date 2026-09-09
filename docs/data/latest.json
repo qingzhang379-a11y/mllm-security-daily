@@ -1,10 +1,36 @@
 {
   "meta": {
-    "total": 13,
+    "total": 14,
     "range": "last 30 days",
-    "last_updated": "2026-09-04T06:37:02Z"
+    "last_updated": "2026-09-09T06:48:45Z"
   },
   "news": [
+    {
+      "id": "35c6b3e2ea81",
+      "title": "FreqDoor: A Hidden Trojan in the Frequency Domain for Backdoor Attacks on Vision-Language Models",
+      "abstract": "Vision-language models (VLMs) have recently shown excellent progress in open-ended image-to-text generation. However, their multimodal nature makes them persistently vulnerable to backdoor attacks. Existing backdoor triggers for VLMs are either spatial, textual, or bimodal, which may yield localized",
+      "source": "arXiv Backdoor-Generic",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-09-07",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "tags": [
+        "cs.CV",
+        "后门专题",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2609.07048v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.07048v1",
+      "arxiv_id": "2609.07048",
+      "is_today_new": true,
+      "created_at": "2026-09-09",
+      "security_tags": [
+        "backdoor",
+        "security"
+      ],
+      "category_tag": "backdoor",
+      "is_safe": true
+    },
     {
       "id": "d869872ac90f",
       "title": "Who Drives the Probability Game of VLMs? A Temporal Causal Drive Evaluation Framework",

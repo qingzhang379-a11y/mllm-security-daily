@@ -1,7 +1,7 @@
 {
   "meta": {
-    "total_count": 33,
-    "last_updated": "2026-09-04T06:37:02Z",
+    "total_count": 34,
+    "last_updated": "2026-09-09T06:48:45Z",
     "today_new": 1,
     "today_added": 1
   },
@@ -28,6 +28,32 @@
         "security"
       ],
       "category_tag": "security",
+      "is_safe": true
+    },
+    {
+      "id": "35c6b3e2ea81",
+      "title": "FreqDoor: A Hidden Trojan in the Frequency Domain for Backdoor Attacks on Vision-Language Models",
+      "abstract": "Vision-language models (VLMs) have recently shown excellent progress in open-ended image-to-text generation. However, their multimodal nature makes them persistently vulnerable to backdoor attacks. Existing backdoor triggers for VLMs are either spatial, textual, or bimodal, which may yield localized",
+      "source": "arXiv Backdoor-Generic",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-09-07",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "tags": [
+        "cs.CV",
+        "后门专题",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2609.07048v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.07048v1",
+      "arxiv_id": "2609.07048",
+      "is_today_new": true,
+      "created_at": "2026-09-09",
+      "security_tags": [
+        "backdoor",
+        "security"
+      ],
+      "category_tag": "backdoor",
       "is_safe": true
     },
     {

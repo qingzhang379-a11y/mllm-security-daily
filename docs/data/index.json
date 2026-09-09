@@ -1,7 +1,7 @@
 {
   "meta": {
-    "total_count": 33,
-    "last_updated": "2026-09-04T06:37:02Z",
+    "total_count": 34,
+    "last_updated": "2026-09-09T06:48:45Z",
     "today_new": 1,
     "today_added": 1
   },
@@ -38,9 +38,18 @@
     "9c2c74215133",
     "188e20a4ee25",
     "d869872ac90f",
-    "162531cd7055"
+    "162531cd7055",
+    "35c6b3e2ea81"
   ],
   "items": [
+    {
+      "id": "35c6b3e2ea81",
+      "title": "FreqDoor: A Hidden Trojan in the Frequency Domain for Backdoor Attacks on Vision-Language Models",
+      "publish_date": "2026-09-07",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "source": "arXiv Backdoor-Generic"
+    },
     {
       "id": "d869872ac90f",
       "title": "Who Drives the Probability Game of VLMs? A Temporal Causal Drive Evaluation Framework",
