@@ -16,8 +16,14 @@ const readSet = reactive({})
 // 当前打开的笔记抽屉对应的资讯 ID
 const activeNoteId = ref('')
 
-// 模块加载时从 localStorage 恢复（仅客户端；SSR 构建期无 localStorage）
-if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+// 是否已从 localStorage 恢复过（模块级单例，hydration 时只会恢复一次）
+let restored = false
+
+function restore() {
+  // 仅客户端可恢复；SSR 构建/渲染期跳过
+  if (typeof window === 'undefined' || typeof localStorage === 'undefined') return
+  if (restored) return
+  restored = true
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     if (raw) Object.assign(notes, JSON.parse(raw))
@@ -49,6 +55,9 @@ function persistRead() {
 }
 
 export function useNotes() {
+  // 客户端 hydration 后首次调用时从 localStorage 恢复（SSR 期跳过）
+  restore()
+
   function openNote(id) {
     activeNoteId.value = id
   }
