@@ -31,6 +31,7 @@
       <select class="filter-select" v-model="localSort" @change="emitChange">
         <option value="date_desc">最新优先</option>
         <option value="date_asc">最早优先</option>
+        <option value="rating_desc">重要度优先</option>
       </select>
     </div>
 

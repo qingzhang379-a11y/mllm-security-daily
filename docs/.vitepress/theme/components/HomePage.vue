@@ -96,6 +96,7 @@ import FilterSidebar from './FilterSidebar.vue'
 import HotTopics from './HotTopics.vue'
 import Pagination from './Pagination.vue'
 import NewsCard from './NewsCard.vue'
+import { useNotes } from '../composables/useNotes.js'
 
 const props = defineProps({
   data: { type: Object, default: () => ({ news: [], meta: {} }) }
@@ -123,6 +124,12 @@ const backdoorOnly = ref(false)
 const timeRange = ref('all')
 const sort = ref('date_desc')
 const activeTopic = ref('')
+
+// 读取用户标记的重要程度（用于"重要度优先"排序）
+const { getRating } = useNotes()
+function itemRating(item) {
+  return getRating(item.id || item.origin_url || '') || 0
+}
 
 // Auto-extract hot topics from data: count keyword occurrences across all items
 const TOPIC_KEYWORDS = {
@@ -176,9 +183,14 @@ const filteredItems = computed(() => {
     arr = arr.filter(i => { const t = (i.title+' '+(i.abstract||'')).toLowerCase(); return kws.some(k => t.includes(k)) })
   }
   arr = [...arr]
-  arr.sort((a, b) => sort.value === 'date_desc'
-    ? (b.publish_date||'').localeCompare(a.publish_date||'')
-    : (a.publish_date||'').localeCompare(b.publish_date||''))
+  if (sort.value === 'rating_desc') {
+    // 重要度优先：先按星级降序，同级再按时间降序
+    arr.sort((a, b) => (itemRating(b) - itemRating(a)) || (b.publish_date||'').localeCompare(a.publish_date||''))
+  } else {
+    arr.sort((a, b) => sort.value === 'date_desc'
+      ? (b.publish_date||'').localeCompare(a.publish_date||'')
+      : (a.publish_date||'').localeCompare(b.publish_date||''))
+  }
   return arr
 })
 

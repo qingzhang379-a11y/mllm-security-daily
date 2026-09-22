@@ -3,7 +3,7 @@
     class="news-card"
     :class="[
       categoryClass,
-      { 'card-backdoor': item.is_backdoor, 'card-new': isNew }
+      { 'card-backdoor': item.is_backdoor, 'card-new': isNew, 'card-read': isReadFlag }
     ]"
     @click="onOpenNote"
     role="button"
@@ -40,8 +40,19 @@
     <p v-if="item.abstract" class="card-abstract">{{ item.abstract }}</p>
 
     <div class="card-footer">
+      <!-- 已读圆圈 -->
+      <span
+        class="card-read-circle"
+        :class="{ read: isReadFlag }"
+        :title="isReadFlag ? '点击取消已读' : '点击标记已读'"
+        @click.stop="onToggleRead"
+      ><i class="fas fa-check"></i></span>
+
       <span v-if="item.arxiv_id" class="tag tag-arxiv">
         <i class="fas fa-scroll"></i> arXiv:{{ item.arxiv_id }}
+      </span>
+      <span v-if="rating > 0" class="tag tag-rating" :title="'重要程度 ' + rating + ' 星'">
+        <i class="fas fa-star"></i> {{ rating }}
       </span>
       <span class="spacer"></span>
       <a v-if="item.pdf_url" :href="item.pdf_url" target="_blank" @click.stop>
@@ -69,11 +80,21 @@ import { useNotes } from '../composables/useNotes.js'
 
 const props = defineProps({ item: { type: Object, required: true } })
 
-const { hasNote } = useNotes()
+const { hasNote, getRating, isRead, toggleRead } = useNotes()
 const noteItem = ref(null)
 
 // 是否有已保存的笔记（小圆点标记）
 const hasSavedNote = computed(() => hasNote(props.item.id || props.item.origin_url || ''))
+
+// 重要程度（0 表示未评分）
+const rating = computed(() => getRating(props.item.id || props.item.origin_url || ''))
+
+// 是否已读
+const isReadFlag = computed(() => isRead(props.item.id || props.item.origin_url || ''))
+
+function onToggleRead() {
+  toggleRead(props.item.id || props.item.origin_url || '')
+}
 
 // 是否今日新增（按首次采集时间判断，7 天内视为新增）
 const isNew = computed(() => {

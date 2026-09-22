@@ -33,6 +33,32 @@
             <div v-else class="note-target-link muted">暂无来源链接</div>
           </div>
 
+          <!-- 重要程度：1-5 星 -->
+          <div class="note-rating">
+            <span class="note-rating-label">重要程度</span>
+            <div class="note-stars">
+              <span
+                v-for="n in 5"
+                :key="n"
+                class="note-star"
+                :class="{ active: rating >= n }"
+                @click="rating = n"
+                @mouseenter="hoverRating = n"
+                @mouseleave="hoverRating = 0"
+              >
+                <i class="fas" :class="(hoverRating || rating) >= n ? 'fa-star' : 'fa-star-regular'"></i>
+              </span>
+              <span class="note-rating-hint">{{ rating ? rating + ' 星' : '未评分' }}</span>
+            </div>
+          </div>
+
+          <!-- 已读状态 -->
+          <label class="note-read-toggle">
+            <input type="checkbox" :checked="readFlag" @change="onToggleRead" />
+            <span class="note-read-dot"></span>
+            标记为已读
+          </label>
+
           <!-- 多行笔记编辑区 -->
           <div class="note-editor">
             <textarea
@@ -51,10 +77,10 @@
         </div>
 
         <footer class="note-drawer-footer">
-          <button class="note-btn note-btn-ghost" @click="onClear" :disabled="!draft.trim()">
+          <button class="note-btn note-btn-ghost" @click="onClear" :disabled="!draft.trim() && !rating">
             <i class="fas fa-eraser"></i> 清空笔记
           </button>
-          <button class="note-btn note-btn-primary" @click="onSave" :disabled="!draft.trim()">
+          <button class="note-btn note-btn-primary" @click="onSave" :disabled="!draft.trim() && !rating">
             <i class="fas fa-floppy-disk"></i> 保存笔记
           </button>
         </footer>
@@ -74,8 +100,11 @@ const props = defineProps({
 
 const emit = defineEmits(['close'])
 
-const { getNote, saveNote, clearNote, closeNote } = useNotes()
+const { getNote, getRating, saveNote, clearNote, closeNote, isRead, toggleRead } = useNotes()
 const draft = ref('')
+const rating = ref(0)
+const hoverRating = ref(0)
+const readFlag = ref(false)
 
 const visible = computed(() => Boolean(props.item))
 
@@ -84,7 +113,10 @@ watch(
   () => props.item,
   (item) => {
     if (item) {
-      draft.value = getNote(item.id || item.origin_url || '') || ''
+      const id = item.id || item.origin_url || ''
+      draft.value = getNote(id) || ''
+      rating.value = getRating(id)
+      readFlag.value = isRead(id)
       // 等待抽屉渲染完成后聚焦输入框
       nextTick(() => {
         const ta = document.querySelector('.note-textarea')
@@ -92,6 +124,8 @@ watch(
       })
     } else {
       draft.value = ''
+      rating.value = 0
+      readFlag.value = false
     }
   },
   { immediate: true }
@@ -106,12 +140,19 @@ function close() {
 
 function onSave() {
   if (!props.item) return
-  saveNote(props.item.id || props.item.origin_url || '', draft.value)
+  saveNote(props.item.id || props.item.origin_url || '', draft.value, rating.value)
 }
 
 function onClear() {
   if (!props.item) return
   clearNote(props.item.id || props.item.origin_url || '')
   draft.value = ''
+  rating.value = 0
+}
+
+function onToggleRead(e) {
+  if (!props.item) return
+  toggleRead(props.item.id || props.item.origin_url || '')
+  readFlag.value = e.target.checked
 }
 </script>

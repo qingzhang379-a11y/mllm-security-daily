@@ -616,6 +616,14 @@ body {
   font-size: 11px;
 }
 
+/* 重要程度星级标签 */
+.tag-rating {
+  background: rgba(240, 196, 80, 0.14);
+  color: #e0b040;
+  border: 1px solid rgba(240, 196, 80, 0.3);
+  font-weight: 600;
+}
+
 /* === Right Sidebar === */
 .right-sidebar {
   width: 190px;
@@ -776,6 +784,49 @@ body {
   color: var(--cat-orange);
 }
 
+/* === 已读圆圈 === */
+.card-read-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border-light);
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+  font-size: 10px;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.card-read-circle:hover {
+  border-color: var(--cat-green);
+  color: var(--cat-green);
+}
+
+.card-read-circle.read {
+  background: var(--cat-green);
+  border-color: var(--cat-green);
+  color: #fff;
+  box-shadow: 0 0 8px rgba(92, 184, 132, 0.4);
+}
+
+/* 已读卡片：弱化显示 */
+.news-card.card-read {
+  opacity: 0.55;
+}
+
+.news-card.card-read:hover {
+  opacity: 0.9;
+}
+
+.news-card.card-read .card-title {
+  text-decoration: line-through;
+  text-decoration-color: var(--color-text-tertiary);
+}
+
 /* 已有笔记时的小圆点标记 */
 .note-dot {
   width: 6px;
@@ -901,6 +952,91 @@ body {
 
 .note-target-link:hover { text-decoration: underline; }
 .note-target-link.muted { color: var(--color-text-tertiary); }
+
+/* 重要程度星级选择 */
+.note-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-card);
+}
+
+.note-rating-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.note-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.note-star {
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--color-text-tertiary);
+  transition: transform 0.12s, color 0.12s;
+  line-height: 1;
+}
+
+.note-star:hover {
+  transform: scale(1.15);
+}
+
+.note-star.active i,
+.note-star i {
+  color: #e0b040;
+  text-shadow: 0 0 6px rgba(240, 196, 80, 0.4);
+}
+
+.note-star i.fa-star-regular {
+  color: var(--color-text-tertiary);
+  text-shadow: none;
+}
+
+.note-rating-hint {
+  margin-left: 8px;
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  min-width: 42px;
+  text-align: left;
+}
+
+/* 已读开关 */
+.note-read-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  user-select: none;
+  width: fit-content;
+}
+
+.note-read-toggle input {
+  display: none;
+}
+
+.note-read-toggle .note-read-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border-light);
+  display: inline-block;
+  transition: all 0.15s;
+}
+
+.note-read-toggle input:checked + .note-read-dot {
+  background: var(--cat-green);
+  border-color: var(--cat-green);
+  box-shadow: 0 0 6px rgba(92, 184, 132, 0.5);
+}
 
 /* 多行笔记编辑区 */
 .note-editor {
