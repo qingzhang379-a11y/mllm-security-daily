@@ -311,12 +311,24 @@ body {
   justify-content: center;
   color: var(--color-text-secondary);
   transition: all 0.15s;
+  text-decoration: none;
 }
 
 .stat-refresh-btn:hover {
   color: var(--color-primary);
   border-color: var(--color-primary);
   background: var(--color-primary-glow);
+}
+
+.stat-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat-actions .stat-refresh-btn {
+  margin-left: 0;
 }
 
 /* === Main Layout === */

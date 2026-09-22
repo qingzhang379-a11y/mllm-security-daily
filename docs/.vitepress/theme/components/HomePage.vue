@@ -50,7 +50,10 @@
           <div class="stat-value">{{ lastUpdated }}</div>
           <div class="stat-sub">{{ todayNewText }}</div>
         </div>
-        <button class="stat-refresh-btn" @click="refresh" title="刷新数据"><i class="fas fa-rotate"></i></button>
+        <div class="stat-actions">
+          <a class="stat-refresh-btn" :href="manualRunUrl" target="_blank" rel="noopener" title="触发一次采集（需在 GitHub 页面点击 Run workflow）"><i class="fas fa-play"></i></a>
+          <button class="stat-refresh-btn" @click="refresh" title="刷新数据"><i class="fas fa-rotate"></i></button>
+        </div>
       </div>
     </div>
 
@@ -186,6 +189,8 @@ watch(filteredItems, () => { currentPage.value = 1 })
 function refresh() { window.location.reload() }
 
 const basePath = import.meta.env.BASE_URL || '/'
+// 手动触发采集：跳转 GitHub Actions 手动运行页（无需在页面暴露 token，最安全）
+const manualRunUrl = 'https://github.com/qingzhang379-a11y/mllm-security-daily/actions/workflows/daily_collect.yml'
 
 const isDark = ref(true)
 function toggleTheme() {
