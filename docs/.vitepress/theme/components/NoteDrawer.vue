@@ -46,7 +46,7 @@
                 @mouseenter="hoverRating = n"
                 @mouseleave="hoverRating = 0"
               >
-                <i class="fas" :class="(hoverRating || rating) >= n ? 'fa-star' : 'fa-star-regular'"></i>
+                <i :class="(hoverRating || rating) >= n ? 'fas fa-star' : 'far fa-star'"></i>
               </span>
               <span class="note-rating-hint">{{ rating ? rating + ' 星' : '未评分' }}</span>
             </div>
