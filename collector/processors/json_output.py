@@ -58,9 +58,12 @@ class JsonOutput:
 
         # Separate new items
         truly_new = []
+        collected_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         for item in new_items:
             item_id = item.get("id", "")
             if item_id and item_id not in existing_ids:
+                # 记录首次采集时间，前端据此显示“新增”徽标
+                item["collected_at"] = collected_at
                 truly_new.append(item)
                 existing_ids.add(item_id)
 

@@ -432,6 +432,7 @@ body {
   transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 /* Category-specific thin colored left borders */
@@ -583,6 +584,13 @@ body {
   background: rgba(232, 104, 104, 0.15);
   color: var(--color-backdoor);
   border: 1px solid rgba(232, 104, 104, 0.25);
+}
+
+.tag-new {
+  background: rgba(92, 184, 132, 0.16);
+  color: var(--cat-green);
+  border: 1px solid rgba(92, 184, 132, 0.35);
+  box-shadow: 0 0 8px rgba(92, 184, 132, 0.25);
 }
 
 .tag-source {

@@ -1,18 +1,24 @@
 <template>
-  <a
+  <div
     class="news-card"
     :class="[
       categoryClass,
-      { 'card-backdoor': item.is_backdoor }
+      { 'card-backdoor': item.is_backdoor, 'card-new': isNew }
     ]"
-    :href="item.origin_url"
-    target="_blank"
-    rel="noopener noreferrer"
+    @click="onOpenNote"
+    role="button"
+    tabindex="0"
+    @keydown.enter="onOpenNote"
   >
     <div class="card-header">
       <!-- Category icon (linear) -->
       <span class="cat-icon" :class="categoryClass">
         <i :class="categoryIcon"></i>
+      </span>
+
+      <!-- 新增徽标 -->
+      <span v-if="isNew" class="tag tag-new">
+        <i class="fas fa-bolt"></i> 新增
       </span>
 
       <!-- Backdoor warning badge (coexists with category border) -->
@@ -50,7 +56,7 @@
         <span v-if="hasSavedNote" class="note-dot"></span>
       </button>
     </div>
-  </a>
+  </div>
 
   <!-- 笔记抽屉 -->
   <NoteDrawer :item="noteItem" @close="noteItem = null" />
@@ -68,6 +74,16 @@ const noteItem = ref(null)
 
 // 是否有已保存的笔记（小圆点标记）
 const hasSavedNote = computed(() => hasNote(props.item.id || props.item.origin_url || ''))
+
+// 是否今日新增（按首次采集时间判断，7 天内视为新增）
+const isNew = computed(() => {
+  const t = props.item.collected_at || props.item.today_added
+  if (!t) return false
+  const d = new Date(t)
+  if (isNaN(d.getTime())) return false
+  const diffDays = (Date.now() - d.getTime()) / 86400000
+  return diffDays < 7
+})
 
 function onOpenNote() {
   noteItem.value = props.item
