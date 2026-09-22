@@ -46,9 +46,9 @@
       <div class="stat-card">
         <div class="stat-icon blue"><i class="fas fa-clock-rotate-left"></i></div>
         <div class="stat-info">
-          <div class="stat-label">上次更新</div>
+          <div class="stat-label">最近采集</div>
           <div class="stat-value">{{ lastUpdated }}</div>
-          <div class="stat-sub">每日自动采集</div>
+          <div class="stat-sub">{{ todayNewText }}</div>
         </div>
         <button class="stat-refresh-btn" @click="refresh" title="刷新数据"><i class="fas fa-rotate"></i></button>
       </div>
@@ -106,6 +106,13 @@ const items = allItems
 const totalCount = computed(() => items.value.length)
 const backdoorCount = computed(() => items.value.filter(i => i.is_backdoor).length)
 const lastUpdated = computed(() => meta.value.last_updated?.slice(0,10) || '--')
+// 今日新增状态：today_new>0 显示新增数，否则显示“今日无新增·系统正常采集”
+const todayNewText = computed(() => {
+  const n = meta.value.today_new
+  if (n === undefined || n === null) return '每日自动采集'
+  if (n > 0) return `今日新增 ${n} 条`
+  return '今日无新增·系统正常采集'
+})
 
 const search = ref('')
 const category = ref('')

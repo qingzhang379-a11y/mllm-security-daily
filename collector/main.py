@@ -178,6 +178,9 @@ class CollectorOrchestrator:
 
         if not new_items:
             logger.info("No new items to publish")
+            # 即使无新条目，也刷新 last_updated / 今日统计，
+            # 让前端“最近采集时间”每天更新，避免页面误以为系统停止采集
+            self.json_output.touch_timestamps(today_new=0, today_added=0)
             self.json_output.write_today_stats([])
             return
 

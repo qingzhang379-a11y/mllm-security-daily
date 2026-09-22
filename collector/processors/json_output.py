@@ -189,6 +189,41 @@ class JsonOutput:
         with open(filepath, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
 
+    def touch_timestamps(self, today_new: int = 0, today_added: int = 0):
+        """Refresh last_updated timestamps on index/latest/all_news without changing content.
+        Called when no new items are collected, so the frontend still shows a
+        fresh "last collected" time and the daily workflow produces a commit.
+        """
+        now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+        # --- index.json: refresh meta only ---
+        index = self._read_index()
+        index.setdefault("ids", [])
+        index.setdefault("items", [])
+        index["meta"] = {
+            "total_count": len(index["ids"]),
+            "last_updated": now,
+            "today_new": today_new,
+            "today_added": today_added,
+        }
+        self._write_json(self.index_file, index)
+
+        # --- latest.json: refresh meta only ---
+        latest = self._read_json(self.latest_file)
+        if latest and isinstance(latest, dict):
+            latest["meta"]["last_updated"] = now
+            self._write_json(self.latest_file, latest)
+
+        # --- all_news.json: refresh meta only ---
+        all_news = self._read_json(self.all_news_file)
+        if all_news and isinstance(all_news, dict):
+            all_news["meta"]["last_updated"] = now
+            all_news["meta"]["today_new"] = today_new
+            all_news["meta"]["today_added"] = today_added
+            self._write_json(self.all_news_file, all_news)
+
+        logger.info(f"Touched timestamps (no new items): last_updated={now}, today_new={today_new}")
+
     def write_today_stats(self, items: list[dict[str, Any]],
                           output_path: str | Path | None = None) -> dict:
         """Write a stats summary for today's collection run."""
