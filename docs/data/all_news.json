@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_count": 34,
-    "last_updated": "2026-09-23T00:54:56Z",
-    "today_new": 0,
-    "today_added": 0
+    "total_count": 35,
+    "last_updated": "2026-09-23T06:51:08Z",
+    "today_new": 1,
+    "today_added": 1
   },
   "news": [
     {
@@ -365,6 +365,35 @@
       ],
       "category_tag": "security",
       "is_safe": true
+    },
+    {
+      "id": "95dd12f3f388",
+      "title": "StepTrigger: Contact-State-Triggered Backdoor Attacks on VLM-Powered Legged Robots",
+      "abstract": "Large language models and vision-language models are increasingly used as high-level planners in robotic systems, using task goals and sensor summaries to select navigation or manipulation actions. This creates a new backdoor surface: a compromised planner can behave normally in most runs, yet chang",
+      "source": "arXiv Backdoor-Generic",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-08-07",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "tags": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CR",
+        "后门专题",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2609.26131v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.26131v1",
+      "arxiv_id": "2609.26131",
+      "is_today_new": true,
+      "created_at": "2026-09-23",
+      "security_tags": [
+        "backdoor",
+        "security"
+      ],
+      "category_tag": "backdoor",
+      "is_safe": true,
+      "collected_at": "2026-09-23T06:51:08Z"
     },
     {
       "id": "06ed47043b6f",
