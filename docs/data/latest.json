@@ -1,10 +1,38 @@
 {
   "meta": {
-    "total": 7,
+    "total": 5,
     "range": "last 30 days",
-    "last_updated": "2026-09-29T07:35:25Z"
+    "last_updated": "2026-09-30T07:34:57Z"
   },
   "news": [
+    {
+      "id": "bdec115eb681",
+      "title": "Selective Channel Restoration for Backdoored Vision-Language Models",
+      "abstract": "Vision-language models (VLMs) exhibit strong multimodal capabilities but remain vulnerable to backdoors implanted through poisoned fine-tuning data. Existing defenses often require extensive parameter updates during fine-tuning or incur per-query overhead during inference. To address these limitatio",
+      "source": "arXiv Backdoor-Generic",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-09-29",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "tags": [
+        "cs.CR",
+        "cs.CV",
+        "后门专题",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2609.37759v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.37759v1",
+      "arxiv_id": "2609.37759",
+      "is_today_new": true,
+      "created_at": "2026-09-30",
+      "security_tags": [
+        "backdoor",
+        "security"
+      ],
+      "category_tag": "backdoor",
+      "is_safe": true,
+      "collected_at": "2026-09-30T07:34:57Z"
+    },
     {
       "id": "35c6b3e2ea81",
       "title": "FreqDoor: A Hidden Trojan in the Frequency Domain for Backdoor Attacks on Vision-Language Models",
@@ -104,84 +132,6 @@
         "security"
       ],
       "category_tag": "security",
-      "is_safe": true
-    },
-    {
-      "id": "49b0a83cefb8",
-      "title": "Fully Unleashing the Multimodal Attacker: Meta-Adaptive Jailbreaking of Vision-Language Models",
-      "abstract": "The safety of large vision-language models is increasingly stress-tested by multimodal jailbreaks, yet existing attacks remain largely static at the meta level: template-based attacks freeze the image--text layout, while iterative attacks adapt only the image--text content with fixed attack strategi",
-      "source": "arXiv LLM-Jailbreak",
-      "source_type": "arxiv_api",
-      "publish_date": "2026-08-27",
-      "category": "学术论文",
-      "is_backdoor": false,
-      "tags": [
-        "cs.CR",
-        "cs.CV",
-        "AI安全"
-      ],
-      "origin_url": "http://arxiv.org/abs/2608.27531v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.27531v1",
-      "arxiv_id": "2608.27531",
-      "is_today_new": true,
-      "created_at": "2026-08-31",
-      "security_tags": [
-        "security"
-      ],
-      "category_tag": "security",
-      "is_safe": true
-    },
-    {
-      "id": "162531cd7055",
-      "title": "Fully Unleashing the Multimodal Attacker: Meta-Adaptive Jailbreaking of Vision-Language Models",
-      "abstract": "The safety of large vision-language models is increasingly stress-tested by multimodal jailbreaks, yet existing attacks remain largely static at the meta level: template-based attacks freeze the image-text layout, while iterative attacks adapt only the image-text content with fixed attack strategies",
-      "source": "arXiv LLM-Jailbreak",
-      "source_type": "arxiv_api",
-      "publish_date": "2026-08-27",
-      "category": "学术论文",
-      "is_backdoor": false,
-      "tags": [
-        "cs.CR",
-        "cs.CV",
-        "AI安全"
-      ],
-      "origin_url": "http://arxiv.org/abs/2608.27531v2",
-      "pdf_url": "https://arxiv.org/pdf/2608.27531v2",
-      "arxiv_id": "2608.27531",
-      "is_today_new": true,
-      "created_at": "2026-09-04",
-      "security_tags": [
-        "security"
-      ],
-      "category_tag": "security",
-      "is_safe": true
-    },
-    {
-      "id": "03ab9c896d6c",
-      "title": "Not All Tokens Are Equal: Region-Aware Consistency Repair of Backdoors in MLLMs",
-      "abstract": "MLLMs are increasingly deployed in user-facing applications, yet they inherit backdoor risks from the pipelines used to construct them: triggers may reside in images, texts, or both. Existing model-level backdoor removal methods, largely designed for conventional classifiers, show limited effectiven",
-      "source": "arXiv Backdoor-Generic",
-      "source_type": "arxiv_api",
-      "publish_date": "2026-08-25",
-      "category": "学术论文",
-      "is_backdoor": true,
-      "tags": [
-        "cs.CR",
-        "cs.AI",
-        "cs.CL",
-        "后门专题",
-        "AI安全"
-      ],
-      "origin_url": "http://arxiv.org/abs/2608.24354v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.24354v1",
-      "arxiv_id": "2608.24354",
-      "is_today_new": true,
-      "created_at": "2026-08-26",
-      "security_tags": [
-        "backdoor",
-        "security"
-      ],
-      "category_tag": "backdoor",
       "is_safe": true
     }
   ]

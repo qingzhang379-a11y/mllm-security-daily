@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_count": 35,
-    "last_updated": "2026-09-29T07:35:25Z",
-    "today_new": 0,
-    "today_added": 0
+    "total_count": 36,
+    "last_updated": "2026-09-30T07:34:57Z",
+    "today_new": 1,
+    "today_added": 1
   },
   "ids": [
     "06ed47043b6f",
@@ -40,9 +40,18 @@
     "d869872ac90f",
     "162531cd7055",
     "35c6b3e2ea81",
-    "95dd12f3f388"
+    "95dd12f3f388",
+    "bdec115eb681"
   ],
   "items": [
+    {
+      "id": "bdec115eb681",
+      "title": "Selective Channel Restoration for Backdoored Vision-Language Models",
+      "publish_date": "2026-09-29",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "source": "arXiv Backdoor-Generic"
+    },
     {
       "id": "35c6b3e2ea81",
       "title": "FreqDoor: A Hidden Trojan in the Frequency Domain for Backdoor Attacks on Vision-Language Models",
