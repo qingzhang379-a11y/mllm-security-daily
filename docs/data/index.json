@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_count": 36,
-    "last_updated": "2026-09-30T07:34:57Z",
-    "today_new": 1,
-    "today_added": 1
+    "total_count": 38,
+    "last_updated": "2026-10-01T07:54:47Z",
+    "today_new": 2,
+    "today_added": 2
   },
   "ids": [
     "06ed47043b6f",
@@ -41,9 +41,19 @@
     "162531cd7055",
     "35c6b3e2ea81",
     "95dd12f3f388",
-    "bdec115eb681"
+    "bdec115eb681",
+    "38e31ece56b5",
+    "e7f1c2707991"
   ],
   "items": [
+    {
+      "id": "38e31ece56b5",
+      "title": "SceneJail: Exploiting Video Scenario Context to Jailbreak Multimodal LLMs",
+      "publish_date": "2026-09-30",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv LLM-Jailbreak"
+    },
     {
       "id": "bdec115eb681",
       "title": "Selective Channel Restoration for Backdoored Vision-Language Models",
@@ -294,6 +304,14 @@
     },
     {
       "id": "1311e87f7e0a",
+      "title": "Semantic Misalignment in Vision-Language Models under Perceptual Degradation",
+      "publish_date": "2026-01-13",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv Embodied-Robot-Safety"
+    },
+    {
+      "id": "e7f1c2707991",
       "title": "Semantic Misalignment in Vision-Language Models under Perceptual Degradation",
       "publish_date": "2026-01-13",
       "category": "学术论文",
