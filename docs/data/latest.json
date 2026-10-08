@@ -1,10 +1,37 @@
 {
   "meta": {
-    "total": 4,
+    "total": 3,
     "range": "last 30 days",
-    "last_updated": "2026-10-07T07:47:42Z"
+    "last_updated": "2026-10-08T08:05:10Z"
   },
   "news": [
+    {
+      "id": "c832e0e2ae1c",
+      "title": "Purifying Backdoored Large Vision-Language Models by Removing Hijacked Directions",
+      "abstract": "Large vision-language models (LVLMs) are increasingly deployed in safety-critical applications, yet they remain vulnerable to backdoor attacks. Defending against such attacks remains costly, as existing methods require either extensive retraining on clean data or per-query intervention at inference ",
+      "source": "arXiv Backdoor-Generic",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-10-07",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "tags": [
+        "cs.CV",
+        "后门专题",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2610.09941v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.09941v1",
+      "arxiv_id": "2610.09941",
+      "is_today_new": true,
+      "created_at": "2026-10-08",
+      "security_tags": [
+        "backdoor",
+        "security"
+      ],
+      "category_tag": "backdoor",
+      "is_safe": true,
+      "collected_at": "2026-10-08T08:05:10Z"
+    },
     {
       "id": "38e31ece56b5",
       "title": "SceneJail: Exploiting Video Scenario Context to Jailbreak Multimodal LLMs",
@@ -59,56 +86,6 @@
       "category_tag": "backdoor",
       "is_safe": true,
       "collected_at": "2026-09-30T07:34:57Z"
-    },
-    {
-      "id": "35c6b3e2ea81",
-      "title": "FreqDoor: A Hidden Trojan in the Frequency Domain for Backdoor Attacks on Vision-Language Models",
-      "abstract": "Vision-language models (VLMs) have recently shown excellent progress in open-ended image-to-text generation. However, their multimodal nature makes them persistently vulnerable to backdoor attacks. Existing backdoor triggers for VLMs are either spatial, textual, or bimodal, which may yield localized",
-      "source": "arXiv Backdoor-Generic",
-      "source_type": "arxiv_api",
-      "publish_date": "2026-09-07",
-      "category": "学术论文",
-      "is_backdoor": true,
-      "tags": [
-        "cs.CV",
-        "后门专题",
-        "AI安全"
-      ],
-      "origin_url": "http://arxiv.org/abs/2609.07048v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.07048v1",
-      "arxiv_id": "2609.07048",
-      "is_today_new": true,
-      "created_at": "2026-09-09",
-      "security_tags": [
-        "backdoor",
-        "security"
-      ],
-      "category_tag": "backdoor",
-      "is_safe": true
-    },
-    {
-      "id": "d869872ac90f",
-      "title": "Who Drives the Probability Game of VLMs? A Temporal Causal Drive Evaluation Framework",
-      "abstract": "Vision-language models (VLMs) are increasingly evaluated on complex image and video understanding tasks, yet conventional metrics primarily assess final-answer quality and reveal little about how different information sources shape the generation process. We propose a causal and temporal evaluation ",
-      "source": "arXiv Backdoor-Generic",
-      "source_type": "arxiv_api",
-      "publish_date": "2026-09-02",
-      "category": "学术论文",
-      "is_backdoor": false,
-      "tags": [
-        "cs.CV",
-        "AI安全"
-      ],
-      "origin_url": "http://arxiv.org/abs/2609.02000v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.02000v1",
-      "arxiv_id": "2609.02000",
-      "is_today_new": true,
-      "created_at": "2026-09-03",
-      "security_tags": [
-        "security"
-      ],
-      "category_tag": "security",
-      "is_safe": true
     }
   ]
 }

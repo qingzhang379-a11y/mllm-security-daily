@@ -1,0 +1,29 @@
+[
+  {
+    "id": "c832e0e2ae1c",
+    "title": "Purifying Backdoored Large Vision-Language Models by Removing Hijacked Directions",
+    "abstract": "Large vision-language models (LVLMs) are increasingly deployed in safety-critical applications, yet they remain vulnerable to backdoor attacks. Defending against such attacks remains costly, as existing methods require either extensive retraining on clean data or per-query intervention at inference ",
+    "source": "arXiv Backdoor-Generic",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-10-07",
+    "category": "学术论文",
+    "is_backdoor": true,
+    "tags": [
+      "cs.CV",
+      "后门专题",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2610.09941v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.09941v1",
+    "arxiv_id": "2610.09941",
+    "is_today_new": true,
+    "created_at": "2026-10-08",
+    "security_tags": [
+      "backdoor",
+      "security"
+    ],
+    "category_tag": "backdoor",
+    "is_safe": true,
+    "collected_at": "2026-10-08T08:05:10Z"
+  }
+]

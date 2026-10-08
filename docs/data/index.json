@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_count": 38,
-    "last_updated": "2026-10-07T07:47:42Z",
-    "today_new": 0,
-    "today_added": 0
+    "total_count": 39,
+    "last_updated": "2026-10-08T08:05:10Z",
+    "today_new": 1,
+    "today_added": 1
   },
   "ids": [
     "06ed47043b6f",
@@ -43,9 +43,18 @@
     "95dd12f3f388",
     "bdec115eb681",
     "38e31ece56b5",
-    "e7f1c2707991"
+    "e7f1c2707991",
+    "c832e0e2ae1c"
   ],
   "items": [
+    {
+      "id": "c832e0e2ae1c",
+      "title": "Purifying Backdoored Large Vision-Language Models by Removing Hijacked Directions",
+      "publish_date": "2026-10-07",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "source": "arXiv Backdoor-Generic"
+    },
     {
       "id": "38e31ece56b5",
       "title": "SceneJail: Exploiting Video Scenario Context to Jailbreak Multimodal LLMs",
