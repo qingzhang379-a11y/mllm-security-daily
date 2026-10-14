@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_count": 39,
-    "last_updated": "2026-10-13T08:35:33Z",
-    "today_new": 0,
-    "today_added": 0
+    "total_count": 41,
+    "last_updated": "2026-10-14T06:49:34Z",
+    "today_new": 2,
+    "today_added": 2
   },
   "ids": [
     "06ed47043b6f",
@@ -44,9 +44,27 @@
     "bdec115eb681",
     "38e31ece56b5",
     "e7f1c2707991",
-    "c832e0e2ae1c"
+    "c832e0e2ae1c",
+    "9959d3c28988",
+    "66d08c3f7a24"
   ],
   "items": [
+    {
+      "id": "66d08c3f7a24",
+      "title": "DPOison-VL: Clean Preference Poisoning in Vision-Language Direct Preference Optimization",
+      "publish_date": "2026-10-13",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv Data-Poisoning"
+    },
+    {
+      "id": "9959d3c28988",
+      "title": "EvolvAttack: Backdooring self Evolving VLM Agents",
+      "publish_date": "2026-10-11",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "source": "arXiv Backdoor-Generic"
+    },
     {
       "id": "c832e0e2ae1c",
       "title": "Purifying Backdoored Large Vision-Language Models by Removing Hijacked Directions",

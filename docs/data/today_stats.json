@@ -1,7 +1,12 @@
 {
-  "date": "2026-10-13",
-  "total_items": 0,
-  "backdoor_items": 0,
-  "category_breakdown": {},
-  "sources": []
+  "date": "2026-10-14",
+  "total_items": 2,
+  "backdoor_items": 1,
+  "category_breakdown": {
+    "学术论文": 2
+  },
+  "sources": [
+    "arXiv Data-Poisoning",
+    "arXiv Backdoor-Generic"
+  ]
 }

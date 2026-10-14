@@ -25,5 +25,60 @@
     "category_tag": "backdoor",
     "is_safe": true,
     "collected_at": "2026-10-08T08:05:10Z"
+  },
+  {
+    "id": "9959d3c28988",
+    "title": "EvolvAttack: Backdooring self Evolving VLM Agents",
+    "abstract": "Self-evolving mechanisms let vision-language model (VLM) agents continually adapt through evolving memory, but they also allow malicious behavior to emerge only after deployment. We introduce a new attack surface, the self-evolving backdoor, whose payload stays dormant in the initial agent and is pr",
+    "source": "arXiv Backdoor-Generic",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-10-11",
+    "category": "学术论文",
+    "is_backdoor": true,
+    "tags": [
+      "cs.LG",
+      "cs.AI",
+      "后门专题",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2610.15244v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.15244v1",
+    "arxiv_id": "2610.15244",
+    "is_today_new": true,
+    "created_at": "2026-10-14",
+    "security_tags": [
+      "backdoor",
+      "security"
+    ],
+    "category_tag": "backdoor",
+    "is_safe": true,
+    "collected_at": "2026-10-14T06:49:34Z"
+  },
+  {
+    "id": "66d08c3f7a24",
+    "title": "DPOison-VL: Clean Preference Poisoning in Vision-Language Direct Preference Optimization",
+    "abstract": "Direct Preference Optimization (DPO) has become a widely adopted approach for aligning vision-language models (VLMs), yet the security of multimodal preference data remains largely unexplored. Existing preference poisoning attacks either corrupt explicit supervision signals or require visible trigge",
+    "source": "arXiv Data-Poisoning",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-10-13",
+    "category": "学术论文",
+    "is_backdoor": false,
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CV",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2610.18609v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.18609v1",
+    "arxiv_id": "2610.18609",
+    "is_today_new": true,
+    "created_at": "2026-10-14",
+    "security_tags": [
+      "security"
+    ],
+    "category_tag": "security",
+    "is_safe": true,
+    "collected_at": "2026-10-14T06:49:34Z"
   }
 ]
