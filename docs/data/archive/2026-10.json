@@ -80,5 +80,33 @@
     "category_tag": "security",
     "is_safe": true,
     "collected_at": "2026-10-14T06:49:34Z"
+  },
+  {
+    "id": "519d52f69c3f",
+    "title": "Beyond Static Cues: Unified Dynamic Detection of MLLM Backdoors via Dual-Flow Trajectory Analysis",
+    "abstract": "Multimodal Large Language Models (MLLMs) are increasingly deployed in safety-critical domains, yet their susceptibility to backdoor attacks remains a formidable challenge. While existing defenses have evolved from visual-centric patch cues to unsupervised internal attention statistics, they are fund",
+    "source": "arXiv Backdoor-Generic",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-10-14",
+    "category": "学术论文",
+    "is_backdoor": true,
+    "tags": [
+      "cs.CV",
+      "cs.AI",
+      "后门专题",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2610.20319v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.20319v1",
+    "arxiv_id": "2610.20319",
+    "is_today_new": true,
+    "created_at": "2026-10-15",
+    "security_tags": [
+      "backdoor",
+      "security"
+    ],
+    "category_tag": "backdoor",
+    "is_safe": true,
+    "collected_at": "2026-10-15T06:35:49Z"
   }
 ]

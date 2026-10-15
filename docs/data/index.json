@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_count": 41,
-    "last_updated": "2026-10-14T06:49:34Z",
-    "today_new": 2,
-    "today_added": 2
+    "total_count": 42,
+    "last_updated": "2026-10-15T06:35:49Z",
+    "today_new": 1,
+    "today_added": 1
   },
   "ids": [
     "06ed47043b6f",
@@ -46,9 +46,18 @@
     "e7f1c2707991",
     "c832e0e2ae1c",
     "9959d3c28988",
-    "66d08c3f7a24"
+    "66d08c3f7a24",
+    "519d52f69c3f"
   ],
   "items": [
+    {
+      "id": "519d52f69c3f",
+      "title": "Beyond Static Cues: Unified Dynamic Detection of MLLM Backdoors via Dual-Flow Trajectory Analysis",
+      "publish_date": "2026-10-14",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "source": "arXiv Backdoor-Generic"
+    },
     {
       "id": "66d08c3f7a24",
       "title": "DPOison-VL: Clean Preference Poisoning in Vision-Language Direct Preference Optimization",
