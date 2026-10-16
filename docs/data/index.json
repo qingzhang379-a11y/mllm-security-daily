@@ -1,7 +1,7 @@
 {
   "meta": {
-    "total_count": 42,
-    "last_updated": "2026-10-15T06:35:49Z",
+    "total_count": 43,
+    "last_updated": "2026-10-16T06:29:39Z",
     "today_new": 1,
     "today_added": 1
   },
@@ -47,9 +47,18 @@
     "c832e0e2ae1c",
     "9959d3c28988",
     "66d08c3f7a24",
-    "519d52f69c3f"
+    "519d52f69c3f",
+    "f3608cfc5486"
   ],
   "items": [
+    {
+      "id": "f3608cfc5486",
+      "title": "Proof-based general-purpose computing with Magnetar",
+      "publish_date": "2026-10-15",
+      "category": "官方新闻",
+      "is_backdoor": false,
+      "source": "Microsoft Research"
+    },
     {
       "id": "519d52f69c3f",
       "title": "Beyond Static Cues: Unified Dynamic Detection of MLLM Backdoors via Dual-Flow Trajectory Analysis",

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "total_count": 42,
-    "last_updated": "2026-10-15T06:35:49Z",
+    "total_count": 43,
+    "last_updated": "2026-10-16T06:29:39Z",
     "today_new": 1,
     "today_added": 1
   },
@@ -115,6 +115,31 @@
       "category_tag": "backdoor",
       "is_safe": true,
       "collected_at": "2026-10-15T06:35:49Z"
+    },
+    {
+      "id": "f3608cfc5486",
+      "title": "Proof-based general-purpose computing with Magnetar",
+      "abstract": "Zero-knowledge proofs can verify computing results without rerunning workloads or exposing sensitive data. Magnetar helps bring them into the mainstream with support for standard programming languages, major speed gains, and quantum-resistant security.\nThe post Proof-based general-purpose computing",
+      "source": "Microsoft Research",
+      "source_type": "rss",
+      "publish_date": "2026-10-15",
+      "category": "官方新闻",
+      "is_backdoor": false,
+      "tags": [
+        "Research Blog",
+        "AI安全"
+      ],
+      "origin_url": "https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-10-16",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
+      "is_safe": true,
+      "collected_at": "2026-10-16T06:29:39Z"
     },
     {
       "id": "d869872ac90f",
