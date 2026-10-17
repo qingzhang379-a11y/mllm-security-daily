@@ -1,11 +1,7 @@
 {
-  "date": "2026-10-16",
-  "total_items": 1,
+  "date": "2026-10-17",
+  "total_items": 0,
   "backdoor_items": 0,
-  "category_breakdown": {
-    "官方新闻": 1
-  },
-  "sources": [
-    "Microsoft Research"
-  ]
+  "category_breakdown": {},
+  "sources": []
 }
