@@ -1,10 +1,37 @@
 {
   "meta": {
-    "total": 7,
+    "total": 8,
     "range": "last 30 days",
-    "last_updated": "2026-10-19T07:01:59Z"
+    "last_updated": "2026-10-20T06:46:41Z"
   },
   "news": [
+    {
+      "id": "b9fedd743cd2",
+      "title": "Under the Skin: Backdoor Infection in Multimodal Large Language Models",
+      "abstract": "Multimodal Large Language Models (MLLMs) have achieved impressive performance in generating text conditioned on inputs from different modalities. In this work, we introduce backdoor infection, a cross-modal attack framework targeting MLLMs. Starting from a model already injected with a backdoor in o",
+      "source": "arXiv Backdoor-Generic",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-10-16",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "tags": [
+        "cs.CR",
+        "后门专题",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2610.24058v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.24058v1",
+      "arxiv_id": "2610.24058",
+      "is_today_new": true,
+      "created_at": "2026-10-20",
+      "security_tags": [
+        "backdoor",
+        "security"
+      ],
+      "category_tag": "backdoor",
+      "is_safe": true,
+      "collected_at": "2026-10-20T06:46:41Z"
+    },
     {
       "id": "f3608cfc5486",
       "title": "Proof-based general-purpose computing with Magnetar",
