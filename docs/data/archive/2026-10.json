@@ -160,5 +160,30 @@
     "category_tag": "backdoor",
     "is_safe": true,
     "collected_at": "2026-10-20T06:46:41Z"
+  },
+  {
+    "id": "d651b7170eab",
+    "title": "From synthetic enterprise data evaluations to real Microsoft Copilot AI confidence",
+    "abstract": "Evaluating Microsoft Copilot at enterprise scale requires test data that captures the full complexity of real organizations, yet real enterprise data contains sensitive information that cannot be used for evaluation under any circumstances.\nThe post From synthetic enterprise data evaluations to real",
+    "source": "Microsoft Research",
+    "source_type": "rss",
+    "publish_date": "2026-10-30",
+    "category": "官方新闻",
+    "is_backdoor": false,
+    "tags": [
+      "Research Blog",
+      "AI安全"
+    ],
+    "origin_url": "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/",
+    "pdf_url": "",
+    "arxiv_id": "",
+    "is_today_new": true,
+    "created_at": "2026-10-31",
+    "security_tags": [
+      "security"
+    ],
+    "category_tag": "security",
+    "is_safe": true,
+    "collected_at": "2026-10-31T07:37:17Z"
   }
 ]

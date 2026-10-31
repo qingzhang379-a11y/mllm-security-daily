@@ -1,10 +1,35 @@
 {
   "meta": {
-    "total": 8,
+    "total": 7,
     "range": "last 30 days",
-    "last_updated": "2026-10-30T07:49:08Z"
+    "last_updated": "2026-10-31T07:37:17Z"
   },
   "news": [
+    {
+      "id": "d651b7170eab",
+      "title": "From synthetic enterprise data evaluations to real Microsoft Copilot AI confidence",
+      "abstract": "Evaluating Microsoft Copilot at enterprise scale requires test data that captures the full complexity of real organizations, yet real enterprise data contains sensitive information that cannot be used for evaluation under any circumstances.\nThe post From synthetic enterprise data evaluations to real",
+      "source": "Microsoft Research",
+      "source_type": "rss",
+      "publish_date": "2026-10-30",
+      "category": "官方新闻",
+      "is_backdoor": false,
+      "tags": [
+        "Research Blog",
+        "AI安全"
+      ],
+      "origin_url": "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-10-31",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
+      "is_safe": true,
+      "collected_at": "2026-10-31T07:37:17Z"
+    },
     {
       "id": "b9fedd743cd2",
       "title": "Under the Skin: Backdoor Infection in Multimodal Large Language Models",
@@ -166,61 +191,6 @@
       "category_tag": "backdoor",
       "is_safe": true,
       "collected_at": "2026-10-08T08:05:10Z"
-    },
-    {
-      "id": "38e31ece56b5",
-      "title": "SceneJail: Exploiting Video Scenario Context to Jailbreak Multimodal LLMs",
-      "abstract": "Video Multimodal Large Language Models (Video-MLLMs) support reasoning over video inputs, yet remain vulnerable to jailbreak attacks that elicit policy-violating responses. Existing video jailbreaks primarily manipulate how harmful queries are visually presented, thereby treating video merely as a c",
-      "source": "arXiv LLM-Jailbreak",
-      "source_type": "arxiv_api",
-      "publish_date": "2026-09-30",
-      "category": "学术论文",
-      "is_backdoor": false,
-      "tags": [
-        "cs.CR",
-        "cs.AI",
-        "cs.LG",
-        "AI安全"
-      ],
-      "origin_url": "http://arxiv.org/abs/2609.38899v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.38899v1",
-      "arxiv_id": "2609.38899",
-      "is_today_new": true,
-      "created_at": "2026-10-01",
-      "security_tags": [
-        "security"
-      ],
-      "category_tag": "security",
-      "is_safe": true,
-      "collected_at": "2026-10-01T07:54:47Z"
-    },
-    {
-      "id": "bdec115eb681",
-      "title": "Selective Channel Restoration for Backdoored Vision-Language Models",
-      "abstract": "Vision-language models (VLMs) exhibit strong multimodal capabilities but remain vulnerable to backdoors implanted through poisoned fine-tuning data. Existing defenses often require extensive parameter updates during fine-tuning or incur per-query overhead during inference. To address these limitatio",
-      "source": "arXiv Backdoor-Generic",
-      "source_type": "arxiv_api",
-      "publish_date": "2026-09-29",
-      "category": "学术论文",
-      "is_backdoor": true,
-      "tags": [
-        "cs.CR",
-        "cs.CV",
-        "后门专题",
-        "AI安全"
-      ],
-      "origin_url": "http://arxiv.org/abs/2609.37759v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.37759v1",
-      "arxiv_id": "2609.37759",
-      "is_today_new": true,
-      "created_at": "2026-09-30",
-      "security_tags": [
-        "backdoor",
-        "security"
-      ],
-      "category_tag": "backdoor",
-      "is_safe": true,
-      "collected_at": "2026-09-30T07:34:57Z"
     }
   ]
 }
