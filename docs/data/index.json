@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_count": 45,
-    "last_updated": "2026-11-02T08:29:29Z",
-    "today_new": 0,
-    "today_added": 0
+    "total_count": 47,
+    "last_updated": "2026-11-03T08:43:04Z",
+    "today_new": 2,
+    "today_added": 2
   },
   "ids": [
     "06ed47043b6f",
@@ -50,9 +50,27 @@
     "519d52f69c3f",
     "f3608cfc5486",
     "b9fedd743cd2",
-    "d651b7170eab"
+    "d651b7170eab",
+    "1c5f1a3e1afb",
+    "22a73bc521d8"
   ],
   "items": [
+    {
+      "id": "22a73bc521d8",
+      "title": "PGuard: A Native, Streaming, and Plug-in Guardrail for Multimodal Large Language Models",
+      "publish_date": "2026-11-02",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv LLM-Jailbreak"
+    },
+    {
+      "id": "1c5f1a3e1afb",
+      "title": "Context-Shielded Backdoor Attack against Large Vision-Language Models",
+      "publish_date": "2026-10-31",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "source": "arXiv Backdoor-Generic"
+    },
     {
       "id": "d651b7170eab",
       "title": "From synthetic enterprise data evaluations to real Microsoft Copilot AI confidence",

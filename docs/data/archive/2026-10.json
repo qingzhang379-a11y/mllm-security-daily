@@ -185,5 +185,32 @@
     "category_tag": "security",
     "is_safe": true,
     "collected_at": "2026-10-31T07:37:17Z"
+  },
+  {
+    "id": "1c5f1a3e1afb",
+    "title": "Context-Shielded Backdoor Attack against Large Vision-Language Models",
+    "abstract": "Large vision-language models (LVLMs) routinely use inference-time visual-token compression to prune hundreds of patch tokens down to a compact budget. Existing LVLM backdoors fire whenever a triggered image appears, whereas prior deployment-triggered attacks activate only when model weights are quan",
+    "source": "arXiv Backdoor-Generic",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-10-31",
+    "category": "学术论文",
+    "is_backdoor": true,
+    "tags": [
+      "cs.CV",
+      "后门专题",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2611.01252v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.01252v1",
+    "arxiv_id": "2611.01252",
+    "is_today_new": true,
+    "created_at": "2026-11-03",
+    "security_tags": [
+      "backdoor",
+      "security"
+    ],
+    "category_tag": "backdoor",
+    "is_safe": true,
+    "collected_at": "2026-11-03T08:43:04Z"
   }
 ]

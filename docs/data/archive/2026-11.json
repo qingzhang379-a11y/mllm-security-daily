@@ -1,0 +1,27 @@
+[
+  {
+    "id": "22a73bc521d8",
+    "title": "PGuard: A Native, Streaming, and Plug-in Guardrail for Multimodal Large Language Models",
+    "abstract": "As streaming generation becomes the dominant serving paradigm for both text-only and multimodal large language models, ensuring safety throughout the generation process has become a critical challenge. We introduce PGuard, a native, streaming, and plug-in guardrail that transforms safety monitoring ",
+    "source": "arXiv LLM-Jailbreak",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-11-02",
+    "category": "学术论文",
+    "is_backdoor": false,
+    "tags": [
+      "cs.CL",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2611.02791v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.02791v1",
+    "arxiv_id": "2611.02791",
+    "is_today_new": true,
+    "created_at": "2026-11-03",
+    "security_tags": [
+      "security"
+    ],
+    "category_tag": "security",
+    "is_safe": true,
+    "collected_at": "2026-11-03T08:43:04Z"
+  }
+]
