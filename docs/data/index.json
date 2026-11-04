@@ -1,7 +1,7 @@
 {
   "meta": {
-    "total_count": 47,
-    "last_updated": "2026-11-03T08:43:04Z",
+    "total_count": 49,
+    "last_updated": "2026-11-04T08:12:10Z",
     "today_new": 2,
     "today_added": 2
   },
@@ -52,11 +52,29 @@
     "b9fedd743cd2",
     "d651b7170eab",
     "1c5f1a3e1afb",
-    "22a73bc521d8"
+    "22a73bc521d8",
+    "06d322f33575",
+    "c7388460127a"
   ],
   "items": [
     {
+      "id": "c7388460127a",
+      "title": "Learn the rules: The hacker mindset",
+      "publish_date": "2026-11-03",
+      "category": "官方新闻",
+      "is_backdoor": false,
+      "source": "Microsoft Research"
+    },
+    {
       "id": "22a73bc521d8",
+      "title": "PGuard: A Native, Streaming, and Plug-in Guardrail for Multimodal Large Language Models",
+      "publish_date": "2026-11-02",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv LLM-Jailbreak"
+    },
+    {
+      "id": "06d322f33575",
       "title": "PGuard: A Native, Streaming, and Plug-in Guardrail for Multimodal Large Language Models",
       "publish_date": "2026-11-02",
       "category": "学术论文",

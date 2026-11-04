@@ -1,10 +1,35 @@
 {
   "meta": {
-    "total": 9,
+    "total": 11,
     "range": "last 30 days",
-    "last_updated": "2026-11-03T08:43:04Z"
+    "last_updated": "2026-11-04T08:12:10Z"
   },
   "news": [
+    {
+      "id": "c7388460127a",
+      "title": "Learn the rules: The hacker mindset",
+      "abstract": "Research Manager Mike Walker reflects on a career spanning hacker culture, cybersecurity, and AI, sharing lessons about trust, teamwork, leadership, and why solving difficult problems requires curiosity, judgment, agility—and an understanding of the rules.\nThe post Learn the rules: The hacker mindse",
+      "source": "Microsoft Research",
+      "source_type": "rss",
+      "publish_date": "2026-11-03",
+      "category": "官方新闻",
+      "is_backdoor": false,
+      "tags": [
+        "Microsoft Research Podcast",
+        "AI安全"
+      ],
+      "origin_url": "https://www.microsoft.com/en-us/research/podcast/learn-the-rules-the-hacker-mindset/",
+      "pdf_url": "",
+      "arxiv_id": "",
+      "is_today_new": true,
+      "created_at": "2026-11-04",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
+      "is_safe": true,
+      "collected_at": "2026-11-04T08:12:10Z"
+    },
     {
       "id": "22a73bc521d8",
       "title": "PGuard: A Native, Streaming, and Plug-in Guardrail for Multimodal Large Language Models",
@@ -29,6 +54,31 @@
       "category_tag": "security",
       "is_safe": true,
       "collected_at": "2026-11-03T08:43:04Z"
+    },
+    {
+      "id": "06d322f33575",
+      "title": "PGuard: A Native, Streaming, and Plug-in Guardrail for Multimodal Large Language Models",
+      "abstract": "As streaming generation becomes the dominant serving paradigm for both text-only and multimodal large language models, ensuring safety throughout the generation process has become a critical challenge. We introduce PGuard, a native, streaming, and plug-in guardrail that transforms safety monitoring ",
+      "source": "arXiv LLM-Jailbreak",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-11-02",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "tags": [
+        "cs.CL",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2611.02791v2",
+      "pdf_url": "https://arxiv.org/pdf/2611.02791v2",
+      "arxiv_id": "2611.02791",
+      "is_today_new": true,
+      "created_at": "2026-11-04",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
+      "is_safe": true,
+      "collected_at": "2026-11-04T08:12:10Z"
     },
     {
       "id": "1c5f1a3e1afb",
