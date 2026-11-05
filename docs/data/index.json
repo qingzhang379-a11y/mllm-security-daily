@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_count": 49,
-    "last_updated": "2026-11-04T08:12:10Z",
-    "today_new": 2,
-    "today_added": 2
+    "total_count": 50,
+    "last_updated": "2026-11-05T08:39:06Z",
+    "today_new": 1,
+    "today_added": 1
   },
   "ids": [
     "06ed47043b6f",
@@ -54,9 +54,18 @@
     "1c5f1a3e1afb",
     "22a73bc521d8",
     "06d322f33575",
-    "c7388460127a"
+    "c7388460127a",
+    "9935b35ab6c5"
   ],
   "items": [
+    {
+      "id": "9935b35ab6c5",
+      "title": "BEAKER: An Expert-Curated Benchmark for Embodied Brains in Self-Driving Chemical Laboratories",
+      "publish_date": "2026-11-04",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "source": "arXiv Embodied-Robot-Safety"
+    },
     {
       "id": "c7388460127a",
       "title": "Learn the rules: The hacker mindset",

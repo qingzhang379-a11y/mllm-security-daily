@@ -1,10 +1,35 @@
 {
   "meta": {
-    "total": 11,
+    "total": 12,
     "range": "last 30 days",
-    "last_updated": "2026-11-04T08:12:10Z"
+    "last_updated": "2026-11-05T08:39:06Z"
   },
   "news": [
+    {
+      "id": "9935b35ab6c5",
+      "title": "BEAKER: An Expert-Curated Benchmark for Embodied Brains in Self-Driving Chemical Laboratories",
+      "abstract": "Self-Driving Chemical Laboratories (SDCLs) are moving chemical experimentation toward embodied automation, where machines must perceive laboratory scenes, reason about experimental states, and act under physical, procedural, and safety constraints. Although Multimodal Large Language Models (MLLMs) a",
+      "source": "arXiv Embodied-Robot-Safety",
+      "source_type": "arxiv_api",
+      "publish_date": "2026-11-04",
+      "category": "学术论文",
+      "is_backdoor": false,
+      "tags": [
+        "cs.AI",
+        "AI安全"
+      ],
+      "origin_url": "http://arxiv.org/abs/2611.06911v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.06911v1",
+      "arxiv_id": "2611.06911",
+      "is_today_new": true,
+      "created_at": "2026-11-05",
+      "security_tags": [
+        "security"
+      ],
+      "category_tag": "security",
+      "is_safe": true,
+      "collected_at": "2026-11-05T08:39:06Z"
+    },
     {
       "id": "c7388460127a",
       "title": "Learn the rules: The hacker mindset",
