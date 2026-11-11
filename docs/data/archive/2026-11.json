@@ -98,5 +98,32 @@
     "category_tag": "security",
     "is_safe": true,
     "collected_at": "2026-11-05T08:39:06Z"
+  },
+  {
+    "id": "5e0412b7a900",
+    "title": "Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents",
+    "abstract": "Microsoft researchers have discovered &#8220;Lazarus,&#8221; a backdoor technique that can reprogram dormant neurons in an AI model, causing an otherwise normal AI agent to execute malicious commands when a hidden trigger appears. The threat is especially serious for AI agents with tool or terminal",
+    "source": "Microsoft Research",
+    "source_type": "rss",
+    "publish_date": "2026-11-10",
+    "category": "官方新闻",
+    "is_backdoor": true,
+    "tags": [
+      "Research Blog",
+      "后门专题",
+      "AI安全"
+    ],
+    "origin_url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+    "pdf_url": "",
+    "arxiv_id": "",
+    "is_today_new": true,
+    "created_at": "2026-11-11",
+    "security_tags": [
+      "backdoor",
+      "security"
+    ],
+    "category_tag": "backdoor",
+    "is_safe": true,
+    "collected_at": "2026-11-11T08:30:52Z"
   }
 ]
