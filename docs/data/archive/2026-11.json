@@ -125,5 +125,33 @@
     "category_tag": "backdoor",
     "is_safe": true,
     "collected_at": "2026-11-11T08:30:52Z"
+  },
+  {
+    "id": "5dd4ca762457",
+    "title": "HalluProbe: Exploiting VLM Hallucinations for Backdoor Detection",
+    "abstract": "Vision-Language Models (VLMs) are vulnerable to backdoor attacks introduced through data poisoning, making effective backdoor detection a critical security challenge. In this paper, we uncover a novel connection between VLM hallucinations and backdoor behaviors and exploit this connection for backdo",
+    "source": "arXiv Backdoor-Generic",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-11-15",
+    "category": "学术论文",
+    "is_backdoor": true,
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "后门专题",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2611.19868v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.19868v1",
+    "arxiv_id": "2611.19868",
+    "is_today_new": true,
+    "created_at": "2026-11-17",
+    "security_tags": [
+      "backdoor",
+      "security"
+    ],
+    "category_tag": "backdoor",
+    "is_safe": true,
+    "collected_at": "2026-11-17T09:48:19Z"
   }
 ]

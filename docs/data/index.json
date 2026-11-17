@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_count": 51,
-    "last_updated": "2026-11-16T08:41:33Z",
-    "today_new": 0,
-    "today_added": 0
+    "total_count": 52,
+    "last_updated": "2026-11-17T09:48:19Z",
+    "today_new": 1,
+    "today_added": 1
   },
   "ids": [
     "06ed47043b6f",
@@ -56,9 +56,18 @@
     "06d322f33575",
     "c7388460127a",
     "9935b35ab6c5",
-    "5e0412b7a900"
+    "5e0412b7a900",
+    "5dd4ca762457"
   ],
   "items": [
+    {
+      "id": "5dd4ca762457",
+      "title": "HalluProbe: Exploiting VLM Hallucinations for Backdoor Detection",
+      "publish_date": "2026-11-15",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "source": "arXiv Backdoor-Generic"
+    },
     {
       "id": "5e0412b7a900",
       "title": "Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents",
