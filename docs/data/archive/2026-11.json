@@ -153,5 +153,34 @@
     "category_tag": "backdoor",
     "is_safe": true,
     "collected_at": "2026-11-17T09:48:19Z"
+  },
+  {
+    "id": "9e16f9f5d8cc",
+    "title": "TrojanMaxxing: One-shotting VLM Backdoors with Weight-Space Programming",
+    "abstract": "Recent work shows that large language models (LLMs) can reason directly about the weights of other neural networks. Given only a natural-language objective, an LLM can inspect a model's weights, understand what they compute, and edit them directly without gradient-based optimization. This capability",
+    "source": "arXiv Backdoor-Generic",
+    "source_type": "arxiv_api",
+    "publish_date": "2026-11-20",
+    "category": "学术论文",
+    "is_backdoor": true,
+    "tags": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CV",
+      "后门专题",
+      "AI安全"
+    ],
+    "origin_url": "http://arxiv.org/abs/2611.27425v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.27425v1",
+    "arxiv_id": "2611.27425",
+    "is_today_new": true,
+    "created_at": "2026-11-23",
+    "security_tags": [
+      "backdoor",
+      "security"
+    ],
+    "category_tag": "backdoor",
+    "is_safe": true,
+    "collected_at": "2026-11-23T09:54:36Z"
   }
 ]
