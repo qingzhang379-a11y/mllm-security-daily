@@ -1,9 +1,9 @@
 {
   "meta": {
-    "total_count": 53,
-    "last_updated": "2026-11-24T11:44:55Z",
-    "today_new": 0,
-    "today_added": 0
+    "total_count": 54,
+    "last_updated": "2026-11-25T10:35:43Z",
+    "today_new": 1,
+    "today_added": 1
   },
   "ids": [
     "06ed47043b6f",
@@ -58,7 +58,8 @@
     "9935b35ab6c5",
     "5e0412b7a900",
     "5dd4ca762457",
-    "9e16f9f5d8cc"
+    "9e16f9f5d8cc",
+    "18e467c53152"
   ],
   "items": [
     {
@@ -119,6 +120,14 @@
     },
     {
       "id": "1c5f1a3e1afb",
+      "title": "Context-Shielded Backdoor Attack against Large Vision-Language Models",
+      "publish_date": "2026-10-31",
+      "category": "学术论文",
+      "is_backdoor": true,
+      "source": "arXiv Backdoor-Generic"
+    },
+    {
+      "id": "18e467c53152",
       "title": "Context-Shielded Backdoor Attack against Large Vision-Language Models",
       "publish_date": "2026-10-31",
       "category": "学术论文",
